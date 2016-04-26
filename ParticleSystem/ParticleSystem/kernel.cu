@@ -3,9 +3,11 @@
 #include "device_launch_parameters.h"
 #include <iostream>
 #include <stdio.h>
+#include <chrono>
+typedef std::chrono::high_resolution_clock Clock;
 
 //defining program attributes
-static const int N = 100;
+static const int N = 512*512;
 static const size_t size = N * sizeof(int);
 static const int TPB = 512;	//threads per block
 
@@ -18,6 +20,7 @@ __global__ void ARR_ADD(int* res, int* in1, int *in2, int n)
 
 int main()
 {
+	
 
 
 
@@ -47,8 +50,12 @@ int main()
 	cudaMemcpy(d_in2, in2, size, cudaMemcpyHostToDevice);
 
 	//call function to execute on device
+	auto t1 = Clock::now();
 	ARR_ADD << <N/TPB, TPB>> >(d_res, d_in1, d_in2, N);
-
+	auto t2 = Clock::now();
+	std::cout << "Delta t2-t1: "
+		<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count()
+		<< " nanoseconds" << std::endl;
 	//copy result back to host
 	cudaMemcpy(res, d_res, size, cudaMemcpyDeviceToHost);
 
@@ -63,6 +70,8 @@ int main()
 	{
 		checksum += res[i];
 	}
+
+
 	std::cout << "Parrelelized N=" << N << " : " << checksum << std::endl;
 
 	//free host memory
@@ -76,15 +85,21 @@ int main()
 		in1N[i] = i + 1;
 		in2N[i] = i + 2;
 	}
+	auto t1N = Clock::now();
 	for (int i = 0; i < N; i++)
 	{
 		resN[i] = in1N[i] + in2N[i];
 	}
+	auto t2N = Clock::now();
+	std::cout << "Delta t2-t1: "
+		<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2N - t1N).count()
+		<< " nanoseconds" << std::endl;
 	checksum = 0;
 	for (int i = 0; i < N; i++)
 	{
 		checksum += resN[i];
 	}
 	std::cout << "Standard N=" << N << " : " << checksum << std::endl;
+
 
 }
