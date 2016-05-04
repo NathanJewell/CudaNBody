@@ -4,6 +4,11 @@
 #include <iostream>
 #include <stdio.h>
 #include <chrono>
+#include "inc/GL/glew.h"
+#include "inc/GL/freeglut.h"
+#include "ParticleRenderer.hpp"
+#include "ParticleSystem.hpp"
+
 typedef std::chrono::high_resolution_clock Clock;
 
 
@@ -18,8 +23,32 @@ __global__ void ARR_ADD(float* res, const float* in1, const float *in2, int n)
 
 }
 
-int main()
+int main(int argc, char** argv)
 {
+	ParticleSystem sys;
+	ParticleRenderer ren;
+
+	glutInit(&argc, argv);
+
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+
+	glutInitWindowSize(250, 250);
+
+	glutInitWindowPosition(100, 100);
+
+	glutCreateWindow("hello");
+
+	ren.initGL();
+
+	glutDisplayFunc(ParticleRenderer::drawFrame);
+
+	glutMainLoop();
+
+	sys.allocate(5000);
+
+	ren.setParticleVector(sys.getParticleVector());
+
+	/*
 	//defining program attributes
 	int N = 10000000;
 	size_t size = N * sizeof(float);
@@ -129,4 +158,5 @@ int main()
 
 	free(in1);
 	free(in2);
+	*/
 }
