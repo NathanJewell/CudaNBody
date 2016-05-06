@@ -33,12 +33,13 @@ void ParticleRenderer::initGL()
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 
 	/* initialize viewing values */
+	glViewport(0, 0, 1024, 1024);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60.0, (float)1024 / (float)1024, 0.1, 1000.0);
-
+	glOrtho(-512, 512, -512, 512, -512, 512);
 	glMatrixMode(GL_MODELVIEW);
-	glViewport(0, 0, 1024, 1024);
+	glLoadIdentity();
+	glutPostRedisplay();
 	//glMatrixMode(GL_PROJECTION);
 
 	//glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -46,7 +47,7 @@ void ParticleRenderer::initGL()
 	glLoadIdentity();
 
 	//glEnable(GL_DEPTH_TEST);
-	glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
@@ -55,15 +56,16 @@ void ParticleRenderer::initGL()
 void ParticleRenderer::drawFrame()
 {
 	/* clear all pixels */
-	//sys.doFrameCPU();
+	sys.doFrameCPU();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//parameters
-	glColor4f(0, 1, 0, 0.5f);
+	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 	glPointSize(2);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glDisable(GL_CULL_FACE);
 
 	//drawing vertex array
 	glEnableClientState(GL_VERTEX_ARRAY);
@@ -76,9 +78,19 @@ void ParticleRenderer::drawFrame()
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glDisableClientState(GL_VERTEX_ARRAY);
 
+	glBegin(GL_POINTS);
+	{
+
+		for (int i = 0; i < numParticles; ++i)
+		{
+			int index = i * 3;
+			glVertex3f(particles[index], particles[index + 1], particles[index+2]);
+		}
+	}
+	glEnd();
 	glDisable(GL_BLEND);
 	glDisable(GL_POINT_SMOOTH);
-
+	glutPostRedisplay();
 	//glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
 	/* draw white polygon (rectangle) with corners at

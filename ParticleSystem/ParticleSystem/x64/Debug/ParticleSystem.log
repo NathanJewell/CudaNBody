@@ -1,4 +1,4 @@
-﻿Build started 5/6/2016 11:25:53 AM.
+﻿Build started 5/6/2016 1:27:31 PM.
      1>Project "C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /Zi /nologo /W3 /WX- /Od /D WIN32 /D WIN64 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ParticleRenderer.cpp
@@ -22,4 +22,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.56
+Time Elapsed 00:00:00.59
