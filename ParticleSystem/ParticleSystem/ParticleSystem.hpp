@@ -1,9 +1,7 @@
 #pragma once
 #include <cuda_runtime.h>
 #include <stdlib.h>
-#include "inc/GL/glew.h"
-#include "inc/GL/freeglut.h"
-
+#include "Defines.hpp"
 
 class ParticleSystem
 {
@@ -13,7 +11,7 @@ public:
 
 	void allocate(const unsigned int& numParticles);	//allocated memory on host
 	void initialize();									//defines starting positions
-	double* getParticleVector();
+	p_type* getParticleVector();
 	//void copyPositionFromDevice();						//copies calculated vector from device to host
 	void doFrameCPU();						//calculates stuff (cpu based)
 	void doFrameGPU();					//calculates stuff (gpu based)
@@ -22,15 +20,15 @@ private:
 	float fInvSqrt(const float& in);
 
 	unsigned int numParticles;
-	double* h_pos;
-	double* h_vel;
-	double* h_acc;
-	double* h_mass;
+	p_type* h_pos;
+	p_type* h_vel;
+	p_type* h_acc;
+	p_type* h_mass;
 
-	double* d_pos;
-	double* d_vel;
-	double* d_acc;
-	double* d_mass;
+	p_type* d_pos;
+	p_type* d_vel;
+	p_type* d_acc;
+	p_type* d_mass;
 
 	bool allocated;
 };

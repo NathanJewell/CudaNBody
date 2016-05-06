@@ -1,11 +1,11 @@
 
+
 #include <cuda_runtime.h>
 #include "device_launch_parameters.h"
 #include <iostream>
 #include <stdio.h>
 #include <chrono>
-#include "inc/GL/glew.h"
-#include "inc/GL/freeglut.h"
+
 #include "ParticleRenderer.hpp"
 #include "ParticleSystem.hpp"
 
@@ -36,17 +36,29 @@ int main(int argc, char** argv)
 
 	glutInitWindowPosition(100, 100);
 
-	glutCreateWindow("hello");
-
-	ren.initGL();
+	glutCreateWindow("N-BODY");
 
 	glutDisplayFunc(ParticleRenderer::drawFrame);
 
-	glutMainLoop();
+	
+	glewInit();
+
+
+
+
+	ren.initGL();
+
+
+
 
 	sys.allocate(5000);
 
 	ren.setParticleVector(sys.getParticleVector());
+
+
+	glutMainLoop();
+
+
 
 	/*
 	//defining program attributes

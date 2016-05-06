@@ -21,12 +21,12 @@ void ParticleSystem::allocate(const unsigned int& numParticles)
 	if (numParticles > 0)
 	{
 		int pointsPerParticleVec = 3;
-		size_t size = sizeof(double) * pointsPerParticleVec * numParticles;
+		size_t size = sizeof(p_type) * pointsPerParticleVec * numParticles;
 
-		h_pos = (double*)malloc(size);
-		h_vel = (double*)malloc(size);
-		h_acc = (double*)malloc(size);
-		h_mass = (double*)malloc(size / pointsPerParticleVec);
+		h_pos = (p_type*)malloc(size);
+		h_vel = (p_type*)malloc(size);
+		h_acc = (p_type*)malloc(size);
+		h_mass = (p_type*)malloc(size / pointsPerParticleVec);
 
 		d_pos = NULL;
 		d_vel = NULL;
@@ -37,7 +37,7 @@ void ParticleSystem::allocate(const unsigned int& numParticles)
 
 }
 
-double* ParticleSystem::getParticleVector()
+p_type* ParticleSystem::getParticleVector()
 {
 	return h_pos;
 }
@@ -55,21 +55,21 @@ void ParticleSystem::doFrameCPU()
 		{
 			int indexB = partItB * 3;	//index of x coord in vector
 
-			double diffx = (h_pos[indexB] - h_pos[indexA]);			//calculating difference between points
-			double diffy = (h_pos[indexB + 1] - h_pos[indexA + 1]);
-			double diffz = (h_pos[indexB + 2] - h_pos[indexA + 2]);
+			p_type diffx = (h_pos[indexB] - h_pos[indexA]);			//calculating difference between points
+			p_type diffy = (h_pos[indexB + 1] - h_pos[indexA + 1]);
+			p_type diffz = (h_pos[indexB + 2] - h_pos[indexA + 2]);
 
-			double distsqr = diffx*diffx + diffy*diffy + diffz*diffz;
+			p_type distsqr = diffx*diffx + diffy*diffy + diffz*diffz;
 
-			double attraction = (9.81 * h_mass[partItA] * h_mass[partItB]) / distsqr;	//gravity equation
-			double invsqrt = fInvSqrt((float)distsqr);
-			double normx = invsqrt*diffx;
-			double normy = invsqrt*diffy;
-			double normz = invsqrt*diffz;
+			p_type attraction = (9.81 * h_mass[partItA] * h_mass[partItB]) / distsqr;	//gravity equation
+			p_type invsqrt = fInvSqrt((float)distsqr);
+			p_type normx = invsqrt*diffx;
+			p_type normy = invsqrt*diffy;
+			p_type normz = invsqrt*diffz;
 
-			double forcex = normx * attraction;
-			double forcey = normy * attraction;
-			double forcez = normz * attraction;
+			p_type forcex = normx * attraction;
+			p_type forcey = normy * attraction;
+			p_type forcez = normz * attraction;
 
 			h_acc[indexB] += forcex;
 			h_acc[indexB+1] += forcey;

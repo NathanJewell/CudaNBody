@@ -1,0 +1,1874 @@
+﻿Build started 5/5/2016 6:41:26 PM.
+Environment at start of build:
+ALLUSERSPROFILE = C:\ProgramData
+APPDATA = C:\Users\Nathan\AppData\Roaming
+CommonProgramFiles = C:\Program Files (x86)\Common Files
+CommonProgramFiles(x86) = C:\Program Files (x86)\Common Files
+CommonProgramW6432 = C:\Program Files\Common Files
+COMPUTERNAME = NATHANCOMPUTER
+ComSpec = C:\Windows\system32\cmd.exe
+CUDA_PATH = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
+CUDA_PATH_V7_0 = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0
+CUDA_PATH_V7_5 = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
+FP_NO_HOST_CHECK = NO
+GNUPLOT_LIB = C:\Program Files (x86)\gnuplot\demo;C:\Program Files (x86)\gnuplot\demo\games;C:\Program Files (x86)\gnuplot\share
+GNUTERM = windows
+GOROOT = C:\Go\
+HOMEDRIVE = C:
+HOMEPATH = \Users\Nathan
+LOCALAPPDATA = C:\Users\Nathan\AppData\Local
+LOGONSERVER = \\NATHANCOMPUTER
+MSBuildLoadMicrosoftTargetsReadOnly = true
+NUMBER_OF_PROCESSORS = 4
+NVCUDASAMPLES7_0_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0
+NVCUDASAMPLES7_5_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.5
+NVCUDASAMPLES_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.5
+NVTOOLSEXT_PATH = C:\Program Files\NVIDIA Corporation\NvToolsExt\
+OS = Windows_NT
+Path = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\libnvvp;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Go\bin;C:\Users\Nathan\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Amazon\AWSCLI\;C:\Program Files (x86)\gnuplot\bin;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\cmd;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin;C:\Users\Nathan\AppData\Local\Apps\2.0\TVTB4P6M.OQO\L6X0NAZ0.MTN\gith..tion_317444273a93ac29_0002.0006_159c473f7cb71f94;C:\Users\Nathan\AppData\Local\GitHub\git-media-amd64_0.2.2;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Python27\;C:\Python27\Scripts\;C:\Program Files (x86)\Nmap;C:\Program Files (x86)\Dr. Memory\bin\
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PkgDefApplicationConfigFile = C:\Users\Nathan\AppData\Local\Microsoft\VisualStudio\12.0\devenv.exe.config
+PROCESSOR_ARCHITECTURE = x86
+PROCESSOR_ARCHITEW6432 = AMD64
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+PROCESSOR_LEVEL = 6
+PROCESSOR_REVISION = 3c03
+ProgramData = C:\ProgramData
+ProgramFiles = C:\Program Files (x86)
+ProgramFiles(x86) = C:\Program Files (x86)
+ProgramW6432 = C:\Program Files
+PSModulePath = C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+PUBLIC = C:\Users\Public
+SystemDrive = C:
+SystemRoot = C:\Windows
+TEMP = C:\Users\Nathan\AppData\Local\Temp
+TMP = C:\Users\Nathan\AppData\Local\Temp
+USERDOMAIN = NathanComputer
+USERNAME = Nathan
+USERPROFILE = C:\Users\Nathan
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+VisualStudioDir = C:\Users\Nathan\Documents\Visual Studio 2013
+VisualStudioEdition = Microsoft Visual Studio Community 2013
+VisualStudioVersion = 12.0
+VS110COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+VS120COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+VSLANG = 1033
+windir = C:\Windows
+windows_tracing_flags = 3
+windows_tracing_logfile = C:\BVTBin\Tests\installpackage\csilogfile.log
+
+18:41:26.543     1>Project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" on node 2 (Build target(s)).
+18:41:26.543     1>Initial Properties:
+                   _AfterCompileWinFXInternalDependsOn = 
+                           PrepareResourcesForSatelliteAssemblies;
+                           MergeLocalizationDirectives;
+                           AfterCompileWinFX
+                       
+                   _ApplicableDebuggers = Desktop
+                   _BuildActionType = Build
+                   _BuildSuffix = 
+                   :VCEnd
+                   _CheckDev11ToolsInstalled = true
+                   _CompileTargetNameForLocalType = _CompileTemporaryAssembly
+                   _DebugSymbolsProduced = true
+                   _DeploymentApplicationManifestIdentity = ParticleSystem.exe
+                   _DeploymentBuiltUpdateInterval = 0
+                   _DeploymentBuiltUpdateIntervalUnits = Days
+                   _DeploymentDeployManifestIdentity = ParticleSystem.application
+                   _DeploymentFileMappingExtension = 
+                   _DeploymentPublishableProjectDefault = true
+                   _DeploymentTargetApplicationManifestFileName = ParticleSystem.exe.manifest
+                   _DeploymentUrl = 
+                   _Dev11Installed = 
+                   _Dev11WDExpressInstalled = 
+                   _Dev11Win8ExpressInstalled = 
+                   _DocumentationFileProduced = false
+                   _FullFrameworkReferenceAssemblyPaths = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+                   _GenerateBindingRedirectsIntermediateAppConfig = x64\Debug\ParticleSystem.vcxproj.ParticleSystem.exe.config
+                   _GetChildProjectCopyToOutputDirectoryItems = true
+                   _IgnoreInstalledPlatformToolset_v110 = true
+                   _IgnoreInstalledPlatformToolset_v110_xp = true
+                   _ManifestDependsOn = 
+                         ;
+                         
+                         ;
+                         ComputeManifestInputsTargets;
+                       ;
+                         Manifest;
+                         ComputeManifestGeneratedLinkerInputs;
+                         LinkEmbedManifest;
+                       
+                   _OriginalConfiguration = Debug
+                   _OriginalPlatform = x64
+                   _PlatformDefaultPropsPath = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\\Platforms\x64\\Platform.default.props
+                   _PlatformFolder = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\
+                   _PlatformToolsetFriendlyNameFor_v100 = Visual Studio 2010 (v100)
+                   _PlatformToolsetFriendlyNameFor_v110 = Visual Studio 2012 (v110)
+                   _PlatformToolsetFriendlyNameFor_v110_wp80 = Windows Phone 8.0 (v110_wp80)
+                   _PlatformToolsetFriendlyNameFor_v110_xp = Visual Studio 2012 - Windows XP (v110_xp)
+                   _PlatformToolsetFriendlyNameFor_v120 = Visual Studio 2013 (v120)
+                   _PlatformToolsetFriendlyNameFor_v120_wp81 = Windows Phone 8.1 (v120_wp81)
+                   _PlatformToolsetFriendlyNameFor_v120_xp = Visual Studio 2013 - Windows XP (v120_xp)
+                   _PlatformToolsetFriendlyNameFor_v90 = Visual Studio 2008 (v90)
+                   _PlatformToolsetShortNameFor_v100 = Visual Studio 2010
+                   _PlatformToolsetShortNameFor_v110 = Visual Studio 2012
+                   _PlatformToolsetShortNameFor_v110_wp80 = Windows Phone 8.0
+                   _PlatformToolsetShortNameFor_v110_xp = Visual Studio 2012 - Windows XP
+                   _PlatformToolsetShortNameFor_v120_wp81 = Windows Phone 8.1
+                   _PlatformToolsetShortNameFor_v90 = Visual Studio 2008
+                   _ProjectDefaultTargets = Build
+                   _PropertySheetDisplayName = Application
+                   _RequireMCPass2ForMainAssembly = false
+                   _RequireMCPass2ForSatelliteAssemblyOnly = false
+                   _ResolveReferenceDependencies = false
+                   _ResourceCompileDependsOn = 
+                         
+                         ;
+                         BeforeResourceCompile;
+                       ;
+                         ;
+                         MakeDirsForResourceCompile;
+                         ResourceCompile;
+                         
+                         ;
+                         AfterResourceCompile;
+                       
+                       
+                   _ResourceNameInMainAssembly = ParticleSystem.g.resources
+                   _SGenDllCreated = false
+                   _SGenDllName = ParticleSystem.XmlSerializers.dll
+                   _SGenGenerateSerializationAssembliesConfig = Off
+                   _TargetFrameworkDirectories = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+                   _ToolsetPropsPath = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\PlatformToolsets\v120\Toolset.props
+                   _ToolsetTargetsPath = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\PlatformToolsets\v120\Toolset.targets
+                   _UpgradePlatformToolsetFor_v100 = v120
+                   _UpgradePlatformToolsetFor_v110 = v120
+                   _UpgradePlatformToolsetFor_v110_xp = v120_xp
+                   _UpgradePlatformToolsetFor_v120 = v120
+                   _UpgradePlatformToolsetFor_v90 = v120
+                   _VC_x64_ToolsInstalled = true
+                   AddAdditionalExplicitAssemblyReferences = true
+                   AddAppConfigToBuildOutputs = true
+                   AddBuildInfoToAssembly = false
+                   AddCudaCompileDepsDependsOn = 
+                               SetBuildDefaultEnvironmentVariables;
+                               SetUserMacroEnvironmentVariables;
+                               PrepareForBuild;
+                               AddCudaCompileMetadata;
+                           
+                   AddCudaCompilePropsDepsDependsOn = 
+                               SetBuildDefaultEnvironmentVariables;
+                               SetUserMacroEnvironmentVariables;
+                               PrepareForBuild;
+                               AddCudaCompileMetadata;
+                           
+                   AdditionalExplicitAssemblyReferences = System.Core;
+                   AfterBuildCompileTargets = 
+                         ;
+                         AfterBuildCompileEvent;
+                       
+                   AfterBuildGenerateSourcesTargets = 
+                         
+                         ;
+                         AfterBuildGenerateSources;
+                       ;
+                         AfterBuildGenerateSourcesEvent;
+                       
+                   AfterBuildLinkTargets = 
+                         ;RunMergeNativeCodeAnalysis;RunNativeCodeAnalysis;
+                         CreateSatelliteAssemblies;
+                         _Appverifier;
+                         _Deploy;
+                         PrepareForRun;
+                         PostBuildEvent;
+                       
+                   AfterClCompileTargets = 
+                         ;
+                         AfterClCompile;
+                       
+                   AfterImpLibTargets = 
+                         ;
+                         AfterImpLib;
+                       
+                   AfterLibTargets = 
+                         ;
+                         AfterLib;
+                       
+                   AfterLinkTargets = 
+                         ;
+                         AfterLink;
+                       
+                   AfterManifestTargets = 
+                         ;
+                         AfterManifest;
+                       
+                   AfterMidlTargets = 
+                         ;
+                         AfterMidl;
+                       
+                   AfterResourceCompileTargets = 
+                         ;
+                         AfterResourceCompile;
+                       
+                   AllowedReferenceAssemblyFileExtensions = 
+                         .winmd;
+                         .dll;
+                         .exe
+                       
+                   AllowedReferenceRelatedFileExtensions = 
+                         .pdb;
+                         .xml;
+                         .pri
+                       
+                   AllowLocalNetworkLoopback = true
+                   AllProjectOutputGroupsDependsOn = 
+                         ;
+                         BuiltProjectOutputGroup;
+                         DebugSymbolsProjectOutputGroup;
+                         DocumentationProjectOutputGroup;
+                         SatelliteDllsProjectOutputGroup;
+                         SourceFilesProjectOutputGroup;
+                         ContentFilesProjectOutputGroup;
+                         SGenFilesOutputGroup
+                       
+                   ALLUSERSPROFILE = C:\ProgramData
+                   AlwaysCompileMarkupFilesInSeparateDomain = true
+                   APPDATA = C:\Users\Nathan\AppData\Roaming
+                   AssemblyFoldersSuffix = AssemblyFoldersEx
+                   AssemblyName = ParticleSystem
+                   AssemblySearchPaths = 
+                         {CandidateAssemblyFiles};
+                         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;;
+                         {HintPathFromItem};
+                         {TargetFrameworkDirectory};
+                         {Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx};
+                         {AssemblyFolders};
+                         {GAC};
+                         {RawFileName};
+                         C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\
+                       
+                   AssignTargetPathsDependsOn = 
+                   Attach = false
+                   AutoUnifyAssemblyReferences = false
+                   AvailablePlatforms = Any CPU,x86,x64
+                   BaseIntermediateOutputPath = obj\
+                   BeforeBuildCompileTargets = 
+                         ;
+                       
+                   BeforeBuildGenerateSourcesTargets = 
+                         
+                         ;
+                         BeforeBuildGenerateSources;
+                       ;
+                       
+                   BeforeClCompileTargets = 
+                         ;
+                         BeforeClCompile;
+                       
+                   BeforeImpLibTargets = 
+                         ;
+                         BeforeImpLib;
+                       
+                   BeforeLibTargets = 
+                         ;
+                         BeforeLib;
+                       
+                   BeforeLinkTargets = 
+                         ;
+                         BeforeLink;
+                       
+                   BeforeManifestTargets = 
+                         ;
+                         BeforeManifest;
+                       
+                   BeforeMidlTargets = 
+                         ;
+                         BeforeMidl;
+                       
+                   BeforeResourceCompileTargets = 
+                         ;
+                         BeforeResourceCompile;
+                       
+                   BuildCompileAction = _BuildCompileAction
+                   BuildCompileTargets = 
+                         ;
+                         _ClCompile;
+                         _ResGen;
+                         _ResourceCompile;
+                         
+                         ;
+                         _ImpLib;
+                         _Lib;
+                       ;
+                       
+                   BuildDependsOn = 
+                         _PrepareForBuild;
+                         
+                         ResolveReferences;
+                         PrepareForBuild;
+                         InitializeBuildStatus;
+                         BuildGenerateSources;
+                         BuildCompile;
+                         BuildLink;
+                       ;
+                         AfterBuild;
+                         FinalizeBuildStatus;
+                       
+                   BuildGenerateSourcesAction = _BuildGenerateSourcesAction
+                   BuildGenerateSourcesTargets = 
+                         ;
+                         PreBuildEvent;
+                         _Xsd;
+                         _Midl;
+                       
+                   BuildInfoBinPath = C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\BuildInfo
+                   BuildInfoTargets = C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\BuildInfo\Microsoft.VisualStudio.ReleaseManagement.BuildInfo.targets
+                   BuildingInsideVisualStudio = true
+                   BuildingProject = true
+                   BuildInParallel = true
+                   BuildLibTargets = 
+                         ;
+                         _ImpLib;
+                         _Lib;
+                       
+                   BuildLinkAction = _BuildLinkAction
+                   BuildLinkTargets = 
+                         ;
+                         ComputeLegacyManifestEmbedding;
+                         _Link;
+                         _ALink;
+                         _Manifest;
+                         RegisterOutput;
+                         _XdcMake;
+                         _BscMake;
+                       
+                   BuildProjectReferences = true
+                   BuildSteps = 
+                         ResolveReferences;
+                         PrepareForBuild;
+                         InitializeBuildStatus;
+                         BuildGenerateSources;
+                         BuildCompile;
+                         BuildLink;
+                       
+                   BuildSystem = MSBuild
+                   BuildTaskAssembly = PresentationBuildTasks, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+                   BuiltProjectOutputGroupDependsOn = PrepareForBuild
+                   CAExcludePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
+                   CharacterSet = MultiByte
+                   CleanDependsOn = 
+                         
+                         _PrepareForClean;
+                         
+                         
+                         BeforeClean;
+                         UnmanagedUnregistration;
+                         CoreClean;
+                         CleanReferencedProjects;
+                         CleanPublishFolder;
+                         AfterClean
+                       ;
+                         EntityClean;
+                       ;
+                       ;
+                         CppClean
+                       
+                   CleanFile = ParticleSystem.vcxproj.FileListAbsolute.txt
+                   CLRSupport = false
+                   ClYieldDuringToolExecution = true
+                   CodeAnalysisApplyLogFileXsl = false
+                   CodeAnalysisFailOnMissingRules = false
+                   CodeAnalysisForceOutput = true
+                   CodeAnalysisGenerateSuccessFile = true
+                   CodeAnalysisIgnoreGeneratedCode = true
+                   CodeAnalysisIgnoreInvalidTargets = true
+                   CodeAnalysisIgnoreMissingIndirectReferences = false
+                   CodeAnalysisInputAssembly = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe
+                   CodeAnalysisLogFile = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe.CodeAnalysisLog.xml
+                   CodeAnalysisModuleSuppressionsFile = GlobalSuppressions.cpp
+                   CodeAnalysisOutputToConsole = false
+                   CodeAnalysisOverrideRuleVisibilities = false
+                   CodeAnalysisPath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop\
+                   CodeAnalysisQuiet = false
+                   CodeAnalysisRuleDirectories = ;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop\\Rules
+                   CodeAnalysisRuleSet = NativeRecommendedRules.ruleset
+                   CodeAnalysisRuleSetDirectories = ;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\\Rule Sets
+                   CodeAnalysisSaveMessagesToReport = Active
+                   CodeAnalysisSearchGlobalAssemblyCache = true
+                   CodeAnalysisStaticAnalysisDirectory = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\
+                   CodeAnalysisSucceededFile = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe.lastcodeanalysissucceeded
+                   CodeAnalysisSummary = false
+                   CodeAnalysisTargets = C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\CodeAnalysis\Microsoft.CodeAnalysis.targets
+                   CodeAnalysisTimeout = 120
+                   CodeAnalysisTLogFile = x64\Debug\CodeAnalysis.read.1.tlog
+                   CodeAnalysisTreatWarningsAsErrors = false
+                   CodeAnalysisUpdateProject = false
+                   CodeAnalysisUseTypeNameInSuppression = true
+                   CodeAnalysisVerbose = false
+                   CommonBuildOnlyTargets = 
+                         PrepareForBuild;
+                         ResolveReferences;
+                       
+                   CommonProgramFiles = C:\Program Files (x86)\Common Files
+                   CommonProgramW6432 = C:\Program Files\Common Files
+                   CommonTargetsPath = C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets
+                   CompileDependsOn = 
+                           
+                         ResolveReferences;
+                         ResolveKeySource;
+                         SetWin32ManifestProperties;
+                         _GenerateCompileInputs;
+                         BeforeCompile;
+                         _TimeStampBeforeCompile;
+                         CoreCompile;
+                         _TimeStampAfterCompile;
+                         AfterCompile;
+                       ;
+                           _AfterCompileWinFXInternal
+                       
+                   CompileLicxFilesDependsOn = 
+                   CompileRdlFilesDependsOn = PrepareRdlFiles;RunRdlCompiler
+                   CompileTargetNameForTemporaryAssembly = CompileTemporaryAssembly
+                   ComputeCompileInputsTargets = 
+                         
+                         ;
+                         ComputeMIDLGeneratedCompileInputs;
+                       ;
+                         ComputeCLInputPDBName;
+                         ComputeReferenceCLInput;
+                         WarnCompileDuplicatedFilename
+                       
+                   ComputeImpLibInputsTargets = 
+                           
+                         
+                         
+                         
+                         ;
+                         ComputeRCGeneratedLibInputs;
+                       ;
+                         ComputeRCGeneratedImpLibInputs;
+                       ;
+                         ComputeCustomBuildOutput;
+                       ;
+                         ComputeCLGeneratedImpLibInputs;
+                       ;
+                           ComputeImpLibInputsFromProject;
+                         
+                   ComputeIntermediateSatelliteAssembliesDependsOn = 
+                         CreateManifestResourceNames
+                       
+                   ComputeLibInputsTargets = 
+                               
+                         ComputeLibAdditionalOptions;
+                         
+                         
+                           
+                         
+                         
+                         ;
+                         ComputeRCGeneratedLibInputs;
+                       ;
+                         ComputeCustomBuildOutput;
+                       ;
+                         ComputeCLGeneratedLibInputs;
+                       ;
+                           ComputeLibInputsFromProject;
+                         ;
+                         ComputeReferenceLibInputs;
+                       
+                       ;
+                               ComputeCudaCompileOutput;
+                               ComputeCudaLinkOutput
+                           
+                   ComputeLinkInputsTargets = 
+                               
+                         
+                           
+                         
+                         
+                         
+                         ;
+                         ComputeRCGeneratedLinkInputs;
+                       ;
+                         ComputeManifestGeneratedLinkerInputs;
+                       ;
+                         ComputeCustomBuildOutput;
+                       ;
+                         ComputeCLGeneratedLinkInputs;
+                       ;
+                           ComputeLinkInputsFromProject;
+                         ;
+                         ComputeReferenceLinkInputs;
+                       ;
+                               ComputeCudaCompileOutput
+                           
+                   ComputeManifestInputsTargets = 
+                         ;
+                         ComputeManifestInputsTargets;
+                       
+                   COMPUTERNAME = NATHANCOMPUTER
+                   ComReferenceExecuteAsTool = false
+                   ComReferenceNoClassMembers = false
+                   ComSpec = C:\Windows\system32\cmd.exe
+                   Configuration = Debug
+                   ConfigurationName = Debug
+                   ConfigurationType = Application
+                   ConsiderPlatformAsProcessorArchitecture = true
+                   ContentFilesProjectOutputGroupDependsOn = PrepareForBuild;AssignTargetPaths;PrepareForBuild;AssignTargetPaths;MakeDirsForFxc
+                   ContinueOnError = false
+                   CoreBuildDependsOn = 
+                         BuildOnlySettings;
+                         PrepareForBuild;
+                         PreBuildEvent;
+                         ResolveReferences;
+                         PrepareResources;
+                         ResolveKeySource;
+                         Compile;
+                         ExportWindowsMDFile;
+                         UnmanagedUnregistration;
+                         GenerateSerializationAssemblies;
+                         CreateSatelliteAssemblies;
+                         GenerateManifests;
+                         GetTargetPath;
+                         PrepareForRun;
+                         UnmanagedRegistration;
+                         IncrementalClean;
+                         PostBuildEvent
+                       
+                   CoreCleanDependsOn = 
+                   CoreCompileDependsOn = 
+                           DesignTimeXamlMarkupCompilation;
+                           
+                             DesignTimeMarkupCompilation;
+                             
+                         
+                       
+                   CoreCppCleanDependsOn = 
+                   CoreResGenDependsOn = 
+                   CppCleanDependsOn = 
+                               
+                         BeforeCppClean;
+                         ;
+                         CoreCppClean;
+                         AfterCppClean;
+                       ;PGInstrumentedClean;
+                               CudaClean
+                           
+                   CppCleanLogFile = ParticleSystem.Build.CppClean.log
+                   CreateCustomManifestResourceNamesDependsOn = 
+                   CreateHardLinksForCopyAdditionalFilesIfPossible = false
+                   CreateManifestResourceNamesDependsOn = 
+                   CreateSatelliteAssembliesDependsOn = 
+                         _GenerateSatelliteAssemblyInputs;
+                         ComputeIntermediateSatelliteAssemblies;
+                         GenerateSatelliteAssemblies
+                       
+                   CRTDefinitionalFile = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\VCProjectDefault\Microsoft.AppX.VCFrameworkReferences.xml
+                   CrtSDKReferenceInclude = Microsoft.VCLibs, Version=12.0
+                   CrtSDKReferenceVersion = 12.0
+                   CUDA_PATH = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
+                   CUDA_PATH_V7_0 = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0
+                   CUDA_PATH_V7_5 = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
+                   CudaBuildRulesPath = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.xml
+                   CudaBuildTasksPath = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\Nvda.Build.CudaTasks.v7.5.dll
+                   CudaCleanDependsOn = 
+                               AddCudaCompileMetadata;
+                               ValidateCudaBuild;
+                           
+                   CudaClVersion = 2013
+                   CudaCompileAfterTargets = CustomBuild
+                   CudaCompileBeforeTargets = Midl
+                   CudaCompileDependsOn = 
+                               ;
+                               _SelectedFiles;
+                               CudaFilterSelectedFiles;
+                               AddCudaCompileMetadata;
+                               AddCudaLinkMetadata;
+                               AddCudaCompileDeps;
+                               AddCudaCompilePropsDeps;
+                               ValidateCudaBuild;
+                               ValidateCudaCodeGeneration;
+                               ComputeCudaCompileOutput;
+                               PrepareForCudaBuild
+                           
+                   CudaContinueOnError = false
+                   CudaIntDir = x64\Debug
+                   CudaLinkAfterTargets = ManifestResourceCompile
+                   CudaLinkBeforeTargets = Link;Lib
+                   CudaLinkDependsOn = 
+                               ;
+                               CudaBuild;
+                               ComputeCudaLinkOutput;
+                           
+                   CudaLogStandardErrorAsError = false
+                   CudaPreferredToolArchitecture = x86
+                   CudaToolkitBinDir = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin
+                   CudaToolkitDir = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\
+                   CudaToolkitFullVersion = 7.50.0000.0000
+                   CudaToolkitIncludeDir = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include
+                   CudaToolkitLibDir = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64
+                   CudaToolkitNvccPath = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe
+                   CudaToolkitVersion = v7.5
+                   CurrentSolutionConfigurationContents = <SolutionConfiguration>
+                   <ProjectConfiguration Project="{c246b7b0-4487-4a1d-a92e-cda311d1fbf3}" AbsolutePath="C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj">Debug|x64</ProjectConfiguration>
+                   </SolutionConfiguration>
+                   CustomAfterMicrosoftCommonProps = C:\Program Files (x86)\MSBuild\v12.0\Custom.After.Microsoft.Common.props
+                   CustomAfterMicrosoftCommonTargets = C:\Program Files (x86)\MSBuild\v12.0\Custom.After.Microsoft.Common.targets
+                   CustomBeforeMicrosoftCommonProps = C:\Program Files (x86)\MSBuild\v12.0\Custom.Before.Microsoft.Common.props
+                   CustomBeforeMicrosoftCommonTargets = C:\Program Files (x86)\MSBuild\v12.0\Custom.Before.Microsoft.Common.targets
+                   CustomBuildAfterTargets = BscMake
+                   CustomBuildBeforeTargets = PostBuildEvent
+                   CustomBuildToolAfterTargets = PreBuildEvent
+                   CustomBuildToolBeforeTargets = Midl
+                   DebugCppRuntimeFilesPath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\redist\Debug_NonRedist\x64
+                   DebuggerFlavor = WindowsLocalDebugger
+                   DebuggerLaunchApplication = true
+                   DebuggerRequireAuthentication = true
+                   DebuggerType = NativeOnly
+                   DebugSymbols = true
+                   DebugSymbolsProjectOutputGroupDependsOn = 
+                   DefaultLanguageSourceExtension = .cpp
+                   DefaultPlatformToolset = v120
+                   DefaultToolArchitecture = Native32Bit
+                   DefineExplicitDefaults = true
+                   DelayImplib = Delayimp.lib
+                   DelaySign = 
+                   DeploymentType = Installed
+                   DesignTimeIntermediateOutputPath = x64\Debug\InProcessTempFiles\
+                   DesignTimeResolveAssemblyReferencesDependsOn = 
+                         GetFrameworkPaths;
+                         GetReferenceAssemblyPaths;
+                         ResolveReferences
+                       
+                   DevEnvDir = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\
+                   DocumentationProjectOutputGroupDependsOn = ResolvedXDCMake;ComputeCLCompileGeneratedXDCFiles
+                   DocumentLibraryDependencies = true
+                   EmbeddedWin32Manifest = 
+                   EmbedManifest = true
+                   EmbedManifestBy = LINK
+                   EnableManagedIncrementalBuild = false
+                   EntityDeployDependsOn = 
+                   EntityDeployIntermediateResourcePath = x64\Debug\edmxResourcesToEmbed\
+                   ExcludePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;C:\Program Files (x86)\MSBuild\12.0\bin\;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;
+                   ExecutablePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\bin;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\12.0\bin\;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\libnvvp;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Go\bin;C:\Users\Nathan\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Amazon\AWSCLI\;C:\Program Files (x86)\gnuplot\bin;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\cmd;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin;C:\Users\Nathan\AppData\Local\Apps\2.0\TVTB4P6M.OQO\L6X0NAZ0.MTN\gith..tion_317444273a93ac29_0002.0006_159c473f7cb71f94;C:\Users\Nathan\AppData\Local\GitHub\git-media-amd64_0.2.2;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Python27\;C:\Python27\Scripts\;C:\Program Files (x86)\Nmap;C:\Program Files (x86)\Dr. Memory\bin\;
+                   ExpandSDKAllowedReferenceExtensions = 
+                         .winmd;
+                         .dll
+                       
+                   ExpandSDKReferencesDependsOn = 
+                         ResolveSDKReferences
+                       
+                   ExtensionSDKDirectoryRoot = C:\Program Files (x86)\Microsoft SDKs
+                   ExtensionSDKRegistryFormat = 
+                   ExtensionSDKUserDirectoryRoot = C:\Users\Nathan\AppData\Local\Microsoft SDKs
+                   ExtensionsToDeleteOnClean = *.cdf;*.cache;*.obj;*.ilk;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe.manifest;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.tlb;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.pdb;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.bsc;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.ilk;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe.intermediate.manifest;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe.CodeAnalysisLog.xml;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe.lastcodeanalysissucceeded
+                   FindInvalidProjectReferencesDependsOn = 
+                         GetReferenceTargetPlatformMonikers
+                       
+                   FP_NO_HOST_CHECK = NO
+                   Framework20Dir = @(_TargetFramework20DirectoryItem)
+                   Framework30Dir = @(_TargetFramework30DirectoryItem)
+                   Framework35Dir = @(_TargetFramework35DirectoryItem)
+                   Framework40Dir = @(_TargetFramework40DirectoryItem)
+                   FrameworkDir = C:\Windows\Microsoft.NET\Framework\
+                   FrameworkDir_110 = C:\Windows\Microsoft.NET\Framework\
+                   FrameworkPathOverride = C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0
+                   FrameworkRegistryBase = Software\Microsoft\.NETFramework
+                   FrameworkSdkDir = C:\Program Files (x86)\Windows Kits\8.1\
+                   FrameworkSDKRoot = C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\
+                   FrameworkVersion = v4.5
+                   FullReferenceAssemblyNames = Full
+                   FxCompileAfterTargets = CustomBuild
+                   FxCompileBeforeTargets = Midl
+                   GenerateBindingRedirectsOutputType = true
+                   GenerateBuildInfoConfigFile = false
+                   GenerateClickOnceManifests = 
+                   GeneratedFileExtension = .g.cpp
+                   GenerateManifest = true
+                   GenerateManifestsDependsOn = 
+                         SetWin32ManifestProperties;
+                         GenerateApplicationManifest;
+                         GenerateDeploymentManifest
+                       
+                   GenerateTargetFrameworkAttribute = false
+                   GetCopyToOutputDirectoryItemsDependsOn = 
+                         AssignTargetPaths;
+                         _SplitProjectReferencesByFileExistence
+                       
+                   GetFrameworkPathsDependsOn = 
+                   GetReferenceAssemblyPathsDependsOn = 
+                           ;
+                           GetWinFXPath
+                       
+                   GetTargetPathDependsOn = 
+                   GetTargetPathWithTargetPlatformMonikerDependsOn = ; GetTargetPath
+                   GNUPLOT_LIB = C:\Program Files (x86)\gnuplot\demo;C:\Program Files (x86)\gnuplot\demo\games;C:\Program Files (x86)\gnuplot\share
+                   GNUTERM = windows
+                   GOROOT = C:\Go\
+                   GPURefDebuggerBreakOnAllThreads = GPURefBreakOncePerWarp
+                   HighEntropyVA = false
+                   HOMEDRIVE = C:
+                   HOMEPATH = \Users\Nathan
+                   HostInBrowser = false
+                   IgnoreImportLibrary = false
+                   ImplicitlyExpandDesignTimeFacadesDependsOn = 
+                         ;
+                         GetReferenceAssemblyPaths
+                       
+                   ImportByWildcardAfterMicrosoftCommonTargets = true
+                   ImportByWildcardAfterMicrosoftNetFrameworkProps = true
+                   ImportByWildcardAfterMicrosoftNetFrameworkTargets = true
+                   ImportByWildcardBeforeMicrosoftCommonTargets = true
+                   ImportByWildcardBeforeMicrosoftNetFrameworkProps = true
+                   ImportByWildcardBeforeMicrosoftNetFrameworkTargets = true
+                   ImportUserLocationsByWildcardAfterMicrosoftCommonTargets = true
+                   ImportUserLocationsByWildcardAfterMicrosoftNetFrameworkProps = true
+                   ImportUserLocationsByWildcardAfterMicrosoftNetFrameworkTargets = true
+                   ImportUserLocationsByWildcardBeforeMicrosoftCommonTargets = true
+                   ImportUserLocationsByWildcardBeforeMicrosoftNetFrameworkProps = true
+                   ImportUserLocationsByWildcardBeforeMicrosoftNetFrameworkTargets = true
+                   IncludePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
+                   IncludeServerNameInBuildInfo = false
+                   IncludeVersionInInteropName = true
+                   IntDir = x64\Debug\
+                   IntermediateOutputPath = x64\Debug\
+                   InteropOutputPath = Interop\
+                   IsApplication = true
+                   LangID = 1033
+                   LangName = en-US
+                   Language = C++
+                   LastBuildState = x64\Debug\ParticleSystem.tlog\ParticleSystem.lastbuildstate
+                   LastBuildUnsuccessful = x64\Debug\ParticleSystem.tlog\unsuccessfulbuild
+                   LibraryPath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;;
+                   LibraryWPath = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral;
+                   LinkCompiled = true
+                   LinkIncremental = true
+                   LoadTimeSensitiveProperties = 
+                         ;
+                       
+                   LoadTimeSensitiveTargets = 
+                         ;
+                         XamlMarkupCompilePass1;
+                       
+                   LOCALAPPDATA = C:\Users\Nathan\AppData\Local
+                   LocalDebuggerAttach = False
+                   LocalDebuggerCommand = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe
+                   LocalDebuggerDebuggerType = Auto
+                   LocalDebuggerMergeEnvironment = true
+                   LocalDebuggerSQLDebugging = False
+                   LocalDebuggerWorkingDirectory = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\
+                   LocalGPUDebuggerTargetType = {F4453496-1DB8-47F8-A7D5-31EBDDC2EC96}
+                   LocalizationDirectivesToLocFile = None
+                   LOGONSERVER = \\NATHANCOMPUTER
+                   ManagedAssembly = false
+                   ManagedIncrementalBuildProcessDependencyGraphAfterTarget = 
+                         ClCompile
+                       
+                   ManagedIncrementalBuildProcessDependencyGraphBeforeTarget = 
+                         ClCompile
+                       
+                   MarkupCompilePass2ForMainAssemblyDependsOn = 
+                                        GenerateTemporaryTargetAssembly;
+                                        MarkupCompilePass2;
+                                        AfterMarkupCompilePass2;
+                                        CleanupTemporaryTargetAssembly
+                          
+                   MaxTargetPath = 100
+                   MergedOutputCodeAnalysisFile = x64\Debug\vc.nativecodeanalysis.all.xml
+                   MetagenInputTarget = Link
+                   MetaGenTargets = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\\Microsoft.MetaGen.targets
+                   MicrosoftCommonPropsHasBeenImported = true
+                   MidlYieldDuringToolExecution = true
+                   MpiDebuggerCleanupDeployment = True
+                   MpiDebuggerDebuggerType = Auto
+                   MpiDebuggerDeployCommonRuntime = True
+                   MpiDebuggerNetworkSecurityMode = AnyAddress
+                   MpiDebuggerSchedulerNode = localhost/1
+                   MpiDebuggerSchedulerTimeout = 5000
+                   MsAppxPackageTargets = C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\AppxPackage\Microsoft.AppXPackage.Targets
+                   MSBuild_ExecutablePath = C:\Program Files (x86)\MSBuild\12.0\bin\;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+                   MSBuildAllProjects = ;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj;C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.targets;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj.user;C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.props;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj;C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj.user;C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets;C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Xaml.targets
+                   MSBuildAssemblyVersion = 12.0
+                   MSBuildBinPath = C:\Program Files (x86)\MSBuild\12.0\bin
+                   MSBuildExtensionsPath = C:\Program Files (x86)\MSBuild
+                   MSBuildExtensionsPath32 = C:\Program Files (x86)\MSBuild
+                   MSBuildExtensionsPath64 = C:\Program Files\MSBuild
+                   MSBuildFrameworkToolsPath = C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+                   MSBuildFrameworkToolsPath32 = C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+                   MSBuildFrameworkToolsRoot = C:\Windows\Microsoft.NET\Framework\
+                   MSBuildLoadMicrosoftTargetsReadOnly = true
+                   MSBuildNodeCount = 4
+                   MSBuildProgramFiles32 = C:\Program Files (x86)
+                   MSBuildProjectDefaultTargets = Build
+                   MSBuildProjectDirectory = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem
+                   MSBuildProjectDirectoryNoRoot = Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem
+                   MSBuildProjectExtension = .vcxproj
+                   MSBuildProjectFile = ParticleSystem.vcxproj
+                   MSBuildProjectFullPath = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj
+                   MSBuildProjectName = ParticleSystem
+                   MSBuildRuntimeVersion = 4.0.30319
+                   MSBuildStartupDirectory = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem
+                   MSBuildToolsPath = C:\Program Files (x86)\MSBuild\12.0\bin
+                   MSBuildToolsPath32 = C:\Program Files (x86)\MSBuild\12.0\bin\
+                   MSBuildToolsRoot = C:\Program Files (x86)\MSBuild\
+                   MSBuildToolsVersion = 12.0
+                   MSBuildUserExtensionsPath = C:\Users\Nathan\AppData\Local\Microsoft\MSBuild
+                   MsTestToolsTargets = C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\TeamTest\Microsoft.TeamTest.targets
+                   NativeCodeAnalysisTLogFile = x64\Debug\NativeCodeAnalysis.read.1.tlog
+                   NetFrameworkPropsPath = C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.props
+                   NetFrameworkTargetsPath = C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets
+                   NUMBER_OF_PROCESSORS = 4
+                   NVCUDASAMPLES_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.5
+                   NVCUDASAMPLES7_0_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.0
+                   NVCUDASAMPLES7_5_ROOT = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v7.5
+                   NVTOOLSEXT_PATH = C:\Program Files\NVIDIA Corporation\NvToolsExt\
+                   OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration = true
+                   OS = Windows_NT
+                   OSVersion = 5.1.2600.0
+                   OutDir = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\
+                   OutDirWasSpecified = false
+                   OutputPath = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\
+                   OutputType = exe
+                   OverwriteReadOnlyFiles = false
+                   Path = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\libnvvp;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Go\bin;C:\Users\Nathan\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Amazon\AWSCLI\;C:\Program Files (x86)\gnuplot\bin;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\cmd;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin;C:\Users\Nathan\AppData\Local\Apps\2.0\TVTB4P6M.OQO\L6X0NAZ0.MTN\gith..tion_317444273a93ac29_0002.0006_159c473f7cb71f94;C:\Users\Nathan\AppData\Local\GitHub\git-media-amd64_0.2.2;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Python27\;C:\Python27\Scripts\;C:\Program Files (x86)\Nmap;C:\Program Files (x86)\Dr. Memory\bin\
+                   PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+                   PkgDefApplicationConfigFile = C:\Users\Nathan\AppData\Local\Microsoft\VisualStudio\12.0\devenv.exe.config
+                   Platform = x64
+                   Platform_Actual = x64
+                   PlatformArchitecture = 64
+                   PlatformName = x64
+                   PlatformPropsFound = true
+                   PlatformShortName = x64
+                   PlatformTarget = x64
+                   PlatformTargetAsMSBuildArchitecture = x64
+                   PlatformTargetAsMSBuildArchitectureExplicitlySet = false
+                   PlatformTargetsFound = true
+                   PlatformToolset = v120
+                   PlatformToolsetVersion = 120
+                   PostBuildEventDependsOn = 
+                   PostBuildEventUseInBuild = true
+                   PreBuildEventDependsOn = 
+                   PreBuildEventUseInBuild = true
+                   Prefer32Bit = false
+                   PreferredToolArchitecture = x86
+                   PreLinkEventUseInBuild = true
+                   PrepareForBuildDependsOn = PlatformPrepareForBuild;GetFrameworkPaths;GetReferenceAssemblyPaths;AssignLinkMetadata;SetCABuildNativeEnvironmentVariables
+                   PrepareForRunDependsOn = 
+                         CopyFilesToOutputDirectory
+                       
+                   PrepareResourceNamesDependsOn = 
+                                       AssignWinFXEmbeddedResource;
+                                       
+                         AssignTargetPaths;
+                         SplitResourcesByCulture;
+                         CreateManifestResourceNames;
+                         CreateCustomManifestResourceNames
+                       
+                         
+                   PrepareResourcesDependsOn = 
+                         XamlMarkupCompilePass1;
+                         XamlMarkupCompilePass2;
+                         
+                                   MarkupCompilePass1;
+                                   AfterMarkupCompilePass1;
+                                   MarkupCompilePass2ForMainAssembly;
+                                   FileClassification;
+                                   MainResourcesGeneration;
+                                   
+                         PrepareResourceNames;
+                         ResGen;
+                         CompileLicxFiles
+                       ;CompileRdlFiles
+                          
+                       
+                   PROCESSOR_ARCHITECTURE = x86
+                   PROCESSOR_ARCHITEW6432 = AMD64
+                   PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+                   PROCESSOR_LEVEL = 6
+                   PROCESSOR_REVISION = 3c03
+                   ProcessorArchitecture = amd64
+                   ProgramData = C:\ProgramData
+                   ProgramFiles = C:\Program Files (x86)
+                   ProgramW6432 = C:\Program Files
+                   ProjectDesignTimeAssemblyResolutionSearchPaths = 
+                         {CandidateAssemblyFiles};
+                         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;;
+                         {HintPathFromItem};
+                         {TargetFrameworkDirectory};
+                         {Registry:Software\Microsoft\.NETFramework,v4.0,AssemblyFoldersEx};
+                         {RawFileName};
+                         C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\
+                       
+                   ProjectDir = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\
+                   ProjectEvaluationFingerprint = Debug|x64|C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\|
+                   ProjectExt = .vcxproj
+                   ProjectFileName = ParticleSystem.vcxproj
+                   ProjectFlavor = Client
+                   ProjectGuid = {C246B7B0-4487-4A1D-A92E-CDA311D1FBF3}
+                   ProjectName = ParticleSystem
+                   ProjectPath = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj
+                   PSModulePath = C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+                   PUBLIC = C:\Users\Public
+                   PublishableProject = true
+                   PublishBuildDependsOn = 
+                               BuildOnlySettings;
+                               PrepareForBuild;
+                               ResolveReferences;
+                               PrepareResources;
+                               ResolveKeySource;
+                               PrepareResourcesForSatelliteAssemblies;
+                               GenerateSerializationAssemblies;
+                               CreateSatelliteAssemblies;
+                           
+                   PublishDependsOn = 
+                         SetGenerateManifests;
+                         Build;
+                         PublishOnly
+                       
+                   PublishDir = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\app.publish\
+                   PublishOnlyDependsOn = 
+                         SetGenerateManifests;
+                         PublishBuild;
+                         BeforePublish;
+                         GenerateManifests;
+                         CopyFilesToOutputDirectory;
+                         _CopyFilesToPublishFolder;
+                         _DeploymentGenerateBootstrapper;
+                         ResolveKeySource;
+                         _DeploymentSignClickOnceDeployment;
+                         AfterPublish
+                       
+                   PublishPipelineCollectFilesCore = 
+                               ;
+                               CollectFilesFromBuildInfoConfigFile;
+                           
+                   RebuildDependsOn = 
+                         _PrepareForRebuild;
+                         
+                         BeforeRebuild;
+                         Clean;
+                         Build;
+                         AfterRebuild;
+                       ;
+                       
+                   ReferencePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;
+                   RemoteDebuggerAttach = False
+                   RemoteDebuggerConnection = RemoteWithAuthentication
+                   RemoteDebuggerDebuggerType = Auto
+                   RemoteDebuggerDeployDebugCppRuntime = true
+                   RemoteDebuggerServerName = NATHANCOMPUTER
+                   RemoteDebuggerSQLDebugging = False
+                   RemoteDebuggerWorkingDirectory = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\
+                   RemoteGPUDebuggerTargetType = {F4453496-1DB8-47F8-A7D5-31EBDDC2EC96}
+                   ReportingServicesTargets = C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\ReportingServices\Microsoft.ReportingServices.targets
+                   ResGenDependsOn = ResolveAssemblyReferences;SplitResourcesByCulture;BeforeResGen;CoreResGen;AfterResGen
+                   ResGenExecuteAsTool = false
+                   ResolveAssemblyReferencesDependsOn = _PrepareForReferenceResolution;
+                         GetFrameworkPaths;
+                         GetReferenceAssemblyPaths;
+                         PrepareForBuild;
+                         ResolveSDKReferences;
+                         ExpandSDKReferences;
+                       
+                   ResolveReferencesDependsOn = _PrepareForReferenceResolution;ComputeCrtSDKReference;
+                         
+                         
+                         BeforeResolveReferences;
+                         AssignProjectConfiguration;
+                         ResolveProjectReferences;
+                         FindInvalidProjectReferences;
+                         ResolveNativeReferences;
+                         ResolveAssemblyReferences;
+                         GenerateBindingRedirects;
+                         ResolveComReferences;
+                         AfterResolveReferences
+                       ;
+                         ImplicitlyExpandDesignTimeFacades
+                       ;
+                         ResolveTestReferences
+                       
+                   ResolveSDKReferencesDependsOn = _PrepareForReferenceResolution;ComputeCrtSDKReference;
+                         GetInstalledSDKLocations
+                       
+                   RootNamespace = ParticleSystem
+                   RunAfterInstall = true
+                   RunCodeAnalysisDependsOn = ;ClCompile;RunMergeNativeCodeAnalysis
+                   RunCodeAnalysisInputs = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe
+                   RunDependsOn = 
+                   RunMergeNativeCodeAnalysisDependsOn = ClCompile
+                   RunNativeCodeAnalysisInputs = 
+                   SatelliteDllsProjectOutputGroupDependsOn = PrepareForBuild;PrepareResourceNames
+                   SDK35ToolsPath = C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\
+                   SDK40ToolsPath = C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\
+                   SDKRedistOutputGroupDependsOn = ResolveSDKReferences;ExpandSDKReferences
+                   SDKReferenceDirectoryRoot = C:\Users\Nathan\AppData\Local\Microsoft SDKs;C:\Program Files (x86)\Microsoft SDKs
+                   SDKReferenceRegistryRoot = Software\Microsoft\Microsoft SDKs
+                   SGenFilesOutputGroupDependsOn = 
+                   SGenShouldGenerateSerializer = true
+                   SGenUseKeep = false
+                   SGenUseProxyTypes = true
+                   ShouldMarkCertainSDKReferencesAsRuntimeOnly = true
+                   SkipCopyBuildProduct = true
+                   SkipCopyUnchangedFiles = true
+                   SolutionDir = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\
+                   SolutionExt = .sln
+                   SolutionFileName = ParticleSystem.sln
+                   SolutionName = ParticleSystem
+                   SolutionPath = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem.sln
+                   SourceFilesProjectOutputGroupDependsOn = PrepareForBuild;AssignTargetPaths
+                   SourcePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\src\mfc;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\src\mfcm;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\src\atl;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\crt\src;
+                   SQLDebugging = false
+                   SystemDrive = C:
+                   SystemRoot = C:\Windows
+                   TargetCulture = *
+                   TargetDeployManifestFileName = ParticleSystem.application
+                   TargetDir = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\
+                   TargetedFrameworkDir = @(_TargetedFrameworkDirectoryItem)
+                   TargetedRuntimeVersion = v4.0.30319
+                   TargetedSDKArchitecture = amd64
+                   TargetedSDKConfiguration = Debug
+                   TargetExt = .exe
+                   TargetFileName = ParticleSystem.exe
+                   TargetFrameworkAsMSBuildRuntime = CLR4
+                   TargetFrameworkIdentifier = .NETFramework
+                   TargetFrameworkMoniker = .NETFramework,Version=v4.0
+                   TargetFrameworkMonikerAssemblyAttributesPath = C:\Users\Nathan\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp
+                   TargetFrameworkMonikerDisplayName = .NET Framework 4
+                   TargetFrameworkSDKToolsDirectory = C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\
+                   TargetFrameworkVersion = v4.0
+                   TargetName = ParticleSystem
+                   TargetPath = C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe
+                   TargetPlatformDisplayName = Windows 7.0
+                   TargetPlatformIdentifier = Windows
+                   TargetPlatformMoniker = Windows,Version=7.0
+                   TargetPlatformRegistryBase = Software\Microsoft\Microsoft SDKs\Windows
+                   TargetPlatformSdkPath = 
+                   TargetPlatformVersion = 7.0
+                   TargetPlatformVersionOptions = 7.0;8.0
+                   TargetPlatformWinMDLocation = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
+                   TargetRuntime = Managed
+                   TaskKeyToken = 31bf3856ad364e35
+                   TaskVersion = 4.0.0.0
+                   TEMP = C:\Users\Nathan\AppData\Local\Temp
+                   TLogLocation = x64\Debug\ParticleSystem.tlog\
+                   TMP = C:\Users\Nathan\AppData\Local\Temp
+                   ToolsetPropsFound = true
+                   ToolsetTargetsFound = true
+                   TrackFileAccess = true
+                   UnmanagedRegistrationDependsOn = 
+                   UnmanagedUnregistrationDependsOn = 
+                   UpgradeSubsetToProfile = true
+                   UseCommonOutputDirectory = false
+                   UseDebugLibraries = true
+                   UseLegacyManagedDebugger = true
+                   UseOfATL = false
+                   UseOfMFC = false
+                   USERDOMAIN = NathanComputer
+                   USERNAME = Nathan
+                   USERPROFILE = C:\Users\Nathan
+                   UserRootDir = C:\Users\Nathan\AppData\Local\Microsoft\MSBuild\v4.0
+                   UseSourcePath = true
+                   VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+                   VC_ExecutablePath_ARM = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_arm;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
+                   VC_ExecutablePath_x64 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
+                   VC_ExecutablePath_x64_ARM = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64_arm
+                   VC_ExecutablePath_x64_x64 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64
+                   VC_ExecutablePath_x64_x86 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64_x86
+                   VC_ExecutablePath_x86 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
+                   VC_ExecutablePath_x86_ARM = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_arm
+                   VC_ExecutablePath_x86_x64 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64
+                   VC_ExecutablePath_x86_x86 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
+                   VC_IncludePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include
+                   VC_LibraryPath_ARM = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\ARM;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\ARM
+                   VC_LibraryPath_x64 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64
+                   VC_LibraryPath_x86 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib
+                   VC_ReferencesPath_ARM = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\ARM;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\ARM
+                   VC_ReferencesPath_x64 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64
+                   VC_ReferencesPath_x86 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib
+                   VC_SourcePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\src\mfc;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\src\mfcm;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\src\atl;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\crt\src
+                   VCInstallDir = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\
+                   VCInstallDir_120 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\
+                   VCTargetsPath = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\
+                   VCTargetsPath10 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\
+                   VCTargetsPath11 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\
+                   VCTargetsPath12 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\
+                   VCTargetsPathEffective = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\
+                   VCToolArchitecture = Native32Bit
+                   Version = 1.0.0.0
+                   VisualStudioDir = C:\Users\Nathan\Documents\Visual Studio 2013
+                   VisualStudioEdition = Microsoft Visual Studio Community 2013
+                   VisualStudioVersion = 12.0
+                   VS_ExecutablePath = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\bin;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;
+                   VS110COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\
+                   VS120COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\
+                   VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
+                   VSIDEResolvedNonMSBuildProjectOutputs = <VSIDEResolvedNonMSBuildProjectOutputs />
+                   VSInstallDir = C:\Program Files (x86)\Microsoft Visual Studio 12.0\
+                   VSInstallDir_120 = C:\Program Files (x86)\Microsoft Visual Studio 12.0\
+                   VSLANG = 1033
+                   VSVersion = $(VisualStudoVersion)
+                   WebBrowserDebuggerDebuggerType = Auto
+                   WebReference_EnableLegacyEventingModel = false
+                   WebReference_EnableProperties = true
+                   WebReference_EnableSQLTypes = true
+                   WebServiceDebuggerDebuggerType = Auto
+                   WebServiceDebuggerSQLDebugging = False
+                   WholeProgramOptimization = false
+                   WholeProgramOptimizationAvailabilityInstrument = true
+                   WholeProgramOptimizationAvailabilityOptimize = true
+                   WholeProgramOptimizationAvailabilityTrue = true
+                   WholeProgramOptimizationAvailabilityUpdate = true
+                   windir = C:\Windows
+                   windows_tracing_flags = 3
+                   windows_tracing_logfile = C:\BVTBin\Tests\installpackage\csilogfile.log
+                   WindowsAppContainer = false
+                   WindowsSDK_ExecutablePath = C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools
+                   WindowsSDK_ExecutablePath_arm = C:\Program Files (x86)\Windows Kits\8.1\bin\arm;
+                   WindowsSDK_ExecutablePath_x64 = C:\Program Files (x86)\Windows Kits\8.1\bin\x64;;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64
+                   WindowsSDK_ExecutablePath_x86 = C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools
+                   WindowsSDK_IncludePath = C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;
+                   WindowsSDK_LibraryPath_arm = C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\arm;
+                   WindowsSDK_LibraryPath_x64 = C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;
+                   WindowsSDK_LibraryPath_x86 = C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86;
+                   WindowsSDK_MetadataPath = C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral
+                   WindowsSDK80Path = C:\Program Files (x86)\Windows Kits\8.1\
+                   WindowsSdkDir = C:\Program Files (x86)\Windows Kits\8.1\
+                   WindowsSdkDir_80 = C:\Program Files (x86)\Windows Kits\8.0\
+                   WindowsSdkDir_81 = C:\Program Files (x86)\Windows Kits\8.1\
+                   WindowsSdkDir_81A = C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\
+                   WindowsSDKToolArchitecture = Native32Bit
+                   WinMDAssembly = false
+                   WMSJSProject = WJProject
+                   WMSJSProjectDirectory = JavaScript
+                   XamlBuildTaskAssemblyName = XamlBuildTask, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+                   XamlBuildTaskLocation = C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+                   XamlBuildTaskPath = C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+                   XamlDebuggingInformation = true
+                   XamlGenCodeFileNames = ParticleSystem.vcxproj.XamlGeneratedCodeFileListAbsolute.txt
+                   XamlGenMarkupFileNames = ParticleSystem.vcxproj.XamlGeneratedXamlFileListAbsolute.txt
+                   XamlPass2FlagFile = ParticleSystem.vcxproj.XamlPass2Flag.txt
+                   XamlRequiresCompilationPass2 = false
+                   XamlTemporaryAssemblyName = ParticleSystem
+                   YieldDuringToolExecution = true
+
+18:41:26.543     1>Building with tools version "12.0".
+                   Project file contains ToolsVersion="4.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+18:41:26.544     1>Target "_CheckForInvalidConfigurationAndPlatform: (TargetId:2)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (entry point):
+                   Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+                   Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+                   Using "Message" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "Message" (TaskId:2)
+                     Task Parameter:Text=Configuration=Debug (TaskId:2)
+                     Task Parameter:Importance=Low (TaskId:2)
+                     Configuration=Debug (TaskId:2)
+                   Done executing task "Message". (TaskId:2)
+                   Task "Message" (TaskId:3)
+                     Task Parameter:Text=Platform=x64 (TaskId:3)
+                     Task Parameter:Importance=Low (TaskId:3)
+                     Platform=x64 (TaskId:3)
+                   Done executing task "Message". (TaskId:3)
+                   Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\' != '' and !HasTrailingSlash('C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\')).
+                   Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+                   Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('x64\Debug\' != '' and !HasTrailingSlash('x64\Debug\')).
+18:41:26.545     1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "ParticleSystem.vcxproj".: (TargetId:2)
+18:41:26.545     1>Target "_PrepareForBuild: (TargetId:3)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.BuildSteps.Targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "Build" depends on it):
+                   Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
+18:41:26.545     1>Done building target "_PrepareForBuild" in project "ParticleSystem.vcxproj".: (TargetId:3)
+18:41:26.545     1>Target "_PrepareForReferenceResolution: (TargetId:4)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveReferences" depends on it):
+                   Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+18:41:26.545     1>Done building target "_PrepareForReferenceResolution" in project "ParticleSystem.vcxproj".: (TargetId:4)
+                   Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('ParticleRenderer.cpp;ParticleSystem.cpp'!='' and 'false'=='true' and '' != 'false').
+18:41:26.545     1>Target "BeforeResolveReferences: (TargetId:5)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveReferences" depends on it):
+18:41:26.545     1>Done building target "BeforeResolveReferences" in project "ParticleSystem.vcxproj".: (TargetId:5)
+18:41:26.545     1>Target "AssignProjectConfiguration: (TargetId:6)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveReferences" depends on it):
+                   Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "AssignProjectConfiguration" (TaskId:4)
+                     Task Parameter:CurrentProject=C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj (TaskId:4)
+                     Task Parameter:CurrentProjectConfiguration=Debug (TaskId:4)
+                     Task Parameter:CurrentProjectPlatform=x64 (TaskId:4)
+                     Task Parameter:OutputType=exe (TaskId:4)
+                     Task Parameter:ResolveConfigurationPlatformUsingMappings=False (TaskId:4)
+                     Task Parameter:SolutionConfigurationContents=<SolutionConfiguration>
+                     <ProjectConfiguration Project="{c246b7b0-4487-4a1d-a92e-cda311d1fbf3}" AbsolutePath="C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj">Debug|x64</ProjectConfiguration>
+                     </SolutionConfiguration> (TaskId:4)
+                     Task Parameter:OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration=True (TaskId:4)
+                     Task Parameter:ShouldUnsetParentConfigurationAndPlatform=True (TaskId:4)
+                   Done executing task "AssignProjectConfiguration". (TaskId:4)
+18:41:26.546     1>Done building target "AssignProjectConfiguration" in project "ParticleSystem.vcxproj".: (TargetId:6)
+                   Target "AssignProjectConfiguration" skipped. Previously built successfully.
+18:41:26.546     1>Target "_SplitProjectReferencesByFileExistence: (TargetId:7)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveProjectReferences" depends on it):
+                   Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
+18:41:26.546     1>Done building target "_SplitProjectReferencesByFileExistence" in project "ParticleSystem.vcxproj".: (TargetId:7)
+                   Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
+18:41:26.546     1>Target "ResolveProjectReferences: (TargetId:8)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveReferences" depends on it):
+                   Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' != '10.0' and '' != '').
+                   Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' == '10.0' and '' != '').
+                   Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+                   Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
+                   Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
+18:41:26.546     1>Done building target "ResolveProjectReferences" in project "ParticleSystem.vcxproj".: (TargetId:8)
+                   Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+                   Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+                   Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+18:41:26.546     1>Target "GetFrameworkPaths: (TargetId:9)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+18:41:26.546     1>Done building target "GetFrameworkPaths" in project "ParticleSystem.vcxproj".: (TargetId:9)
+                   Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+18:41:26.546     1>Target "GetReferenceAssemblyPaths: (TargetId:10)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+                   Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+18:41:26.546     1>Done building target "GetReferenceAssemblyPaths" in project "ParticleSystem.vcxproj".: (TargetId:10)
+18:41:26.546     1>Target "SetBuildDefaultEnvironmentVariables: (TargetId:11)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Cpp.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "PrepareForBuild" depends on it):
+                   Using "SetEnv" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Build.CppTasks.Common.dll".
+                   Task "SetEnv" (TaskId:5)
+                     Task Parameter:Name=PATH (TaskId:5)
+                     Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\bin;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\12.0\bin\;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\libnvvp;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Go\bin;C:\Users\Nathan\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Amazon\AWSCLI\;C:\Program Files (x86)\gnuplot\bin;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\cmd;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin;C:\Users\Nathan\AppData\Local\Apps\2.0\TVTB4P6M.OQO\L6X0NAZ0.MTN\gith..tion_317444273a93ac29_0002.0006_159c473f7cb71f94;C:\Users\Nathan\AppData\Local\GitHub\git-media-amd64_0.2.2;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Python27\;C:\Python27\Scripts\;C:\Program Files (x86)\Nmap;C:\Program Files (x86)\Dr. Memory\bin\; (TaskId:5)
+                     Task Parameter:Prefix=False (TaskId:5)
+                     PATH=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\bin;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\12.0\bin\;C:\Windows\Microsoft.NET\Framework\v4.0.30319\;;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\NativeBinaries/x86;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\libnvvp;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Go\bin;C:\Users\Nathan\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Amazon\AWSCLI\;C:\Program Files (x86)\gnuplot\bin;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\cmd;C:\Users\Nathan\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin;C:\Users\Nathan\AppData\Local\Apps\2.0\TVTB4P6M.OQO\L6X0NAZ0.MTN\gith..tion_317444273a93ac29_0002.0006_159c473f7cb71f94;C:\Users\Nathan\AppData\Local\GitHub\git-media-amd64_0.2.2;C:\Windows\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Python27\;C:\Python27\Scripts\;C:\Program Files (x86)\Nmap;C:\Program Files (x86)\Dr. Memory\bin\; (TaskId:5)
+                   Done executing task "SetEnv". (TaskId:5)
+                   Task "SetEnv" (TaskId:6)
+                     Task Parameter:Name=LIB (TaskId:6)
+                     Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;; (TaskId:6)
+                     Task Parameter:Prefix=False (TaskId:6)
+                     LIB=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64;; (TaskId:6)
+                   Done executing task "SetEnv". (TaskId:6)
+                   Task "SetEnv" (TaskId:7)
+                     Task Parameter:Name=LIBPATH (TaskId:7)
+                     Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64; (TaskId:7)
+                     Task Parameter:Prefix=False (TaskId:7)
+                     LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64; (TaskId:7)
+                   Done executing task "SetEnv". (TaskId:7)
+                   Task "SetEnv" (TaskId:8)
+                     Task Parameter:Name=INCLUDE (TaskId:8)
+                     Task Parameter:Value=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;; (TaskId:8)
+                     Task Parameter:Prefix=False (TaskId:8)
+                     INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;; (TaskId:8)
+                   Done executing task "SetEnv". (TaskId:8)
+18:41:26.547     1>Done building target "SetBuildDefaultEnvironmentVariables" in project "ParticleSystem.vcxproj".: (TargetId:11)
+                   Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '') was evaluated as ('' != '').
+18:41:26.547     1>Target "GetResolvedWinMD: (TargetId:12)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "PrepareForBuild" depends on it):
+18:41:26.547     1>Done building target "GetResolvedWinMD" in project "ParticleSystem.vcxproj".: (TargetId:12)
+18:41:26.547     1>Target "PlatformPrepareForBuild: (TargetId:13)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Cpp.Platform.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "PrepareForBuild" depends on it):
+                   Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
+                   Task "VCMessage" skipped, due to false condition; ('$(ConfigurationPlatformExists)' != 'true') was evaluated as ('true' != 'true').
+                   Task "VCMessage" skipped, due to false condition; ('$(ToolsetTargetsFound)' != 'true') was evaluated as ('true' != 'true').
+18:41:26.547     1>Done building target "PlatformPrepareForBuild" in project "ParticleSystem.vcxproj".: (TargetId:13)
+                   Target "GetFrameworkPaths" skipped. Previously built successfully.
+                   Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+                   Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+18:41:26.547     1>Target "SetCABuildNativeEnvironmentVariables: (TargetId:14)" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "PrepareForBuild" depends on it):
+                   Initializing task factory "CodeTaskFactory" from assembly "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Build.Tasks.v12.0.dll".
+                   Using "SetEnvironmentVariable" task from the task factory "Code Task Factory".
+                   Task "SetEnvironmentVariable" (TaskId:9)
+                     Task Parameter:EnvValue=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;; (TaskId:9)
+                     Task Parameter:EnvKey=CAExcludePath (TaskId:9)
+                   Done executing task "SetEnvironmentVariable". (TaskId:9)
+18:41:26.552     1>Done building target "SetCABuildNativeEnvironmentVariables" in project "ParticleSystem.vcxproj".: (TargetId:14)
+18:41:26.552     1>Target "PrepareForBuild: (TargetId:15)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+                   Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as ('' != 'true' and 'true' != 'true').
+                   Using "MakeDir" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "MakeDir" (TaskId:10)
+                     Task Parameter:Directories=x64\Debug\ (TaskId:10)
+                   Done executing task "MakeDir". (TaskId:10)
+                   Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') was evaluated as (''!='true' and 'false'=='true' and 'Application'!='Application' and 'Application'!='DynamicLibrary' and 'Application'!='StaticLibrary').
+                   Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+                   Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\'=='' and '' != 'true' and 'v120'=='v90').
+                   Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\'=='' and '' != 'true').
+                   Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Windows Kits\8.1\'=='' and '' != 'true').
+                   Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+                   Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+                   Task "VCMessage" skipped, due to false condition; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') was evaluated as ('' != '' and ''!='true').
+                   Task "VCMessage" skipped, due to false condition; ('$(_MBCS_Using)' == 'true' and '$(_MBCS_Installed)' != 'true' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' == 'true' and '' != 'true' and '' != 'true').
+                   Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') was evaluated as ('' != 'true' and '' == 'true').
+                   Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) was evaluated as ('' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+                   Task "MakeDir" (TaskId:11)
+                     Task Parameter:
+                         Directories=
+                             x64\Debug\
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\x64\Debug\
+                             x64\Debug\ParticleSystem.tlog\ (TaskId:11)
+                   Done executing task "MakeDir". (TaskId:11)
+18:41:26.554     1>Done building target "PrepareForBuild" in project "ParticleSystem.vcxproj".: (TargetId:15)
+                   Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+                   Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('ParticleRenderer.cpp;ParticleSystem.cpp'!='' and 'false'=='true' and '' != 'false').
+18:41:26.554     1>Target "GetInstalledSDKLocations: (TargetId:16)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveSDKReferences" depends on it):
+                   Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+18:41:26.554     1>Done building target "GetInstalledSDKLocations" in project "ParticleSystem.vcxproj".: (TargetId:16)
+18:41:26.554     1>Target "ResolveSDKReferences: (TargetId:17)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+                   Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+18:41:26.554     1>Done building target "ResolveSDKReferences" in project "ParticleSystem.vcxproj".: (TargetId:17)
+                   Target "ResolveSDKReferences" skipped. Previously built successfully.
+18:41:26.554     1>Target "ExpandSDKReferences: (TargetId:18)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+                   Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+18:41:26.554     1>Done building target "ExpandSDKReferences" in project "ParticleSystem.vcxproj".: (TargetId:18)
+18:41:26.554     1>Target "ResolveAssemblyReferences: (TargetId:19)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveReferences" depends on it):
+                   Task "ResolveAssemblyReference" skipped, due to false condition; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') was evaluated as (''!='' or ''!='' or '' != '').
+18:41:26.554     1>Done building target "ResolveAssemblyReferences" in project "ParticleSystem.vcxproj".: (TargetId:19)
+                   Target "GenerateBindingRedirects" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') was evaluated as ('' == 'true' and 'true' == 'true').
+                   Target "GenerateBindingRedirectsUpdateAppConfig" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) was evaluated as ('' == 'true' and 'true' == 'true' and Exists('x64\Debug\ParticleSystem.vcxproj.ParticleSystem.exe.config')).
+                   Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+18:41:26.554     1>Target "AfterResolveReferences: (TargetId:20)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ResolveReferences" depends on it):
+18:41:26.554     1>Done building target "AfterResolveReferences" in project "ParticleSystem.vcxproj".: (TargetId:20)
+                   Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
+                   Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
+18:41:26.554     1>Target "ResolveReferences: (TargetId:21)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "Build" depends on it):
+18:41:26.554     1>Done building target "ResolveReferences" in project "ParticleSystem.vcxproj".: (TargetId:21)
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+18:41:26.554     1>Target "InitializeBuildStatus: (TargetId:22)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "Build" depends on it):
+                   Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "ReadLinesFromFile" (TaskId:12)
+                     Task Parameter:File=x64\Debug\ParticleSystem.tlog\ParticleSystem.lastbuildstate (TaskId:12)
+                   Done executing task "ReadLinesFromFile". (TaskId:12)
+                   Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "WriteLinesToFile" (TaskId:13)
+                     Task Parameter:Overwrite=True (TaskId:13)
+                     Task Parameter:File=x64\Debug\ParticleSystem.tlog\ParticleSystem.lastbuildstate (TaskId:13)
+                     Task Parameter:
+                         Lines=
+                             #TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+                             Debug|x64|C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\| (TaskId:13)
+                   Done executing task "WriteLinesToFile". (TaskId:13)
+                   Using "Touch" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "Touch" (TaskId:14)
+                     Task Parameter:AlwaysCreate=True (TaskId:14)
+                     Task Parameter:Files=x64\Debug\ParticleSystem.tlog\unsuccessfulbuild (TaskId:14)
+                     Touching "x64\Debug\ParticleSystem.tlog\unsuccessfulbuild". (TaskId:14)
+                   Done executing task "Touch". (TaskId:14)
+18:41:26.555     1>Done building target "InitializeBuildStatus" in project "ParticleSystem.vcxproj".: (TargetId:22)
+                   Target "AssignProjectConfiguration" skipped. Previously built successfully.
+                   Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+18:41:26.555     1>Target "BuildGenerateSourcesTraverse: (TargetId:23)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "BuildGenerateSources" depends on it):
+                   Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != '' and '' == 'true').
+18:41:26.555     1>Done building target "BuildGenerateSourcesTraverse" in project "ParticleSystem.vcxproj".: (TargetId:23)
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+                   Target "ResolveReferences" skipped. Previously built successfully.
+18:41:26.555     1>Target "BeforeBuildGenerateSources: (TargetId:24)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.BuildSteps.Targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+18:41:26.555     1>Done building target "BeforeBuildGenerateSources" in project "ParticleSystem.vcxproj".: (TargetId:24)
+18:41:26.555     1>Target "PreBuildEvent: (TargetId:25)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+                   Task "Message" skipped, due to false condition; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+                   Task "Exec" skipped, due to false condition; ('%(PreBuildEvent.Command)' != '') was evaluated as ('' != '').
+18:41:26.555     1>Done building target "PreBuildEvent" in project "ParticleSystem.vcxproj".: (TargetId:25)
+                   Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
+                   Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+                   Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+                   Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '') was evaluated as ('' != '').
+18:41:26.555     1>Target "_SelectedFiles: (TargetId:26)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+18:41:26.555     1>Done building target "_SelectedFiles" in project "ParticleSystem.vcxproj".: (TargetId:26)
+                   Target "CudaFilterSelectedFiles" skipped, due to false condition; ('@(SelectedFiles)' != '') was evaluated as ('' != '').
+18:41:26.555     1>Target "InitializeCudaHostProperties: (TargetId:27)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "AddCudaCompileMetadata" depends on it):
+18:41:26.555     1>Done building target "InitializeCudaHostProperties" in project "ParticleSystem.vcxproj".: (TargetId:27)
+18:41:26.555     1>Target "AddCudaCompileMetadata: (TargetId:28)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Building target "AddCudaCompileMetadata" completely.
+                   No input files were specified.
+                   Using "SanitizePaths" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\Nvda.Build.CudaTasks.v7.5.dll".
+                   Task "SanitizePaths" (TaskId:15)
+                     Task Parameter:InputPaths=C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc (TaskId:15)
+                   Done executing task "SanitizePaths". (TaskId:15)
+                   Task "ReadLinesFromFile" (TaskId:16)
+                     Task Parameter:File=x64\Debug\kernel.cu.deps (TaskId:16)
+                   Done executing task "ReadLinesFromFile". (TaskId:16)
+                   Using "SplitToItemMetadata" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\Nvda.Build.CudaTasks.v7.5.dll".
+                   Task "SplitToItemMetadata" (TaskId:17)
+                     Task Parameter:InputItemSpec=kernel.cu (TaskId:17)
+                     Task Parameter:InputItemName=Code Generation (TaskId:17)
+                     Task Parameter:InputItems=compute_20,sm_20 (TaskId:17)
+                     Task Parameter:
+                         MetadataNames=
+                             Arch
+                             Code (TaskId:17)
+                     Task Parameter:SplitSeparator=, (TaskId:17)
+                   Done executing task "SplitToItemMetadata". (TaskId:17)
+18:41:26.559     1>Done building target "AddCudaCompileMetadata" in project "ParticleSystem.vcxproj".: (TargetId:28)
+                   Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+                   Target "InitializeCudaHostProperties" skipped. Previously built successfully.
+                   Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+18:41:26.559     1>Target "InitializeCudaProjectProperties: (TargetId:29)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "AddCudaLinkMetadata" depends on it):
+                   Task "SplitToItemMetadata" (TaskId:18)
+                     Task Parameter:InputItemSpec=CudaLink (TaskId:18)
+                     Task Parameter:InputItemName=Code Generation (TaskId:18)
+                     Task Parameter:InputItems=compute_20,sm_20 (TaskId:18)
+                     Task Parameter:
+                         MetadataNames=
+                             Arch
+                             Code (TaskId:18)
+                     Task Parameter:SplitSeparator=, (TaskId:18)
+                   Done executing task "SplitToItemMetadata". (TaskId:18)
+18:41:26.559     1>Done building target "InitializeCudaProjectProperties" in project "ParticleSystem.vcxproj".: (TargetId:29)
+18:41:26.559     1>Target "AddCudaLinkMetadata: (TargetId:30)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Building target "AddCudaLinkMetadata" completely.
+                   No input files were specified.
+                   Using "ResolvePaths" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\Nvda.Build.CudaTasks.v7.5.dll".
+                   Task "ResolvePaths" (TaskId:19)
+                   Done executing task "ResolvePaths". (TaskId:19)
+18:41:26.559     1>Done building target "AddCudaLinkMetadata" in project "ParticleSystem.vcxproj".: (TargetId:30)
+                   Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+                   Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '') was evaluated as ('' != '').
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+                   Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+18:41:26.559     1>Target "AddCudaCompileDeps: (TargetId:31)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Skipping target "AddCudaCompileDeps" because all output files are up-to-date with respect to the input files.
+                   Input files: kernel.cu;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\host_config.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\crtdefs.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\sal.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ConcurrencySal.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\vadefs.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\builtin_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\host_defines.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\driver_types.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\limits.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\stddef.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\vector_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\channel_descriptor.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\cuda_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\cuda_device_runtime_api.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\driver_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\vector_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\vector_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\common_functions.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\string.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\time.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\wtime.inl;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\time.inl;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\math_functions.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\math.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\stdlib.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cmath;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\yvals.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xkeycheck.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\use_ansi.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xtgmath.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xtr1common;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cstdlib;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\math_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\math_functions_dbl_ptx3.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\math_functions_dbl_ptx3.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\cuda_surface_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\cuda_texture_types.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_atomic_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_double_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_double_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_20_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_20_atomic_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_32_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_32_atomic_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_35_atomic_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_20_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_20_intrinsics.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_30_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_30_intrinsics.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_32_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_32_intrinsics.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\sm_35_intrinsics.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\surface_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\surface_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\texture_fetch_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\texture_fetch_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\texture_indirect_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\texture_indirect_functions.hpp;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\surface_indirect_functions.h;c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\surface_indirect_functions.hpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\device_launch_parameters.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\iostream;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\istream;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ostream;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ios;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xlocnum;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\climits;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cstdio;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\stdio.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\swprintf.inl;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\streambuf;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xiosbase;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xlocale;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cstring;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\stdexcept;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\exception;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xstddef;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cstddef;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\initializer_list;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\eh.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\malloc.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xstring;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xmemory0;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\limits;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ymath.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cfloat;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\float.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\crtwrn.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cwchar;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\wchar.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\new;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xutility;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\utility;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\iosfwd;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\crtdbg.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\type_traits;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xrefwrap;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xatomic0.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\intrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\setjmp.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\immintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\wmmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\nmmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\smmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\tmmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\pmmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\emmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xmmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\mmintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ammintrin.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\typeinfo;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xlocinfo;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xlocinfo.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ctype.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\locale.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xdebug;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xmemory;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\xfacet;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\system_error;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\cerrno;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\errno.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\share.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\chrono;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\ratio;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\stdint.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\thr/xtimec.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\thr/xthrcommon.h;c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ParticleRenderer.hpp;c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ParticleSystem.hpp;c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\glew.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\GL/glu.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\winapifamily.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\GL/gl.h;C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\freeglut.h;c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_std.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\windows.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\sdkddkver.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\excpt.h;C:\Program Files %28x86%29\Microsoft Visual Studio 12.0\VC\include\stdarg.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\windef.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\minwindef.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\specstrings.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\specstrings_strict.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\specstrings_undef.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\driverspecs.h;c:\program files %28x86%29\windows kits\8.1\include\shared\sdv_driverspecs.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winnt.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\kernelspecs.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\basetsd.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\guiddef.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\pshpack4.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\poppack.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\pshpack2.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\pshpack8.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\apiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\ktmtypes.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winbase.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\apisetcconv.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\minwinbase.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\processenv.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\fileapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\debugapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\utilapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\handleapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\errhandlingapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\fibersapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\namedpipeapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\profileapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\heapapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\ioapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\synchapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\interlockedapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\processthreadsapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\sysinfoapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\memoryapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\threadpoollegacyapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\threadpoolapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\bemapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\jobapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\wow64apiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\libloaderapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\securitybaseapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\namespaceapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\systemtopologyapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\processtopologyapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\securityappcontainer.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\realtimeapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\winerror.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\timezoneapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\wingdi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\pshpack1.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winuser.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\tvout.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winnls.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\datetimeapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\stringapiset.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\wincon.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\consoleapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winver.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\verrsrc.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winreg.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\reason.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winnetwk.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\wnnc.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\cderr.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\dde.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\ddeml.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\dlgs.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\lzexpand.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mmsystem.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mmsyscom.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mciapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mmiscapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mmiscapi2.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\playsoundapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mmeapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\timeapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\joystickapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\nb30.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\rpc.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\rpcdce.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\rpcdcep.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\rpcnsi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\rpcnterr.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\rpcasync.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\shellapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winperf.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winsock.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\inaddr.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\wincrypt.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\bcrypt.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\ncrypt.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\dpapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winefs.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winscard.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\wtypes.h;c:\program files %28x86%29\windows kits\8.1\include\shared\rpcndr.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\rpcnsip.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\rpcsal.h;c:\program files %28x86%29\windows kits\8.1\include\shared\wtypesbase.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winioctl.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\winsmcrd.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winspool.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\prsht.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\ole2.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\objbase.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\combaseapi.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\unknwnbase.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\objidlbase.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\cguid.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\objidl.h;c:\program files %28x86%29\windows kits\8.1\include\um\unknwn.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\urlmon.h;c:\program files %28x86%29\windows kits\8.1\include\um\oleidl.h;c:\program files %28x86%29\windows kits\8.1\include\um\servprov.h;c:\program files %28x86%29\windows kits\8.1\include\um\msxml.h;c:\program files %28x86%29\windows kits\8.1\include\um\oaidl.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\propidl.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\oleauto.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\commdlg.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\stralign.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\winsvc.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\mcx.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\imm.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\um\ime_cmodes.h;C:\Program Files %28x86%29\Windows Kits\8.1\Include\shared\windowsx.h;c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_ext.h
+                   Output files: x64\Debug\kernel.cu.deps
+18:41:26.566     1>Done building target "AddCudaCompileDeps" in project "ParticleSystem.vcxproj".: (TargetId:31)
+                   Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+                   Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '') was evaluated as ('' != '').
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+                   Target "AddCudaCompileMetadata" skipped. Previously built successfully.
+18:41:26.566     1>Target "AddCudaCompilePropsDeps: (TargetId:32)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Skipping target "AddCudaCompilePropsDeps" because all output files are up-to-date with respect to the input files.
+                   Input files: ParticleSystem.vcxproj
+                   Output files: x64\Debug\kernel.cu.cache
+18:41:26.566     1>Done building target "AddCudaCompilePropsDeps" in project "ParticleSystem.vcxproj".: (TargetId:32)
+18:41:26.566     1>Target "ValidateCudaBuild: (TargetId:33)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Task "Error" skipped, due to false condition; ('$(PlatformToolset)' == 'v140') was evaluated as ('v120' == 'v140').
+                   Task "Error" skipped, due to false condition; (!Exists($(CudaToolkitDir))) was evaluated as (!Exists(C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\)).
+18:41:26.567     1>Done building target "ValidateCudaBuild" in project "ParticleSystem.vcxproj".: (TargetId:33)
+18:41:26.567     1>Target "ValidateCudaCodeGeneration: (TargetId:34)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Building target "ValidateCudaCodeGeneration" completely.
+                   No input files were specified.
+                   Using "CountItems" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\Nvda.Build.CudaTasks.v7.5.dll".
+                   Task "CountItems" (TaskId:20)
+                     Task Parameter:InputItems=compute_20,sm_20 (TaskId:20)
+                   Done executing task "CountItems". (TaskId:20)
+                   Task "Error" skipped, due to false condition; ('%(CudaCompile.NvccCompilation)' != 'compile' AND $(ValidateCudaCodeGenerationCount) > 1) was evaluated as ('compile' != 'compile' AND 1 > 1).
+18:41:26.567     1>Done building target "ValidateCudaCodeGeneration" in project "ParticleSystem.vcxproj".: (TargetId:34)
+18:41:26.567     1>Target "ComputeCudaCompileOutput: (TargetId:35)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Building target "ComputeCudaCompileOutput" completely.
+                   No input files were specified.
+18:41:26.567     1>Done building target "ComputeCudaCompileOutput" in project "ParticleSystem.vcxproj".: (TargetId:35)
+18:41:26.567     1>Target "PrepareForCudaBuild: (TargetId:36)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "CudaBuild" depends on it):
+                   Task "SanitizePaths" (TaskId:21)
+                     Task Parameter:InputPaths=C:\Program Files (x86)\Windows Kits\8.1\ (TaskId:21)
+                   Done executing task "SanitizePaths". (TaskId:21)
+                   Using "CudaSetEnvironmentVariable" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\Nvda.Build.CudaTasks.v7.5.dll".
+                   Task "CudaSetEnvironmentVariable" (TaskId:22)
+                     Task Parameter:Name=CUDAFE_FLAGS (TaskId:22)
+                     Task Parameter:Value=--sdk_dir "C:\Program Files (x86)\Windows Kits\8.1" (TaskId:22)
+                     Nvda.Build.CudaTasks.CudaSetEnvironmentVariable: Setting 'CUDAFE_FLAGS' to '--sdk_dir "C:\Program Files (x86)\Windows Kits\8.1"' (TaskId:22)
+                   Done executing task "CudaSetEnvironmentVariable". (TaskId:22)
+18:41:26.568     1>Done building target "PrepareForCudaBuild" in project "ParticleSystem.vcxproj".: (TargetId:36)
+18:41:26.568     1>Target "CudaBuild: (TargetId:37)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.5.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+                   Building target "CudaBuild" completely.
+                   Input file "kernel.cu" is newer than output file "x64\Debug\kernel.cu.obj".
+                   Task "Message" (TaskId:23)
+                     Task Parameter:Importance=High (TaskId:23)
+                     Task Parameter:Text=Compiling CUDA source file kernel.cu... (TaskId:23)
+                     Compiling CUDA source file kernel.cu... (TaskId:23)
+                   Done executing task "Message". (TaskId:23)
+                   Task "Message" skipped, due to false condition; ('%(CudaCompile.ExcludedFromBuild)' == 'true') was evaluated as ('' == 'true').
+                   Task "MakeDir" skipped, due to false condition; (!Exists('$(CompileOutDir)')) was evaluated as (!Exists('C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug')).
+                   Task "MakeDir" skipped, due to false condition; ('%(CudaCompile.Keep)' == 'true' AND !Exists('%(CudaCompile.KeepDir)')) was evaluated as ('false' == 'true' AND !Exists('x64\Debug')).
+                   Initializing task factory "XamlTaskFactory" from assembly "Microsoft.Build.Tasks.v12.0".
+                   Using "CudaCompile" task from the task factory "XamlTaskFactory".
+                   Task "CudaCompile" (TaskId:24)
+                     Task Parameter:StandardOutputImportance=High (TaskId:24)
+                     Task Parameter:LogStandardErrorAsError=False (TaskId:24)
+                     Task Parameter:CompileOut=x64\Debug\kernel.cu.obj (TaskId:24)
+                     Task Parameter:
+                         Include=
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc
+                             C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include (TaskId:24)
+                     Task Parameter:GenerateRelocatableDeviceCode=False (TaskId:24)
+                     Task Parameter:NvccCompilation=compile (TaskId:24)
+                     Task Parameter:CudaRuntime=Static (TaskId:24)
+                     Task Parameter:NvccPath=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe (TaskId:24)
+                     Task Parameter:RequiredIncludes=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include (TaskId:24)
+                     Task Parameter:TargetMachinePlatform=64 (TaskId:24)
+                     Task Parameter:InterleaveSourceInPTX=False (TaskId:24)
+                     Task Parameter:CodeGeneration=arch=compute_20,code=\"sm_20,compute_20\" (TaskId:24)
+                     Task Parameter:GPUDebugInfo=True (TaskId:24)
+                     Task Parameter:GenerateLineInfo=False (TaskId:24)
+                     Task Parameter:Keep=False (TaskId:24)
+                     Task Parameter:KeepDir=x64\Debug (TaskId:24)
+                     Task Parameter:MaxRegCount=0 (TaskId:24)
+                     Task Parameter:PtxAsOptionV=False (TaskId:24)
+                     Task Parameter:
+                         Defines=
+                             WIN32
+                             WIN64
+                             _DEBUG
+                             _CONSOLE
+                             _MBCS (TaskId:24)
+                     Task Parameter:Emulation=False (TaskId:24)
+                     Task Parameter:HostDebugInfo=True (TaskId:24)
+                     Task Parameter:FastMath=False (TaskId:24)
+                     Task Parameter:Optimization=Od (TaskId:24)
+                     Task Parameter:Runtime=MDd (TaskId:24)
+                     Task Parameter:RuntimeChecks=RTC1 (TaskId:24)
+                     Task Parameter:Warning=W3 (TaskId:24)
+                     Task Parameter:CommandLineTemplate="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" [CodeGeneration] --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64" [GenerateRelocatableDeviceCode] [Include] [RequiredIncludes] [InterleaveSourceInPTX] [GPUDebugInfo] [GenerateLineInfo] [Keep] [KeepDir] [MaxRegCount] [PtxAsOptionV] [TargetMachinePlatform] [NvccCompilation] [CudaRuntime] [AdditionalOptions] [HostDebugInfo] [Emulation] [FastMath] [Defines] -Xcompiler "/EHsc [Warning] /nologo [Optimization] /Zi [RuntimeChecks] [Runtime] [TypeInfo]" [CompileOut] "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\kernel.cu" (TaskId:24)
+                     cmd.exe /C "C:\Users\Nathan\AppData\Local\Temp\tmp6c856db490ee46db9c104454f19abd24.cmd" (TaskId:24)
+                     "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\kernel.cu" (TaskId:24)
+                      (TaskId:24)
+                     C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\kernel.cu"  (TaskId:24)
+                     kernel.cu (TaskId:24)
+                   Done executing task "CudaCompile". (TaskId:24)
+                   Using "Delete" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+                   Task "Delete" (TaskId:25)
+                   Done executing task "Delete". (TaskId:25)
+18:41:33.671     1>Done building target "CudaBuild" in project "ParticleSystem.vcxproj".: (TargetId:37)
+                   Target "Xsd" skipped, due to false condition; ('@(Xsd)' != '') was evaluated as ('' != '').
+18:41:33.671     1>Target "_Xsd: (TargetId:38)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+18:41:33.671     1>Done building target "_Xsd" in project "ParticleSystem.vcxproj".: (TargetId:38)
+18:41:33.671     1>Target "MakeDirsForMidl: (TargetId:39)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_Midl" depends on it):
+                   Task "Makedir" (TaskId:26)
+                   Done executing task "Makedir". (TaskId:26)
+18:41:33.671     1>Done building target "MakeDirsForMidl" in project "ParticleSystem.vcxproj".: (TargetId:39)
+                   Target "Midl" skipped, due to false condition; ('@(Midl)' != '') was evaluated as ('' != '').
+                   Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
+                   Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+18:41:33.671     1>Target "ComputeMIDLGeneratedCompileInputs: (TargetId:40)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_Midl" depends on it):
+18:41:33.671     1>Done building target "ComputeMIDLGeneratedCompileInputs" in project "ParticleSystem.vcxproj".: (TargetId:40)
+18:41:33.671     1>Target "AfterMidl: (TargetId:41)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_Midl" depends on it):
+18:41:33.671     1>Done building target "AfterMidl" in project "ParticleSystem.vcxproj".: (TargetId:41)
+18:41:33.671     1>Target "_Midl: (TargetId:42)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+18:41:33.671     1>Done building target "_Midl" in project "ParticleSystem.vcxproj".: (TargetId:42)
+18:41:33.671     1>Target "AfterBuildGenerateSources: (TargetId:43)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.BuildSteps.Targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+18:41:33.671     1>Done building target "AfterBuildGenerateSources" in project "ParticleSystem.vcxproj".: (TargetId:43)
+18:41:33.671     1>Target "AfterBuildGenerateSourcesEvent: (TargetId:44)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+18:41:33.671     1>Done building target "AfterBuildGenerateSourcesEvent" in project "ParticleSystem.vcxproj".: (TargetId:44)
+18:41:33.671     1>Target "_BuildGenerateSourcesAction: (TargetId:45)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "BuildGenerateSources" depends on it):
+18:41:33.671     1>Done building target "_BuildGenerateSourcesAction" in project "ParticleSystem.vcxproj".: (TargetId:45)
+18:41:33.671     1>Target "BuildGenerateSources: (TargetId:46)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "Build" depends on it):
+18:41:33.671     1>Done building target "BuildGenerateSources" in project "ParticleSystem.vcxproj".: (TargetId:46)
+                   Target "AssignProjectConfiguration" skipped. Previously built successfully.
+                   Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+18:41:33.671     1>Target "BuildCompileTraverse: (TargetId:47)" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "BuildCompile" depends on it):
+                   Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
+18:41:33.671     1>Done building target "BuildCompileTraverse" in project "ParticleSystem.vcxproj".: (TargetId:47)
+                   Target "PrepareForBuild" skipped. Previously built successfully.
+                   Target "ResolveReferences" skipped. Previously built successfully.
+18:41:33.671     1>Target "BeforeClCompile: (TargetId:48)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_ClCompile" depends on it):
+18:41:33.671     1>Done building target "BeforeClCompile" in project "ParticleSystem.vcxproj".: (TargetId:48)
+                   Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
+18:41:33.671     1>Target "ComputeCLInputPDBName: (TargetId:49)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_ClCompile" depends on it):
+18:41:33.671     1>Done building target "ComputeCLInputPDBName" in project "ParticleSystem.vcxproj".: (TargetId:49)
+                   Target "ResolveReferences" skipped. Previously built successfully.
+18:41:33.671     1>Target "ComputeReferenceCLInput: (TargetId:50)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_ClCompile" depends on it):
+                   Task "WriteLinesToFile" skipped, due to false condition; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') was evaluated as ((''!='') and '' != 'true').
+                   Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+18:41:33.671     1>Done building target "ComputeReferenceCLInput" in project "ParticleSystem.vcxproj".: (TargetId:50)
+18:41:33.671     1>Target "WarnCompileDuplicatedFilename: (TargetId:51)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_ClCompile" depends on it):
+                   Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'ParticleRenderer.cpp' != 'ParticleRenderer.cpp' and 'x64\Debug\' == 'x64\Debug\').
+                   Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'ParticleSystem.cpp' != 'ParticleSystem.cpp' and 'x64\Debug\' == 'x64\Debug\').
+18:41:33.672     1>Done building target "WarnCompileDuplicatedFilename" in project "ParticleSystem.vcxproj".: (TargetId:51)
+18:41:33.672     1>Target "MakeDirsForCl: (TargetId:52)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_ClCompile" depends on it):
+                   Task "MakeDir" (TaskId:27)
+                     Task Parameter:
+                         Directories=
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug (TaskId:27)
+                   Done executing task "MakeDir". (TaskId:27)
+18:41:33.672     1>Done building target "MakeDirsForCl" in project "ParticleSystem.vcxproj".: (TargetId:52)
+                   Target "_SelectedFiles" skipped. Previously built successfully.
+                   Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
+                   Target "ComputeCLInputPDBName" skipped. Previously built successfully.
+                   Target "ComputeReferenceCLInput" skipped. Previously built successfully.
+                   Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
+                   Target "_SelectedFiles" skipped. Previously built successfully.
+18:41:33.672     1>Target "SelectCustomBuild: (TargetId:53)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "SelectClCompile" depends on it):
+18:41:33.672     1>Done building target "SelectCustomBuild" in project "ParticleSystem.vcxproj".: (TargetId:53)
+18:41:33.672     1>Target "SelectClCompile: (TargetId:54)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "ClCompile" depends on it):
+18:41:33.672     1>Done building target "SelectClCompile" in project "ParticleSystem.vcxproj".: (TargetId:54)
+                   Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
+                   Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('ParticleRenderer.cpp;ParticleSystem.cpp' != '' and 'false' == 'True').
+18:41:33.672     1>Target "ClCompile: (TargetId:55)" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppCommon.targets" from project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (target "_ClCompile" depends on it):
+                   Task "Delete" skipped, due to false condition; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) was evaluated as ('ProgramDatabase' != '' and 'ProgramDatabase' != 'OldStyle' and 'x64\Debug\vc120.pdb' != '' and !Exists(x64\Debug\vc120.pdb)).
+                   Task "CL" skipped, due to false condition; ('%(ClCompile.PrecompiledHeader)' == 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '') was evaluated as ('NotUsing' == 'Create' and ''!='true' and '' == '').
+                   Using "CL" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.Build.CppTasks.Common.dll".
+                   Task "CL" (TaskId:28)
+                     Task Parameter:BuildingInIde=True (TaskId:28)
+                     Task Parameter:
+                         Sources=
+                             ParticleRenderer.cpp
+                                     AcceptableNonZeroExitCodes=
+                                     AdditionalIncludeDirectories=C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include
+                                     AssemblerListingLocation=
+                                     AssemblerOutput=NoListing
+                                     BasicRuntimeChecks=EnableFastChecks
+                                     BrowseInformation=false
+                                     BrowseInformationFile=x64\Debug\
+                                     BufferSecurityCheck=true
+                                     CallingConvention=Cdecl
+                                     CompileAs=CompileAsCpp
+                                     DebugInformationFormat=ProgramDatabase
+                                     DisableLanguageExtensions=false
+                                     EnableEnhancedInstructionSet=NotSet
+                                     EnableFiberSafeOptimizations=false
+                                     ErrorReporting=Prompt
+                                     ExceptionHandling=Sync
+                                     ExpandAttributedSource=false
+                                     FavorSizeOrSpeed=Neither
+                                     FloatingPointModel=Precise
+                                     ForceConformanceInForLoopScope=true
+                                     ForcedIncludeFiles=
+                                     ForcedUsingFiles=
+                                     GenerateXMLDocumentationFiles=false
+                                     IgnoreStandardIncludePath=false
+                                     ImpLibCompiled=
+                                     InlineFunctionExpansion=Default
+                                     IntrinsicFunctions=false
+                                     LibCompiled=
+                                     LinkCompiled=true
+                                     MinimalRebuild=true
+                                     MinimalRebuildFromTracking=true
+                                     ObjectFileName=x64\Debug\
+                                     OmitDefaultLibName=false
+                                     Optimization=Disabled
+                                     PrecompiledHeader=NotUsing
+                                     PrecompiledHeaderFile=
+                                     PrecompiledHeaderOutputFile=
+                                     PreprocessKeepComments=false
+                                     PreprocessorDefinitions=WIN32;WIN64;_DEBUG;_CONSOLE;_MBCS;
+                                     PreprocessSuppressLineNumbers=false
+                                     PreprocessToFile=false
+                                     ProgramDataBaseFileName=x64\Debug\vc120.pdb
+                                     RuntimeLibrary=MultiThreadedDebugDll
+                                     ShowIncludes=false
+                                     SmallerTypeCheck=false
+                                     StructMemberAlignment=Default
+                                     SuppressStartupBanner=true
+                                     TrackerLogDirectory=x64\Debug\ParticleSystem.tlog\
+                                     TreatWarningAsError=false
+                                     TreatWChar_tAsBuiltInType=true
+                                     UndefineAllPreprocessorDefinitions=false
+                                     UseFullPaths=false
+                                     UseUnicodeForAssemblerListing=
+                                     WarningLevel=Level3
+                                     WholeProgramOptimization=false
+                                     WinRTNoStdLib=false
+                                     XMLDocumentationFileName=x64\Debug\
+                             ParticleSystem.cpp
+                                     AcceptableNonZeroExitCodes=
+                                     AdditionalIncludeDirectories=C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include
+                                     AssemblerListingLocation=
+                                     AssemblerOutput=NoListing
+                                     BasicRuntimeChecks=EnableFastChecks
+                                     BrowseInformation=false
+                                     BrowseInformationFile=x64\Debug\
+                                     BufferSecurityCheck=true
+                                     CallingConvention=Cdecl
+                                     CompileAs=CompileAsCpp
+                                     DebugInformationFormat=ProgramDatabase
+                                     DisableLanguageExtensions=false
+                                     EnableEnhancedInstructionSet=NotSet
+                                     EnableFiberSafeOptimizations=false
+                                     ErrorReporting=Prompt
+                                     ExceptionHandling=Sync
+                                     ExpandAttributedSource=false
+                                     FavorSizeOrSpeed=Neither
+                                     FloatingPointModel=Precise
+                                     ForceConformanceInForLoopScope=true
+                                     ForcedIncludeFiles=
+                                     ForcedUsingFiles=
+                                     GenerateXMLDocumentationFiles=false
+                                     IgnoreStandardIncludePath=false
+                                     ImpLibCompiled=
+                                     InlineFunctionExpansion=Default
+                                     IntrinsicFunctions=false
+                                     LibCompiled=
+                                     LinkCompiled=true
+                                     MinimalRebuild=true
+                                     MinimalRebuildFromTracking=true
+                                     ObjectFileName=x64\Debug\
+                                     OmitDefaultLibName=false
+                                     Optimization=Disabled
+                                     PrecompiledHeader=NotUsing
+                                     PrecompiledHeaderFile=
+                                     PrecompiledHeaderOutputFile=
+                                     PreprocessKeepComments=false
+                                     PreprocessorDefinitions=WIN32;WIN64;_DEBUG;_CONSOLE;_MBCS;
+                                     PreprocessSuppressLineNumbers=false
+                                     PreprocessToFile=false
+                                     ProgramDataBaseFileName=x64\Debug\vc120.pdb
+                                     RuntimeLibrary=MultiThreadedDebugDll
+                                     ShowIncludes=false
+                                     SmallerTypeCheck=false
+                                     StructMemberAlignment=Default
+                                     SuppressStartupBanner=true
+                                     TrackerLogDirectory=x64\Debug\ParticleSystem.tlog\
+                                     TreatWarningAsError=false
+                                     TreatWChar_tAsBuiltInType=true
+                                     UndefineAllPreprocessorDefinitions=false
+                                     UseFullPaths=false
+                                     UseUnicodeForAssemblerListing=
+                                     WarningLevel=Level3
+                                     WholeProgramOptimization=false
+                                     WinRTNoStdLib=false
+                                     XMLDocumentationFileName=x64\Debug\ (TaskId:28)
+                     Task Parameter:
+                         AdditionalIncludeDirectories=
+                             C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc
+                             C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include (TaskId:28)
+                     Task Parameter:AssemblerOutput=NoListing (TaskId:28)
+                     Task Parameter:BasicRuntimeChecks=EnableFastChecks (TaskId:28)
+                     Task Parameter:BrowseInformation=False (TaskId:28)
+                     Task Parameter:BrowseInformationFile=x64\Debug\ (TaskId:28)
+                     Task Parameter:BufferSecurityCheck=true (TaskId:28)
+                     Task Parameter:CallingConvention=Cdecl (TaskId:28)
+                     Task Parameter:CompileAs=CompileAsCpp (TaskId:28)
+                     Task Parameter:DebugInformationFormat=ProgramDatabase (TaskId:28)
+                     Task Parameter:DisableLanguageExtensions=False (TaskId:28)
+                     Task Parameter:EnableEnhancedInstructionSet=NotSet (TaskId:28)
+                     Task Parameter:EnableFiberSafeOptimizations=False (TaskId:28)
+                     Task Parameter:ErrorReporting=Prompt (TaskId:28)
+                     Task Parameter:ExceptionHandling=Sync (TaskId:28)
+                     Task Parameter:
+                         ExcludedInputPaths=
+                             C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include
+                             C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include
+                             C:\Program Files (x86)\Windows Kits\8.1\Include\um
+                             C:\Program Files (x86)\Windows Kits\8.1\Include\shared
+                             C:\Program Files (x86)\Windows Kits\8.1\Include\winrt
+                             C:\Program Files (x86)\MSBuild\12.0\bin\
+                             C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+                             C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib\amd64
+                             C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib\amd64 (TaskId:28)
+                     Task Parameter:ExpandAttributedSource=False (TaskId:28)
+                     Task Parameter:FavorSizeOrSpeed=Neither (TaskId:28)
+                     Task Parameter:FloatingPointModel=Precise (TaskId:28)
+                     Task Parameter:ForceConformanceInForLoopScope=True (TaskId:28)
+                     Task Parameter:GenerateXMLDocumentationFiles=False (TaskId:28)
+                     Task Parameter:IgnoreStandardIncludePath=False (TaskId:28)
+                     Task Parameter:InlineFunctionExpansion=Default (TaskId:28)
+                     Task Parameter:IntrinsicFunctions=False (TaskId:28)
+                     Task Parameter:MinimalRebuild=True (TaskId:28)
+                     Task Parameter:ObjectFileName=x64\Debug\ (TaskId:28)
+                     Task Parameter:OmitDefaultLibName=False (TaskId:28)
+                     Task Parameter:Optimization=Disabled (TaskId:28)
+                     Task Parameter:PrecompiledHeader=NotUsing (TaskId:28)
+                     Task Parameter:PreprocessKeepComments=False (TaskId:28)
+                     Task Parameter:
+                         PreprocessorDefinitions=
+                             WIN32
+                             WIN64
+                             _DEBUG
+                             _CONSOLE
+                             _MBCS (TaskId:28)
+                     Task Parameter:PreprocessSuppressLineNumbers=False (TaskId:28)
+                     Task Parameter:PreprocessToFile=False (TaskId:28)
+                     Task Parameter:ProgramDataBaseFileName=x64\Debug\vc120.pdb (TaskId:28)
+                     Task Parameter:RuntimeLibrary=MultiThreadedDebugDll (TaskId:28)
+                     Task Parameter:ShowIncludes=False (TaskId:28)
+                     Task Parameter:SmallerTypeCheck=False (TaskId:28)
+                     Task Parameter:StructMemberAlignment=Default (TaskId:28)
+                     Task Parameter:SuppressStartupBanner=True (TaskId:28)
+                     Task Parameter:TreatWarningAsError=False (TaskId:28)
+                     Task Parameter:TreatWChar_tAsBuiltInType=True (TaskId:28)
+                     Task Parameter:UndefineAllPreprocessorDefinitions=False (TaskId:28)
+                     Task Parameter:UseFullPaths=False (TaskId:28)
+                     Task Parameter:WarningLevel=Level3 (TaskId:28)
+                     Task Parameter:WholeProgramOptimization=False (TaskId:28)
+                     Task Parameter:WinRTNoStdLib=False (TaskId:28)
+                     Task Parameter:XMLDocumentationFileName=x64\Debug\ (TaskId:28)
+                     Task Parameter:TrackerLogDirectory=x64\Debug\ParticleSystem.tlog\ (TaskId:28)
+                     Task Parameter:TrackFileAccess=True (TaskId:28)
+                     Task Parameter:MinimalRebuildFromTracking=True (TaskId:28)
+                     Task Parameter:ToolArchitecture=Native32Bit (TaskId:28)
+                     Task Parameter:DeleteOutputOnExecute=True (TaskId:28)
+                     Task Parameter:YieldDuringToolExecution=True (TaskId:28)
+                     Read Tracking Logs: (TaskId:28)
+                     	x64\Debug\ParticleSystem.tlog\cl.read.1.tlog (TaskId:28)
+                     Outputs for C:\USERS\NATHAN\DESKTOP\CUDANBODY\PARTICLESYSTEM\PARTICLESYSTEM\PARTICLERENDERER.CPP|C:\USERS\NATHAN\DESKTOP\CUDANBODY\PARTICLESYSTEM\PARTICLESYSTEM\PARTICLESYSTEM.CPP: (TaskId:28)
+                     	C:\USERS\NATHAN\DESKTOP\CUDANBODY\PARTICLESYSTEM\PARTICLESYSTEM\X64\DEBUG\PARTICLERENDERER.OBJ (TaskId:28)
+                     	C:\USERS\NATHAN\DESKTOP\CUDANBODY\PARTICLESYSTEM\PARTICLESYSTEM\X64\DEBUG\PARTICLESYSTEM.OBJ (TaskId:28)
+                     ParticleRenderer.cpp will be compiled as output C:\USERS\NATHAN\DESKTOP\CUDANBODY\PARTICLESYSTEM\PARTICLESYSTEM\X64\DEBUG\PARTICLERENDERER.OBJ does not exist. (TaskId:28)
+                     Environment Variables passed to tool: (TaskId:28)
+                       VS_UNICODE_OUTPUT=1660 (TaskId:28)
+                     C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /Zi /nologo /W3 /WX- /Od /D WIN32 /D WIN64 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ParticleRenderer.cpp (TaskId:28)
+                     Tracking command: (TaskId:28)
+                     C:\Program Files (x86)\MSBuild\12.0\bin\Tracker.exe /d "C:\Program Files (x86)\MSBuild\12.0\bin\FileTracker.dll" /i C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\x64\Debug\ParticleSystem.tlog /r C:\USERS\NATHAN\DESKTOP\CUDANBODY\PARTICLESYSTEM\PARTICLESYSTEM\PARTICLERENDERER.CPP /b MSBuildConsole_CancelEvent333de8c636964f4d83f40e8377ebc3b8  /c "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe"  /c /IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /Zi /nologo /W3 /WX- /Od /D WIN32 /D WIN64 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ParticleRenderer.cpp (TaskId:28)
+                     ParticleRenderer.cpp (TaskId:28)
+18:41:34.122     1>ParticleRenderer.cpp(32): error C2597: illegal reference to non-static member 'ParticleRenderer::vao'
+                     The command exited with code 2. (TaskId:28)
+                   Done executing task "CL" -- FAILED. (TaskId:28)
+18:41:34.208     1>Done building target "ClCompile" in project "ParticleSystem.vcxproj" -- FAILED.: (TargetId:55)
+18:41:34.208     1>Done Building Project "C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" (Build target(s)) -- FAILED.
+
+Project Performance Summary:
+     7665 ms  C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj   1 calls
+               7665 ms  Build                                      1 calls
+
+Target Performance Summary:
+        0 ms  _Xsd                                       1 calls
+        0 ms  InitializeCudaHostProperties               1 calls
+        0 ms  ResolveReferences                          1 calls
+        0 ms  BuildGenerateSourcesTraverse               1 calls
+        0 ms  PlatformPrepareForBuild                    1 calls
+        0 ms  ResolveSDKReferences                       1 calls
+        0 ms  _PrepareForBuild                           1 calls
+        0 ms  AfterResolveReferences                     1 calls
+        0 ms  InitializeCudaProjectProperties            1 calls
+        0 ms  _Midl                                      1 calls
+        0 ms  SelectClCompile                            1 calls
+        0 ms  _BuildGenerateSourcesAction                1 calls
+        0 ms  ComputeReferenceCLInput                    1 calls
+        0 ms  ComputeCLInputPDBName                      1 calls
+        0 ms  ResolveProjectReferences                   1 calls
+        0 ms  MakeDirsForMidl                            1 calls
+        0 ms  ValidateCudaCodeGeneration                 1 calls
+        0 ms  GetFrameworkPaths                          1 calls
+        0 ms  BuildGenerateSources                       1 calls
+        0 ms  ResolveAssemblyReferences                  1 calls
+        0 ms  GetReferenceAssemblyPaths                  1 calls
+        0 ms  MakeDirsForCl                              1 calls
+        0 ms  BeforeResolveReferences                    1 calls
+        0 ms  BeforeClCompile                            1 calls
+        0 ms  PreBuildEvent                              1 calls
+        0 ms  _SelectedFiles                             1 calls
+        0 ms  AddCudaCompilePropsDeps                    1 calls
+        0 ms  ExpandSDKReferences                        1 calls
+        0 ms  SelectCustomBuild                          1 calls
+        0 ms  GetResolvedWinMD                           1 calls
+        0 ms  ComputeCudaCompileOutput                   1 calls
+        0 ms  BeforeBuildGenerateSources                 1 calls
+        0 ms  AfterBuildGenerateSourcesEvent             1 calls
+        0 ms  _PrepareForReferenceResolution             1 calls
+        0 ms  BuildCompileTraverse                       1 calls
+        0 ms  AfterBuildGenerateSources                  1 calls
+        0 ms  AddCudaLinkMetadata                        1 calls
+        0 ms  _SplitProjectReferencesByFileExistence     1 calls
+        0 ms  AfterMidl                                  1 calls
+        0 ms  GetInstalledSDKLocations                   1 calls
+        0 ms  ComputeMIDLGeneratedCompileInputs          1 calls
+        1 ms  AssignProjectConfiguration                 1 calls
+        1 ms  ValidateCudaBuild                          1 calls
+        1 ms  InitializeBuildStatus                      1 calls
+        1 ms  WarnCompileDuplicatedFilename              1 calls
+        1 ms  _CheckForInvalidConfigurationAndPlatform   1 calls
+        1 ms  SetBuildDefaultEnvironmentVariables        1 calls
+        1 ms  PrepareForCudaBuild                        1 calls
+        2 ms  PrepareForBuild                            1 calls
+        4 ms  AddCudaCompileMetadata                     1 calls
+        5 ms  SetCABuildNativeEnvironmentVariables       1 calls
+        7 ms  AddCudaCompileDeps                         1 calls
+      536 ms  ClCompile                                  1 calls
+     7103 ms  CudaBuild                                  1 calls
+
+Task Performance Summary:
+        0 ms  SanitizePaths                              2 calls
+        0 ms  Touch                                      1 calls
+        0 ms  SetEnvironmentVariable                     1 calls
+        0 ms  AssignProjectConfiguration                 1 calls
+        0 ms  CudaSetEnvironmentVariable                 1 calls
+        0 ms  ResolvePaths                               1 calls
+        0 ms  CountItems                                 1 calls
+        0 ms  Delete                                     1 calls
+        0 ms  Message                                    3 calls
+        1 ms  WriteLinesToFile                           1 calls
+        1 ms  SetEnv                                     4 calls
+        1 ms  MakeDir                                    4 calls
+        1 ms  SplitToItemMetadata                        2 calls
+        2 ms  ReadLinesFromFile                          2 calls
+      535 ms  CL                                         1 calls
+     6886 ms  CudaCompile                                1 calls
+
+Build FAILED.
+
+Time Elapsed 00:00:07.66

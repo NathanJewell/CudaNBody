@@ -1,22 +1,28 @@
 #pragma once
 
+#include <cuda_runtime.h>
 #include "ParticleSystem.hpp"
-#include "inc/GL/freeglut.h"
-#include "inc/GL/glew.h"
+#include "GL\glew.h"
+#include "GL\freeglut.h"
+#include "Defines.hpp"
 
 
-class ParticleRenderer
+static class ParticleRenderer
 {
 public:
 	ParticleRenderer();
 	~ParticleRenderer();
 
 	void initGL();
-	static void drawFrame();
+	void initRender(const int& newNumParticles);
+	void drawFrame();
 
 	void setParticleVector(double* positions);
-	double* getParticleVector();
 
 private:
-	GLuint vbo;
+	GLuint vbo;		//buffer
+	GLuint vao;		//vertex array
+	GLsizei numParticles;
+
+	static p_type* particles;
 };
