@@ -460,16 +460,14 @@ C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdint.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\thr/xtimec.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\thr/xthrcommon.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ParticleRenderer.hpp
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ParticleSystem.hpp
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\ParticleRenderer.hpp
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp
-C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\glew.h
+C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\glew.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL/glu.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winapifamily.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL/gl.h
-C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\freeglut.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_std.h
+C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\freeglut.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_std.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\windows.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\sdkddkver.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\excpt.h
@@ -673,4 +671,7 @@ C:\Program Files (x86)\Windows Kits\8.1\Include\um\ime_cmodes.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\windowsx.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\mmsystem.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL/gl.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_ext.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_ext.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\ParticleSystem.hpp
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp

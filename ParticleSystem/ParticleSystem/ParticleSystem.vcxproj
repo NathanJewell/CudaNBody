@@ -153,13 +153,13 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;%(AdditionalIncludeDirectories);C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64;%(AdditionalLibraryDirectories);C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64;</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
@@ -167,7 +167,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
-      <Include>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;</Include>
+      <Include>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc;</Include>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='64Bit|x64'">

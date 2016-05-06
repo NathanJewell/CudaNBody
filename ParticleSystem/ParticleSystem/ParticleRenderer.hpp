@@ -1,13 +1,14 @@
 #pragma once
 
 #include <cuda_runtime.h>
+#include <GL\glew.h>
+#include <GL\freeglut.h>
 #include "ParticleSystem.hpp"
-#include "GL\glew.h"
-#include "GL\freeglut.h"
 #include "Defines.hpp"
 
 
-static class ParticleRenderer
+
+class ParticleRenderer
 {
 public:
 	ParticleRenderer();
@@ -15,14 +16,18 @@ public:
 
 	void initGL();
 	void initRender(const int& newNumParticles);
-	void drawFrame();
+	void initSystem();	//allocate memory and initialize particle positionss
+	void begin();
+	static void drawFrame();
 
-	void setParticleVector(double* positions);
+	void setParticleVector(p_type* positions);
 
 private:
-	GLuint vbo;		//buffer
-	GLuint vao;		//vertex array
-	GLsizei numParticles;
+	static GLuint vbo;		//buffer
+
+	static GLsizei numParticles;
 
 	static p_type* particles;
+
+	static ParticleSystem sys;
 };

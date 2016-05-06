@@ -15,9 +15,10 @@ ParticleSystem::~ParticleSystem()
 	}
 }
 
-void ParticleSystem::allocate(const unsigned int& numParticles)
+void ParticleSystem::allocate(const unsigned int& newNumParticles)
 {
 	//define distribution here or something
+	numParticles = newNumParticles;
 	if (numParticles > 0)
 	{
 		int pointsPerParticleVec = 3;
@@ -43,7 +44,16 @@ p_type* ParticleSystem::getParticleVector()
 }
 void ParticleSystem::initialize(/*distribution type?*/)
 {
-
+	for (unsigned int partIt = 0; partIt < numParticles; partIt++)
+	{
+		int index = partIt * 3;
+		p_type x = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * 256;
+		p_type y = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * 256;
+		p_type z = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * 256;
+		h_pos[index] = x;
+		h_pos[index + 1] = y;
+		h_pos[index + 2] = z;
+	}
 }
 
 void ParticleSystem::doFrameCPU()
@@ -101,6 +111,10 @@ void ParticleSystem::doFrameGPU()
 
 }
 
+int ParticleSystem::getNumParticles()
+{
+	return numParticles;
+}
 //PRIVATE FUNCTIONS
 
 float ParticleSystem::fInvSqrt(const float& in)

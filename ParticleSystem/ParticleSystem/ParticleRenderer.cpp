@@ -3,32 +3,50 @@
 ParticleRenderer::ParticleRenderer(){}
 ParticleRenderer::~ParticleRenderer(){}
 
+
+
 void ParticleRenderer::initGL()
 {
 	/* select clearing (background) color */
-	glGenVertexArrays(1, &vao);
-	glBindVertexArray(vao);
+
+
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+
+	glutInitWindowSize(1024, 1024);
+
+	glutCreateWindow("N-BODY");
+
+	glutDisplayFunc(drawFrame);
+
+
+	glewInit();
+
 
 	glGenBuffers(1, &vbo);
 	
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(particles), particles, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, particles, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	cudaGLRegisterBufferObject(vbo);
+	//cudaGLRegisterBufferObject(vbo);
 
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 
 	/* initialize viewing values */
-	glLoadIdentity();
-
 	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60.0, (float)1024 / (float)1024, 0.1, 1000.0);
 
-	glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+	glMatrixMode(GL_MODELVIEW);
+	glViewport(0, 0, 1024, 1024);
+	//glMatrixMode(GL_PROJECTION);
+
+	//glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
 
 	glLoadIdentity();
 
-	glEnable(GL_DEPTH_TEST);
-	glClearColor(1.0f, 1.0f, 1.0f, 1.5f);
+	//glEnable(GL_DEPTH_TEST);
+	glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
@@ -37,48 +55,78 @@ void ParticleRenderer::initGL()
 void ParticleRenderer::drawFrame()
 {
 	/* clear all pixels */
-
+	//sys.doFrameCPU();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//parameters
 	glColor4f(0, 1, 0, 0.5f);
-	glPointSize(1);
+	glPointSize(2);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	//drawing vertex array
 	glEnableClientState(GL_VERTEX_ARRAY);
-	glBindBufferARB(GL_ARRAY_BUFFER_ARB, vbo);
-	glVertexPointer(2, GL_FLOAT, 0, NULL);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	size_t test = sizeof(p_type);
+	glVertexPointer(3, GL_FLOAT, 12, (void*)particles);
 	glDrawArrays(GL_POINTS, 0, numParticles);
-	glBindBufferARB(GL_ARRAY_BUFFER_ARB, 0);
+
+	//glBindBuffer(GL_ARRAY_BUFFER_ARB, 0);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glDisableClientState(GL_VERTEX_ARRAY);
-	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+
+	glDisable(GL_BLEND);
+	glDisable(GL_POINT_SMOOTH);
+
+	//glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
 	/* draw white polygon (rectangle) with corners at
 
 	* (0.25, 0.25, 0.0) and (0.75, 0.75, 0.0)
 
 	*/
-	glBindVertexArray(vao);
-	glDrawArrays(GL_POINT, 0, numParticles);
 
-	glColor3f(1.0, 1.0, 1.0);
+
 
 	/* don't wait!
 
 	* start processing buffered OpenGL routines
 
 	*/
-
-	glFlush();
-
 }
 
-void ParticleRenderer::setParticleVector(double* positions)
+void ParticleRenderer::initSystem()
 {
+	sys.allocate(5000);
+	sys.initialize();
+	numParticles = sys.getNumParticles();
+
+	setParticleVector(sys.getParticleVector());
+
+	if (!vbo)
+	{
+		glGenBuffers(1, &vbo);
+	}
+
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, particles, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 }
 
+void ParticleRenderer::begin()
+{
+	glutMainLoop();
+}
 
+void ParticleRenderer::setParticleVector(p_type* positions)
+{
+	particles = positions;
+}
+
+GLuint ParticleRenderer::vbo;
+GLsizei ParticleRenderer::numParticles;
+p_type* ParticleRenderer::particles;
+
+ParticleSystem ParticleRenderer::sys;

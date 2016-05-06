@@ -12,6 +12,7 @@ public:
 	void allocate(const unsigned int& numParticles);	//allocated memory on host
 	void initialize();									//defines starting positions
 	p_type* getParticleVector();
+	int getNumParticles();
 	//void copyPositionFromDevice();						//copies calculated vector from device to host
 	void doFrameCPU();						//calculates stuff (cpu based)
 	void doFrameGPU();					//calculates stuff (gpu based)
