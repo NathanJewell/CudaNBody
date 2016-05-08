@@ -2,6 +2,11 @@
 #include <cuda_runtime.h>
 #include <stdlib.h>
 #include "Defines.hpp"
+#include <math.h>
+#include <cuda_runtime.h>
+#include "device_launch_parameters.h"
+#include "math.cuh"
+#include "MathUtil.hpp"
 
 class ParticleSystem
 {
@@ -11,14 +16,14 @@ public:
 
 	void allocate(const unsigned int& numParticles);	//allocated memory on host
 	void initialize();									//defines starting positions
-	p_type* getParticleVector();
+	p_type* getHostParticleVector();
+	p_type* getDeviceParticleVector();
 	int getNumParticles();
 	//void copyPositionFromDevice();						//copies calculated vector from device to host
 	void doFrameCPU();						//calculates stuff (cpu based)
 	void doFrameGPU();					//calculates stuff (gpu based)
 
 private:
-	float fInvSqrt(const float& in);
 
 	unsigned int numParticles;
 	p_type* h_pos;

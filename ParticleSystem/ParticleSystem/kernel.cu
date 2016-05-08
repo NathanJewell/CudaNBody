@@ -9,23 +9,14 @@
 #include "ParticleRenderer.hpp"
 #include "ParticleSystem.hpp"
 
+#include "math.cuh"
+
 typedef std::chrono::high_resolution_clock Clock;
 
 
-
-
-__global__ void ARR_ADD(float* res, const float* in1, const float *in2, int n)
-{
-	int index = blockDim.x * blockIdx.x + threadIdx.x;
-	if (index < n)
-	{
-		res[index] = sqrt(in1[index] * in2[index]);
-	}
-
-}
-
 int main(int argc, char** argv)
 {
+	
 	srand(time(NULL));
 
 	ParticleRenderer ren;
@@ -40,13 +31,12 @@ int main(int argc, char** argv)
 
 
 
-
 	/*
 	//defining program attributes
-	int N = 10000000;
+	int N = 1000;
 	size_t size = N * sizeof(float);
-	int TPB = 1024;	//threads per block
-	int times = 100;
+	//int TPB = 1024;	//threads per block
+	int times = 1;
 
 
 	//allocating host memory
@@ -81,7 +71,7 @@ int main(int argc, char** argv)
 	int numblocks = (N + TPB - 1) / TPB;
 	for (int i = 0; i < times; i++)
 	{
-		ARR_ADD << <numblocks, TPB >> >(d_res, d_in1, d_in2, N);
+		ARR_ADDC << <numblocks, TPB >> >(d_res, d_in1, d_in2, N);
 	}
 
 	err = cudaGetLastError();
@@ -132,7 +122,7 @@ int main(int argc, char** argv)
 	{
 		for (int i = 0; i < N; i++)
 		{
-			resN[i] = sqrt(in1N[i] * in2N[i]);
+			resN[i] = in1N[i] + in2N[i];
 		}
 	}
 
@@ -151,5 +141,5 @@ int main(int argc, char** argv)
 
 	free(in1);
 	free(in2);
-	*/
+	*/	
 }

@@ -33,10 +33,10 @@ void ParticleRenderer::initGL()
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 
 	/* initialize viewing values */
-	glViewport(0, 0, 1024, 1024);
+	glViewport(512, 0, 128, 128);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(-512, 512, -512, 512, -512, 512);
+	glOrtho(-10240, 10240, -10240, 10240, -1000000000, 1000000000);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glutPostRedisplay();
@@ -56,11 +56,11 @@ void ParticleRenderer::initGL()
 void ParticleRenderer::drawFrame()
 {
 	/* clear all pixels */
-	sys.doFrameCPU();
+
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//parameters
-	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+	glColor4f(1.0f, 0.0f, 1.0f, .4f);
 	glPointSize(2);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
@@ -70,26 +70,22 @@ void ParticleRenderer::drawFrame()
 	//drawing vertex array
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	size_t test = sizeof(p_type);
-	glVertexPointer(3, GL_FLOAT, 12, (void*)particles);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, particles, GL_STATIC_DRAW);
+	glVertexPointer(3, GL_FLOAT, sizeof(p_type) * 3, 0);
 	glDrawArrays(GL_POINTS, 0, numParticles);
 
 	//glBindBuffer(GL_ARRAY_BUFFER_ARB, 0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glDisableClientState(GL_VERTEX_ARRAY);
 
-	glBegin(GL_POINTS);
-	{
 
-		for (int i = 0; i < numParticles; ++i)
-		{
-			int index = i * 3;
-			glVertex3f(particles[index], particles[index + 1], particles[index+2]);
-		}
-	}
-	glEnd();
 	glDisable(GL_BLEND);
 	glDisable(GL_POINT_SMOOTH);
+
+	sys.doFrameGPU();
+	//sys.doFrameCPU();
+
+
 	glutPostRedisplay();
 	//glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
@@ -106,15 +102,17 @@ void ParticleRenderer::drawFrame()
 	* start processing buffered OpenGL routines
 
 	*/
+
 }
 
 void ParticleRenderer::initSystem()
 {
-	sys.allocate(5000);
+	sys.allocate(4000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 
-	setParticleVector(sys.getParticleVector());
+	setParticleVector(sys.getHostParticleVector());
+
 
 	if (!vbo)
 	{
