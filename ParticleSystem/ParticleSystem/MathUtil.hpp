@@ -79,3 +79,5 @@ inline p_type getMagO(const p_type* pos, const int & p1)
 	p_type diffz = (- pos[p1 + 2]);
 	return  abs(diffx*diffx + diffy*diffy + diffz*diffz);
 }
+
+

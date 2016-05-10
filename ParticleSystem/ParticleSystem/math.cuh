@@ -8,7 +8,7 @@
 
 
 __device__ float fInvSqrt_D(const float& in);
-__device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, int pIndex2, int index2, int thisIndex);
+__device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, int pIndex2, int index2, int thisIndex, float tstep);
 __global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, int numBlocks);
 __global__ void ARR_ADD(p_type* getter, const p_type *giver, int N);
 __global__ void ARR_ADDC(float* result, float* in1, float* in2, int N);

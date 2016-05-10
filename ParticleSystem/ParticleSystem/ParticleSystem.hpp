@@ -8,6 +8,7 @@
 #include "math.cuh"
 #include "MathUtil.hpp"
 
+
 class ParticleSystem
 {
 public:

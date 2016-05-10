@@ -107,7 +107,7 @@ void ParticleRenderer::drawFrame()
 
 void ParticleRenderer::initSystem()
 {
-	sys.allocate(4000);
+	sys.allocate(3000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 

@@ -89,8 +89,8 @@ void ParticleSystem::initialize(/*distribution type?*/)
 		float cr = cos(rotation);
 		float sr = sin(rotation);
 
-		particleEnd = .5 * (armIt + 1) * numParticles / numArms;
-		particleStart = .5 * (armIt) * numParticles / numArms;
+		particleEnd = (armIt + 1) * numParticles / numArms;
+		particleStart = (armIt) * numParticles / numArms;
 
 		float step = intervalLength/(particleEnd-particleStart);
 		float cTheta = 0;	//current theta
@@ -160,34 +160,58 @@ void ParticleSystem::initialize(/*distribution type?*/)
 
 #endif
 #ifdef DISK_DIST
-	float maxRadius = 3000;
-	for (unsigned int partIt = numParticles/2; partIt < numParticles; partIt++)
+	float maxRadius = 4000;
+	float depth = 500;
+	float massAvg = 1;
+	for (unsigned int partIt = 0; partIt < numParticles; partIt++)
 	{
 
 		int index = partIt * 3;
 		float angle = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX)* 2* PI ;
-		float r = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX)* (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX)*   (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * maxRadius;
 
+		float rp = partIt - numParticles;
+		/*
+		if ((float)rp < -500)
+		{
+			float rp = pow(1.01, rp);
+		}
+		else
+		{
+			rp = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * .005;	//approx 1.01^-500
+		}
+		*/
+
+		//float r = (rp + .1)*maxRadius;
+		float power = 1.5;
+		float r = (maxRadius * (pow(partIt, power) / pow(numParticles, power)));
 		p_type x = cos(angle) * r;
 		p_type y = sin(angle) * r;
-		p_type z = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX)* 2000;
+		p_type z = pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1.2) * depth;
 
 		h_pos[index] = x;
 		h_pos[index + 1] = y;
 		h_pos[index + 2] = z;
 
 		auto tang = getTangentO(h_pos, index);
-		p_type dist = getMagO(h_pos, index);
-		p_type oV = sqrt(EARTH_KG*2 / (dist * 100));
-		h_vel[index] = std::get<0>(tang) * oV;
-		h_vel[index + 1] = std::get<1>(tang) * oV;
-		h_vel[index + 2] = std::get<2>(tang) * oV;
+		p_type distsqr = getMagO(h_pos, index);
+		p_type invDist = fInvSqrt((float)distsqr);
+		p_type dist = 1 / invDist;
+
+		p_type Rm = ((float)partIt) * massAvg;
+
+
+		p_type oV = sqrt(Rm / dist);
+		//p_type oV = 2*PI; // dist / pow(1 + distsqr, 3 / 4);
+		h_vel[index] =  std::get<0>(tang) * oV;
+		h_vel[index + 1] =  std::get<1>(tang) * oV;
+		h_vel[index + 2] =  std::get<2>(tang) * oV;
 
 		h_acc[index] = 0;
 		h_acc[index + 1] = 0;
 		h_acc[index + 2] = 0;
 
-		h_mass[partIt] = EARTH_KG;
+		h_mass[partIt] = EARTH_KG/distsqr;// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
+		massAvg = (massAvg * (partIt) + h_mass[partIt]) / (partIt+1);
 	}
 
 	size_t size = sizeof(p_type) * 3 * numParticles;
