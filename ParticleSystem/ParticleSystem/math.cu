@@ -41,17 +41,7 @@ __device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 		{
 			distsqr = 30000;
 		}
-		if (distsqr = 0)	//want to prevent errors and simulate collision
-		{
-			//add mass to other particle
-			mass[index2] += mass[index];
-			mass[index] = 0;
 
-			//move it out of view
-			//pos[pIndex1] = 100000;
-			//pos[pIndex1 + 1] = 100000;
-			//pos[pIndex1 + 2] = 100000;
-		}
 		//else
 		//{
 
@@ -66,9 +56,9 @@ __device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 			p_type forcey = normy * -attraction;
 			p_type forcez = normz * -attraction;
 
-			acc[pIndex1] += forcex * tstep;
-			acc[pIndex1 + 1] += forcey * tstep;
-			acc[pIndex1 + 2] += forcez * tstep;
+			acc[pIndex1] += forcex;
+			acc[pIndex1 + 1] += forcey;
+			acc[pIndex1 + 2] += forcez;
 		//}
 
 	}
@@ -83,7 +73,7 @@ __global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 	{
 		for (int i = 0; i < numParticles; i++)
 		{
-			doParticle(pos, vel, acc, mass, numParticles, pIndex1, index, i, 1);
+			doParticle(pos, vel, acc, mass, numParticles, pIndex1, index, i, 2);
 		}
 		//pos[index] = 0;
 	}

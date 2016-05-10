@@ -5,6 +5,9 @@
 #include <GL\freeglut.h>
 #include "ParticleSystem.hpp"
 #include "Defines.hpp"
+#include <chrono>
+
+typedef std::chrono::high_resolution_clock Clock;
 
 
 
@@ -30,4 +33,6 @@ private:
 	static p_type* particles;
 
 	static ParticleSystem sys;
+
+	static float fps;
 };

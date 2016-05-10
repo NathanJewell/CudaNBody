@@ -160,7 +160,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 
 #endif
 #ifdef DISK_DIST
-	float maxRadius = 4000;
+	float maxRadius = 1000;
 	float depth = 500;
 	long long massAvg = 1;
 	for (unsigned int partIt = 0; partIt < numParticles; partIt++)
@@ -189,10 +189,10 @@ void ParticleSystem::initialize(/*distribution type?*/)
 		p_type invDist = fInvSqrt((float)distsqr);
 		p_type dist = 1 / invDist;
 
-		h_mass[partIt] = EARTH_KG / (distsqr);// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
-		massAvg += h_mass[partIt];
+		h_mass[partIt] = EARTH_KG/distsqr;// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
+		massAvg += h_mass[partIt]/distsqr;
 
-		p_type Rm = 0;// massAvg;
+		p_type Rm = massAvg;
 
 
 		p_type oV = sqrt(Rm / dist);
@@ -239,19 +239,8 @@ void ParticleSystem::doFrameCPU()
 				{
 					distsqr = 30000;
 				}
-				if (distsqr == 0)	//want to prevent errors and simulate collision
-				{
-					//add mass to other particle
-					h_mass[partItA] += h_mass[partItB];
-					h_mass[partItB] = 0;
 
-					//move it out of view
-					h_pos[indexB] = 100000;
-					h_pos[indexB + 1] = 100000;
-					h_pos[indexB + 2] = 100000;
-				}
-				else
-				{
+
 					p_type attraction = (h_mass[partItA] * h_mass[partItB]) / (distsqr);	//gravity equation
 
 					p_type invsqrt = fInvSqrt((float)distsqr);
@@ -266,7 +255,7 @@ void ParticleSystem::doFrameCPU()
 					h_acc[indexB] += forcex;
 					h_acc[indexB + 1] += forcey;
 					h_acc[indexB + 2] += forcez;
-				}
+
 			}
 		}
 

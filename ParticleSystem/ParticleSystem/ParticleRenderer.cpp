@@ -36,7 +36,7 @@ void ParticleRenderer::initGL()
 	glViewport(512, 0, 128, 128);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(-10240, 10240, -10240, 10240, -1000000000, 1000000000);
+	glOrtho(-2240, 2240, -2240, 2240, -1000000000, 1000000000);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glutPostRedisplay();
@@ -50,13 +50,14 @@ void ParticleRenderer::initGL()
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
+	fps = 60;
 }
 
 void ParticleRenderer::drawFrame()
 {
 	/* clear all pixels */
 	auto t1 = Clock::now();
+
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//parameters
@@ -84,9 +85,19 @@ void ParticleRenderer::drawFrame()
 
 	sys.doFrameGPU();
 	//sys.doFrameCPU();
+	std::cout << "big mama" << std::endl;
+	auto t2 = Clock::now();
+	//float frametime = pow(10, 9) / 60;
+	//float time = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count();
+	//if (time > 0)
+	//{
+//		Sleep(abs(time / 1000));
+	//}
 
 
 	glutPostRedisplay();
+
+
 	//glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
 	/* draw white polygon (rectangle) with corners at
@@ -107,7 +118,7 @@ void ParticleRenderer::drawFrame()
 
 void ParticleRenderer::initSystem()
 {
-	sys.allocate(1000);
+	sys.allocate(5000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 
@@ -140,3 +151,4 @@ GLsizei ParticleRenderer::numParticles;
 p_type* ParticleRenderer::particles;
 
 ParticleSystem ParticleRenderer::sys;
+float ParticleRenderer::fps;
