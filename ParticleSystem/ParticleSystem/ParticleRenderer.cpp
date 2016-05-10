@@ -56,7 +56,7 @@ void ParticleRenderer::initGL()
 void ParticleRenderer::drawFrame()
 {
 	/* clear all pixels */
-
+	auto t1 = Clock::now();
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//parameters
@@ -107,7 +107,7 @@ void ParticleRenderer::drawFrame()
 
 void ParticleRenderer::initSystem()
 {
-	sys.allocate(3000);
+	sys.allocate(1000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 

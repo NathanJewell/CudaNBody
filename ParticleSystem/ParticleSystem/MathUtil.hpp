@@ -80,4 +80,13 @@ inline p_type getMagO(const p_type* pos, const int & p1)
 	return  abs(diffx*diffx + diffy*diffy + diffz*diffz);
 }
 
+inline p_type random(const p_type& max, const p_type& min=0)
+{
+	return ((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX)) * max + min;
+}
+
+inline p_type distributionPoint(const p_type& maxRadius)
+{
+	return pow(random(maxRadius),-1);
+}
 

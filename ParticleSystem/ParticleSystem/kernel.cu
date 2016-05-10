@@ -11,7 +11,7 @@
 
 #include "math.cuh"
 
-typedef std::chrono::high_resolution_clock Clock;
+
 
 
 int main(int argc, char** argv)

@@ -162,7 +162,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 #ifdef DISK_DIST
 	float maxRadius = 4000;
 	float depth = 500;
-	float massAvg = 1;
+	long long massAvg = 1;
 	for (unsigned int partIt = 0; partIt < numParticles; partIt++)
 	{
 
@@ -170,20 +170,12 @@ void ParticleSystem::initialize(/*distribution type?*/)
 		float angle = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX)* 2* PI ;
 
 		float rp = partIt - numParticles;
-		/*
-		if ((float)rp < -500)
-		{
-			float rp = pow(1.01, rp);
-		}
-		else
-		{
-			rp = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * .005;	//approx 1.01^-500
-		}
-		*/
 
-		//float r = (rp + .1)*maxRadius;
-		float power = 1.5;
-		float r = (maxRadius * (pow(partIt, power) / pow(numParticles, power)));
+		float power = 0.0;
+		float rstep = (maxRadius/numParticles) * partIt;
+		float r = rstep;// numParticles / (log(maxRadius)*rstep);//(maxRadius * (pow(partIt, power) / pow(numParticles, power)));
+		//float r = (((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX))*maxRadius)
+
 		p_type x = cos(angle) * r;
 		p_type y = sin(angle) * r;
 		p_type z = pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1.2) * depth;
@@ -197,7 +189,10 @@ void ParticleSystem::initialize(/*distribution type?*/)
 		p_type invDist = fInvSqrt((float)distsqr);
 		p_type dist = 1 / invDist;
 
-		p_type Rm = ((float)partIt) * massAvg;
+		h_mass[partIt] = EARTH_KG / (distsqr);// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
+		massAvg += h_mass[partIt];
+
+		p_type Rm = 0;// massAvg;
 
 
 		p_type oV = sqrt(Rm / dist);
@@ -210,8 +205,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 		h_acc[index + 1] = 0;
 		h_acc[index + 2] = 0;
 
-		h_mass[partIt] = EARTH_KG/distsqr;// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
-		massAvg = (massAvg * (partIt) + h_mass[partIt]) / (partIt+1);
+
 	}
 
 	size_t size = sizeof(p_type) * 3 * numParticles;
@@ -220,29 +214,8 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	err = cudaMemcpy(d_vel, h_vel, size, cudaMemcpyHostToDevice);
 	err = cudaMemcpy(d_acc, h_acc, size, cudaMemcpyHostToDevice);
 	err = cudaMemcpy(d_mass, h_mass, size/3, cudaMemcpyHostToDevice);
-#else
-	for (unsigned int partIt = 0; partIt < numParticles; partIt++)
-	{
-
-		int index = partIt * 3;
-		p_type x = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * 40000;
-		p_type y = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * 40000;
-		p_type z = (p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX) * 20000;
-		h_pos[index] = x;
-		h_pos[index + 1] = y;
-		h_pos[index + 2] = z;
-
-		h_vel[index] = 0;
-		h_vel[index + 1] = 0;
-		h_vel[index + 2] = 0;
-
-		h_acc[index] = 0;
-		h_acc[index + 1] = 0;
-		h_acc[index + 2] = 0;
-
-		h_mass[partIt] = EARTH_KG;
-	}
 #endif
+
 }
 
 void ParticleSystem::doFrameCPU()
@@ -262,8 +235,11 @@ void ParticleSystem::doFrameCPU()
 				p_type diffz = (h_pos[indexB + 2] - h_pos[indexA + 2]);
 
 				p_type distsqr = abs(diffx*diffx + diffy*diffy + diffz*diffz);
-
-				if (distsqr > -.01 && distsqr < .01)	//want to prevent errors and simulate collision
+				if (distsqr < 30000)
+				{
+					distsqr = 30000;
+				}
+				if (distsqr == 0)	//want to prevent errors and simulate collision
 				{
 					//add mass to other particle
 					h_mass[partItA] += h_mass[partItB];
@@ -276,7 +252,7 @@ void ParticleSystem::doFrameCPU()
 				}
 				else
 				{
-					p_type attraction = (h_mass[partItA] * h_mass[partItB]) / (distsqr * 1000000000000000000);	//gravity equation
+					p_type attraction = (h_mass[partItA] * h_mass[partItB]) / (distsqr);	//gravity equation
 
 					p_type invsqrt = fInvSqrt((float)distsqr);
 					p_type normx = invsqrt*diffx;

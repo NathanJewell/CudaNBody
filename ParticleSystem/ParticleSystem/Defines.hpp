@@ -6,13 +6,15 @@ typedef float p_type;	//type to use for all particle stuff
 
 #define BIG_G .00006674
 
-#define EARTH_KG 10000000
+#define EARTH_KG 100000
 
 #define MAX_FORCE BIG_G * EARTH_KG /5
 
 //#define SPIRAL_DIST
 
 #define DISK_DIST
+
+//#define GALAXY_DIST
 
 #define PI 3.141592
 

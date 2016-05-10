@@ -37,7 +37,11 @@ __device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 		{
 			distsqr *= -1;
 		}
-		if (distsqr < 0)	//want to prevent errors and simulate collision
+		if (distsqr < 30000)
+		{
+			distsqr = 30000;
+		}
+		if (distsqr = 0)	//want to prevent errors and simulate collision
 		{
 			//add mass to other particle
 			mass[index2] += mass[index];
@@ -79,7 +83,7 @@ __global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 	{
 		for (int i = 0; i < numParticles; i++)
 		{
-			doParticle(pos, vel, acc, mass, numParticles, pIndex1, index, i, .1);
+			doParticle(pos, vel, acc, mass, numParticles, pIndex1, index, i, 1);
 		}
 		//pos[index] = 0;
 	}
