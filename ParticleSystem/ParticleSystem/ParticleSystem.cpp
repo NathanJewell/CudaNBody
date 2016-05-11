@@ -189,7 +189,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 		p_type invDist = fInvSqrt((float)distsqr);
 		p_type dist = 1 / invDist;
 
-		h_mass[partIt] = EARTH_KG/distsqr;// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
+		h_mass[partIt] = EARTH_KG;// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
 		massAvg += h_mass[partIt]/distsqr;
 
 		p_type Rm = massAvg;
@@ -215,7 +215,73 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	err = cudaMemcpy(d_acc, h_acc, size, cudaMemcpyHostToDevice);
 	err = cudaMemcpy(d_mass, h_mass, size/3, cudaMemcpyHostToDevice);
 #endif
+	float maxRadius = 4000;
+	float maxDepth = 500;
+	float k = numParticles / 49.147007;// 564.319;	//k for 1/ln(r)
+	//float k = numParticles / log(maxRadius);			//k for 1/r
+	float lee = li(4000, 100);
+	float dr = maxRadius / 200;
+	float radiusVariationFrac = 1;
+	int particlesGenerated = 0;
+	float totalMass = 0;
 
+	for (float r = 2; r < maxRadius+.01; r += dr)
+	{
+		int toGen = 0;
+		if (r > maxRadius)
+		{
+			toGen = numParticles - particlesGenerated;
+		}
+		else
+		{
+			toGen = dr * ((1 / log(r) + (1 / log(r + dr))) / 2) * k + 1;	//trapezoid method for integral approximation 1/ln(r)		
+			//toGen = dr * (((1 / r)+(1/(r+dr)))/2) * k + 1;					//trapezoid method for integral approximation 1/r
+		}
+
+		for (int partIt = 0; partIt < toGen && particlesGenerated < numParticles; partIt++, particlesGenerated++)
+		{
+			int index = particlesGenerated * 3;
+
+
+			float angle = random(2*PI);
+			float radius = random(dr*radiusVariationFrac, r);
+
+			p_type x = cos(angle) * r;
+			p_type y = sin(angle) * r;
+			p_type z = pow(random(1), 1.2) * maxDepth;
+
+			h_pos[index] = x;
+			h_pos[index + 1] = y;
+			h_pos[index + 2] = z;
+
+			auto tang = getTangentO(h_pos, index);
+			p_type distsqr = getMagO(h_pos, index);
+			p_type invDist = fInvSqrt((float)distsqr);
+			p_type dist = 1 / invDist;
+
+			h_mass[partIt] = EARTH_KG/distsqr;// ((pow((p_type)static_cast <float> (rand()) / static_cast <float> (RAND_MAX), 1) * 100) + EARTH_KG) / dist;
+			totalMass += h_mass[partIt] / distsqr;
+
+			p_type Rm =  totalMass;
+
+
+			p_type oV = sqrt(Rm / dist);
+			//p_type oV = 2*PI; // dist / pow(1 + distsqr, 3 / 4);
+			h_vel[index] = std::get<0>(tang) * oV;
+			h_vel[index + 1] = std::get<1>(tang) * oV;
+			h_vel[index + 2] = std::get<2>(tang) * oV;
+
+			h_acc[index] = 0;
+			h_acc[index + 1] = 0;
+			h_acc[index + 2] = 0;
+		}
+	}
+	size_t size = sizeof(p_type) * 3 * numParticles;
+	cudaError_t err = cudaSuccess;
+	err = cudaMemcpy(d_pos, h_pos, size, cudaMemcpyHostToDevice);
+	err = cudaMemcpy(d_vel, h_vel, size, cudaMemcpyHostToDevice);
+	err = cudaMemcpy(d_acc, h_acc, size, cudaMemcpyHostToDevice);
+	err = cudaMemcpy(d_mass, h_mass, size / 3, cudaMemcpyHostToDevice);
 }
 
 void ParticleSystem::doFrameCPU()

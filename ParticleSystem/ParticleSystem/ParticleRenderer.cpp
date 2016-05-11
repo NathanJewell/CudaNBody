@@ -83,9 +83,9 @@ void ParticleRenderer::drawFrame()
 	glDisable(GL_BLEND);
 	glDisable(GL_POINT_SMOOTH);
 
-	sys.doFrameGPU();
-	//sys.doFrameCPU();
-	std::cout << "big mama" << std::endl;
+	//sys.doFrameGPU();
+	sys.doFrameCPU();
+
 	auto t2 = Clock::now();
 	//float frametime = pow(10, 9) / 60;
 	//float time = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count();
@@ -118,7 +118,7 @@ void ParticleRenderer::drawFrame()
 
 void ParticleRenderer::initSystem()
 {
-	sys.allocate(5000);
+	sys.allocate(1000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 

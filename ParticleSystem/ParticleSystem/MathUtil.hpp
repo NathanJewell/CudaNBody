@@ -90,3 +90,39 @@ inline p_type distributionPoint(const p_type& maxRadius)
 	return pow(random(maxRadius),-1);
 }
 
+inline int fact(int x)			//pulled this of forums cuz its short
+{						
+	return (x == 1 ? x : x * fact(x - 1));
+}
+
+inline float li(const float& x, const int& summations = 20)	//logarithmic integral series representation
+{
+	float dist = x - 2;
+	dist /= summations;
+	float e = 0;
+	for (float i = 2; i < x; i += dist)
+	{
+		e += ((1 / log(x)) + (1 / log(x + dist))) / 2;
+	}
+	return 1.92242131492 + e * dist;
+
+		/*
+	float y = .5772156649;	//appoximate Euler-Mascheroni gamme constant
+	float part = y + log(log(x));
+	float sum = 0;
+	for (int s = 1; s < summations; s++)
+	{
+		float sum2 = 0;
+		for (int s2 = 0; s2 < (s-1)/2; s2++)
+		{
+			sum2 += 1.0f / (2.0f * (float)s2 + 1.0f);
+		}
+		sum += sum2 * ((pow(-1, s - 1)*pow(log(x), s)) / (fact(s)*pow(2, s - 1)));	//mmmmmm
+	}
+	part += sqrt(x)*sum;
+	return part;
+	*/
+}
+
+
+

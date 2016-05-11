@@ -378,7 +378,7 @@ c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\host_defines.h
 c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\vector_functions.h
 c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\device_launch_parameters.h
 c:\program files\nvidia gpu computing toolkit\cuda\v7.5\include\vector_types.h
-c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\math.cuh
+c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\math.cuh
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\device_launch_parameters.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h
@@ -455,4 +455,4 @@ C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\cerrno
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\errno.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\share.h
-c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp
+c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp
