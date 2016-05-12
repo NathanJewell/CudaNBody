@@ -1,12 +1,12 @@
 #pragma once
 
-typedef float p_type;	//type to use for all particle stuff
+typedef double p_type;	//type to use for all particle stuff
 
 #define USE_CPU
 
 #define BIG_G .00006674
 
-#define EARTH_KG 100000
+#define EARTH_KG 10000000
 
 #define MAX_FORCE BIG_G * EARTH_KG /5
 

@@ -37,15 +37,15 @@ __device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 		{
 			distsqr *= -1;
 		}
-		if (distsqr < 30000)
+		if (distsqr < 500)
 		{
-			distsqr = 30000;
+			distsqr = 500;
 		}
-
 		//else
 		//{
 
 		p_type attraction = (mass[index2] * mass[index]) / (distsqr);	//gravity equation
+
 
 			p_type invsqrt = fInvSqrt_D((float)distsqr);
 			p_type normx = invsqrt*diffx;
@@ -56,15 +56,15 @@ __device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 			p_type forcey = normy * -attraction;
 			p_type forcez = normz * -attraction;
 
-			acc[pIndex1] += forcex;
-			acc[pIndex1 + 1] += forcey;
-			acc[pIndex1 + 2] += forcez;
+			acc[pIndex1] += (forcex * tstep)/mass[index];
+			acc[pIndex1 + 1] += (forcey * tstep)/mass[index];
+			acc[pIndex1 + 2] += (forcez * tstep)/mass[index];
 		//}
 
 	}
 }
 
-__global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, int numBlocks)
+__global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, int numBlocks, float dt)
 {
 	int index = blockDim.x * blockIdx.x + threadIdx.x;
 	int pIndex1 = index * 3;
@@ -73,7 +73,7 @@ __global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 	{
 		for (int i = 0; i < numParticles; i++)
 		{
-			doParticle(pos, vel, acc, mass, numParticles, pIndex1, index, i, 2);
+			doParticle(pos, vel, acc, mass, numParticles, pIndex1, index, i, dt);
 		}
 		//pos[index] = 0;
 	}
@@ -91,6 +91,17 @@ __global__ void ARR_ADD(p_type* getter, const p_type *giver, int N)
 
 }
 
+__global__ void POS_ADD(p_type* getter, const p_type *giver, int N, float dt)
+{
+	int index = blockDim.x * blockIdx.x + threadIdx.x;
+	if (index < N)
+	{
+		getter[index] = getter[index] + (giver[index]*dt);
+	}
+
+}
+
+
 __global__ void ARR_ADDC(float* result, float* in1, float* in2, int N)
 {
 	int index = blockDim.x * blockIdx.x + threadIdx.x;
@@ -99,6 +110,7 @@ __global__ void ARR_ADDC(float* result, float* in1, float* in2, int N)
 		result[index] = in1[index] + in2[index];
 	}
 }
+
 
 __global__ void ARR_SET(p_type* getter, const p_type value, int N)
 {
@@ -111,7 +123,8 @@ __global__ void ARR_SET(p_type* getter, const p_type value, int N)
 
 __host__ void doFrame(p_type* d_pos, p_type* d_vel, p_type* d_acc, p_type* d_mass, int numParticles, int numBlocks, int numBlocks2)
 {
-	beginFrame << <numBlocks, TPB >> >(d_pos, d_vel, d_acc, d_mass, numParticles, numBlocks);
+	float dt = .01;
+	beginFrame << <numBlocks, TPB >> >(d_pos, d_vel, d_acc, d_mass, numParticles, numBlocks, dt);
 	cudaError_t err;
 
 	ARR_ADD << <numBlocks2, TPB >> >(d_vel, d_acc, numParticles * 3);
@@ -129,7 +142,7 @@ __host__ void doFrame(p_type* d_pos, p_type* d_vel, p_type* d_acc, p_type* d_mas
 	//cudaMemcpy(test, d_vel, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 	//cudaMemcpy(test, d_acc, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 
-	ARR_ADD << <numBlocks2, TPB >> >(d_pos, d_vel, numParticles * 3);
+	POS_ADD << <numBlocks2, TPB >> >(d_pos, d_vel, numParticles * 3, dt);
 
 	//cudaMemcpy(test, d_pos, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 	//cudaMemcpy(test, d_vel, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);

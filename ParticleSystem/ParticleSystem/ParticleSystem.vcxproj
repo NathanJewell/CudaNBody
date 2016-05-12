@@ -159,7 +159,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64;%(AdditionalLibraryDirectories);C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64;%(AdditionalLibraryDirectories);C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
@@ -240,16 +240,105 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     <ClInclude Include="Defines.hpp" />
     <ClInclude Include="math.cuh" />
     <ClInclude Include="MathUtil.hpp" />
+    <ClInclude Include="noiseutils.h" />
+    <ClInclude Include="noise\basictypes.h" />
+    <ClInclude Include="noise\exception.h" />
+    <ClInclude Include="noise\interp.h" />
+    <ClInclude Include="noise\latlon.h" />
+    <ClInclude Include="noise\mathconsts.h" />
+    <ClInclude Include="noise\misc.h" />
+    <ClInclude Include="noise\model\cylinder.h" />
+    <ClInclude Include="noise\model\line.h" />
+    <ClInclude Include="noise\model\model.h" />
+    <ClInclude Include="noise\model\plane.h" />
+    <ClInclude Include="noise\model\sphere.h" />
+    <ClInclude Include="noise\module\abs.h" />
+    <ClInclude Include="noise\module\add.h" />
+    <ClInclude Include="noise\module\billow.h" />
+    <ClInclude Include="noise\module\blend.h" />
+    <ClInclude Include="noise\module\cache.h" />
+    <ClInclude Include="noise\module\checkerboard.h" />
+    <ClInclude Include="noise\module\clamp.h" />
+    <ClInclude Include="noise\module\const.h" />
+    <ClInclude Include="noise\module\curve.h" />
+    <ClInclude Include="noise\module\cylinders.h" />
+    <ClInclude Include="noise\module\displace.h" />
+    <ClInclude Include="noise\module\exponent.h" />
+    <ClInclude Include="noise\module\invert.h" />
+    <ClInclude Include="noise\module\max.h" />
+    <ClInclude Include="noise\module\min.h" />
+    <ClInclude Include="noise\module\module.h" />
+    <ClInclude Include="noise\module\modulebase.h" />
+    <ClInclude Include="noise\module\multiply.h" />
+    <ClInclude Include="noise\module\perlin.h" />
+    <ClInclude Include="noise\module\power.h" />
+    <ClInclude Include="noise\module\ridgedmulti.h" />
+    <ClInclude Include="noise\module\rotatepoint.h" />
+    <ClInclude Include="noise\module\scalebias.h" />
+    <ClInclude Include="noise\module\scalepoint.h" />
+    <ClInclude Include="noise\module\select.h" />
+    <ClInclude Include="noise\module\spheres.h" />
+    <ClInclude Include="noise\module\terrace.h" />
+    <ClInclude Include="noise\module\translatepoint.h" />
+    <ClInclude Include="noise\module\turbulence.h" />
+    <ClInclude Include="noise\module\voronoi.h" />
+    <ClInclude Include="noise\noise.h" />
+    <ClInclude Include="noise\noisegen.h" />
+    <ClInclude Include="noise\vectortable.h" />
     <ClInclude Include="ParticleRenderer.hpp" />
     <ClInclude Include="ParticleSystem.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="noiseutils.cpp" />
+    <ClCompile Include="noise\latlon.cpp" />
+    <ClCompile Include="noise\model\cylinder.cpp" />
+    <ClCompile Include="noise\model\line.cpp" />
+    <ClCompile Include="noise\model\plane.cpp" />
+    <ClCompile Include="noise\model\sphere.cpp" />
+    <ClCompile Include="noise\module\abs.cpp" />
+    <ClCompile Include="noise\module\add.cpp" />
+    <ClCompile Include="noise\module\billow.cpp" />
+    <ClCompile Include="noise\module\blend.cpp" />
+    <ClCompile Include="noise\module\cache.cpp" />
+    <ClCompile Include="noise\module\checkerboard.cpp" />
+    <ClCompile Include="noise\module\clamp.cpp" />
+    <ClCompile Include="noise\module\const.cpp" />
+    <ClCompile Include="noise\module\curve.cpp" />
+    <ClCompile Include="noise\module\cylinders.cpp" />
+    <ClCompile Include="noise\module\displace.cpp" />
+    <ClCompile Include="noise\module\exponent.cpp" />
+    <ClCompile Include="noise\module\invert.cpp" />
+    <ClCompile Include="noise\module\max.cpp" />
+    <ClCompile Include="noise\module\min.cpp" />
+    <ClCompile Include="noise\module\modulebase.cpp" />
+    <ClCompile Include="noise\module\multiply.cpp" />
+    <ClCompile Include="noise\module\perlin.cpp" />
+    <ClCompile Include="noise\module\power.cpp" />
+    <ClCompile Include="noise\module\ridgedmulti.cpp" />
+    <ClCompile Include="noise\module\rotatepoint.cpp" />
+    <ClCompile Include="noise\module\scalebias.cpp" />
+    <ClCompile Include="noise\module\scalepoint.cpp" />
+    <ClCompile Include="noise\module\select.cpp" />
+    <ClCompile Include="noise\module\spheres.cpp" />
+    <ClCompile Include="noise\module\terrace.cpp" />
+    <ClCompile Include="noise\module\translatepoint.cpp" />
+    <ClCompile Include="noise\module\turbulence.cpp" />
+    <ClCompile Include="noise\module\voronoi.cpp" />
+    <ClCompile Include="noise\noisegen.cpp" />
     <ClCompile Include="ParticleRenderer.cpp" />
     <ClCompile Include="ParticleSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\x64\freeglut.lib" />
     <Library Include="lib\x64\glew64.lib" />
+    <Library Include="lib\x64\libnoise.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="noise\LibNoise64.vcxproj" />
+    <None Include="noise\LibNoise64.vcxproj.filters" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="noise\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

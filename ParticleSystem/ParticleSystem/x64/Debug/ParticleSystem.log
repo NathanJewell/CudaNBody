@@ -1,21 +1,59 @@
-﻿Build started 5/10/2016 1:39:00 PM.
+﻿Build started 5/12/2016 11:55:38 AM.
      1>Project "C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\ParticleSystem.vcxproj" on node 2 (Build target(s)).
      1>AddCudaCompileDeps:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\math.cu 
        CudaBuild:
          Compiling CUDA source file math.cu...
-         cmd.exe /C "C:\Users\njewell5880\AppData\Local\Temp\tmp147f442822f7450bbc45aa062297c432.cmd"
+         cmd.exe /C "C:\Users\njewell5880\AppData\Local\Temp\tmpdcf8f2c19a5a4afc852ba0ecd88fdf47.cmd"
          "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o x64\Debug\math.cu.obj "C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\math.cu"
          
          C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -IC:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -IC:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o x64\Debug\math.cu.obj "C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\math.cu" 
          math.cu
+     1>C:/Users/njewell5880/Desktop/CudaNBody/ParticleSystem/ParticleSystem/math.cu(126): warning C4305: 'initializing' : truncation from 'double' to 'float'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64 /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64" /LIBPATH:C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\lib\x64 cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.lib" /MACHINE:X64 x64\Debug\kernel.cu.obj
          x64\Debug\math.cu.obj
+         x64\Debug\noiseutils.obj
+         x64\Debug\latlon.obj
+         x64\Debug\cylinder.obj
+         x64\Debug\line.obj
+         x64\Debug\plane.obj
+         x64\Debug\sphere.obj
+         x64\Debug\abs.obj
+         x64\Debug\add.obj
+         x64\Debug\billow.obj
+         x64\Debug\blend.obj
+         x64\Debug\cache.obj
+         x64\Debug\checkerboard.obj
+         x64\Debug\clamp.obj
+         x64\Debug\const.obj
+         x64\Debug\curve.obj
+         x64\Debug\cylinders.obj
+         x64\Debug\displace.obj
+         x64\Debug\exponent.obj
+         x64\Debug\invert.obj
+         x64\Debug\max.obj
+         x64\Debug\min.obj
+         x64\Debug\modulebase.obj
+         x64\Debug\multiply.obj
+         x64\Debug\perlin.obj
+         x64\Debug\power.obj
+         x64\Debug\ridgedmulti.obj
+         x64\Debug\rotatepoint.obj
+         x64\Debug\scalebias.obj
+         x64\Debug\scalepoint.obj
+         x64\Debug\select.obj
+         x64\Debug\spheres.obj
+         x64\Debug\terrace.obj
+         x64\Debug\translatepoint.obj
+         x64\Debug\turbulence.obj
+         x64\Debug\voronoi.obj
+         x64\Debug\noisegen.obj
          x64\Debug\ParticleRenderer.obj
          x64\Debug\ParticleSystem.obj
          lib\x64\freeglut.lib
          lib\x64\glew64.lib
+         lib\x64\libnoise.lib
          ParticleSystem.vcxproj -> C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\x64\Debug\ParticleSystem.exe
        PostBuildEvent:
          echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\x64\Debug\"
@@ -29,4 +67,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:04.00
+Time Elapsed 00:00:03.97

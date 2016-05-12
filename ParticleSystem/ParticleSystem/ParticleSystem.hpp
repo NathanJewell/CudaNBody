@@ -8,6 +8,7 @@
 #include "math.cuh"
 #include "MathUtil.hpp"
 
+#include "noiseutils.h"
 
 class ParticleSystem
 {

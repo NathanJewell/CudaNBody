@@ -10,7 +10,7 @@
 #include "ParticleSystem.hpp"
 
 #include "math.cuh"
-
+#include "noise\noise.h"
 
 
 

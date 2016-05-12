@@ -8,7 +8,8 @@ ParticleRenderer::~ParticleRenderer(){}
 void ParticleRenderer::initGL()
 {
 	/* select clearing (background) color */
-
+	float width = 20000;
+	float height = 20000;
 
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
 
@@ -36,7 +37,7 @@ void ParticleRenderer::initGL()
 	glViewport(512, 0, 128, 128);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(-2240, 2240, -2240, 2240, -1000000000, 1000000000);
+	glOrtho(-width/2, width/2, -height/2, height/2, -1000000000, 1000000000);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glutPostRedisplay();
@@ -61,7 +62,7 @@ void ParticleRenderer::drawFrame()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//parameters
-	glColor4f(1.0f, 0.0f, 1.0f, .4f);
+	glColor4f(1.0f, 0.0f, 0.0f, .4f);
 	glPointSize(2);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
@@ -72,7 +73,7 @@ void ParticleRenderer::drawFrame()
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, particles, GL_STATIC_DRAW);
-	glVertexPointer(3, GL_FLOAT, sizeof(p_type) * 3, 0);
+	glVertexPointer(3, GL_DOUBLE, sizeof(p_type) * 3, 0);
 	glDrawArrays(GL_POINTS, 0, numParticles);
 
 	//glBindBuffer(GL_ARRAY_BUFFER_ARB, 0);
@@ -85,7 +86,8 @@ void ParticleRenderer::drawFrame()
 
 	sys.doFrameGPU();
 	//sys.doFrameCPU();
-	std::cout << "big mama" << std::endl;
+	//Sleep(1000);
+	std::cout << "mm" << std::endl;
 	auto t2 = Clock::now();
 	//float frametime = pow(10, 9) / 60;
 	//float time = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count();
