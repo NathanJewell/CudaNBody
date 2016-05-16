@@ -1,6 +1,6 @@
-#version 330 core                           //lower your version if GLSL 4.5 is not supported by your GPU
+#version 410 core                           //lower your version if GLSL 4.5 is not supported by your GPU
 layout(location = 0) in vec3 in_position;  //set the frist input on location (index) 0 ; in_position is our attribute 
-
+layout(location = 1) in vec4 in_color;
 
 out vec4 color;
 

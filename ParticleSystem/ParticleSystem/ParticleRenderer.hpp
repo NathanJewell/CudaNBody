@@ -36,6 +36,7 @@ private:
 
 	static p_type* particles;
 	static p_type* screenParticles;
+	static float* colors;
 
 	static ParticleSystem sys;
 

@@ -16,6 +16,7 @@ void ParticleRenderer::initGL()
 	height =3000;
 
 	frameCounter = 0;
+
 	rotation = (float*)malloc(sizeof(float) * 4);
 	rotation[0] = 0;
 	rotation[1] = 0;
@@ -89,7 +90,6 @@ void ParticleRenderer::drawFrame()
 
 
 	//parameters
-	glColor4f(1.0f, 0.0f, 0.0f, .4f);
 	glPointSize(2);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
@@ -115,7 +115,7 @@ void ParticleRenderer::drawFrame()
 
 
 	//glUseProgram(program);
-
+	glColorPointer(sizeof(float) * 4 * numParticles, GL_FLOAT, sizeof(float) * 4, &colors[0]);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
@@ -167,15 +167,19 @@ void ParticleRenderer::drawFrame()
 
 void ParticleRenderer::keyboardFunc(unsigned char Key, int x, int y)
 {
-	rotation[0] += 1;
+	rotation[1] = 0;
+	rotation[2] = 0;
+	rotation[3] = 0;
+	rotation[0] += 2;
 	switch (Key)
 	{
-	case 'w': rotation[1] += 1.0f;
-	case 's': rotation[1] += -1.0f;
-	case 'a': rotation[2] += 1.0f;
-	case 'd': rotation[2] += -1.0f;
-	case 'z': rotation[3] += 1.0f;
-	case 'x': rotation[3] += -1.0f;
+	case 'w': rotation[1] = 1.0f;
+	case 's': rotation[1] = -1.0f;
+	case 'a': rotation[2] = 1.0f;
+	case 'd': rotation[2] = -1.0f;
+	case 'z': rotation[3] = 1.0f;
+	case 'x': rotation[3] = -1.0f;
+	default: break;
 	}
 };
 
@@ -188,45 +192,59 @@ void ParticleRenderer::initSystem()
 	setParticleVector(sys.getHostParticleVector());
 
 	screenParticles = (p_type*)malloc(sizeof(p_type) * 3 * numParticles);
+
+	//initialize particles
 	for (int i = 0; i < numParticles * 3; i++)	//normalize coordinates for display
 	{
-		screenParticles[i] = particles[i];// / COORD_TO_PIXEL;
+		screenParticles[i] = particles[i] / COORD_TO_PIXEL;
 	}
 
-	if (!vbo)
+	colors = (float*)malloc(sizeof(float) * 4 * numParticles);
+
+	//initialize colors for particles
+	for (int i = 0; i < numParticles; i++)
 	{
-		glGenBuffers(1, &vbo);
+		int index = i * 4;
+		colors[index] = 1.0f;		//r
+		colors[index + 1] = 0.0f;	//g
+		colors[index + 2] = 0.0f;	//b
+		colors[index + 3] = 0.4f;	//a
 	}
 
-
+	//vertex buffer
+	glGenBuffers(1, &vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, screenParticles, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, sizeof(double) * 3, &screenParticles[0]);
+	glVertexPointer(sizeof(p_type) * 3 * numParticles, GL_DOUBLE, sizeof(p_type) * 3, &screenParticles[0]);
+
 	glEnableVertexAttribArray(0);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, 0, (void*)0);
 
-
+	//color buffer
 	glGenBuffers(1, &cbo);
 	glBindBuffer(GL_ARRAY_BUFFER, cbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*4*numParticles, &colors[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*4*numParticles, colors, GL_STATIC_DRAW);
+
 
 	glEnableVertexAttribArray(1);
-	glBindBuffer(GL_ARRAY_BUFFER, colorBuffer);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+	glBindBuffer(GL_ARRAY_BUFFER, cbo);
+	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0, (void*)0);
+
+	//cleanup
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	//glBindVertexArray(0);
 
-
-
+	//creating shaders
 	vertexShader = createShader(GL_VERTEX_SHADER, loadShaderFile("vertex.glsl"), "vertex");
 	fragmentShader = createShader(GL_FRAGMENT_SHADER, loadShaderFile("fragment.glsl"), "fragment");
-
 
 
 	program = glCreateProgram();
 	glAttachShader(program, vertexShader);
 	glAttachShader(program, fragmentShader);
 
-	glBindAttribLocation(program, 0, "in_position");
-
+	//glBindAttribLocation(program, 0, "in_position");
 	glLinkProgram(program);
 
 	int linkResult = 0;
@@ -259,6 +277,7 @@ GLuint ParticleRenderer::cbo;
 GLsizei ParticleRenderer::numParticles;
 p_type* ParticleRenderer::particles;
 p_type* ParticleRenderer::screenParticles;
+float* ParticleRenderer::colors;
 int ParticleRenderer::width;
 int ParticleRenderer::height;
 int ParticleRenderer::frameCounter;
