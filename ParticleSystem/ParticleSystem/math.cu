@@ -64,6 +64,59 @@ __device__ void doParticle(p_type* pos, p_type* vel, p_type* acc, p_type* mass, 
 	}
 }
 
+__global__ void doParticles(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, float tstep)
+{
+	int blockId = blockIdx.x + blockIdx.y * gridDim.x;
+	int threadId = blockId * (blockDim.x * blockDim.y) + (threadIdx.y * blockDim.x) + threadIdx.x;
+
+	int Y = threadId /numParticles;	//slower changing iterator
+	int X = threadId %numParticles;	//fast changing iterator
+
+	int pIndex1 = X * 3;
+	int pIndex2 =Y * 3;
+	//printf("index1 %d \n", index);
+	//printf("index2 %d \n", index2);
+	if (pIndex1 != pIndex2 && Y < numParticles)
+	{
+
+		p_type diffx = (pos[pIndex1] - pos[pIndex2]);			//calculating difference between points
+		p_type diffy = (pos[pIndex1 + 1] - pos[pIndex2 + 1]);
+		p_type diffz = (pos[pIndex1 + 2] - pos[pIndex2 + 2]);
+
+		p_type distsqr = diffx*diffx + diffy*diffy + diffz*diffz;
+
+		if (distsqr < 0)
+		{
+			distsqr *= -1;
+		}
+		if (distsqr < 500)
+		{
+			distsqr = 500;
+		}
+
+		//else
+		//{
+
+		p_type attraction = (mass[X] * mass[Y]) / (distsqr);	//gravity equation
+
+
+		p_type invsqrt = fInvSqrt_D((float)distsqr);
+		p_type normx = invsqrt*diffx;
+		p_type normy = invsqrt*diffy;
+		p_type normz = invsqrt*diffz;
+
+		p_type forcex = normx * -attraction;
+		p_type forcey = normy * -attraction;
+		p_type forcez = normz * -attraction;
+
+		acc[pIndex1] += (forcex * tstep) / mass[X];
+		acc[pIndex1 + 1] += (forcey * tstep) / mass[X];
+		acc[pIndex1 + 2] += (forcez * tstep) / mass[X];
+		//}
+
+	}
+}
+
 __global__ void beginFrame(p_type* pos, p_type* vel, p_type* acc, p_type* mass, int numParticles, int numBlocks, float dt)
 {
 	int index = blockDim.x * blockIdx.x + threadIdx.x;
@@ -121,12 +174,29 @@ __global__ void ARR_SET(p_type* getter, const p_type value, int N)
 	}
 }
 
-__host__ void doFrame(p_type* d_pos, p_type* d_vel, p_type* d_acc, p_type* d_mass, int numParticles, int numBlocks, int numBlocks2)
+__host__ void doFrame(p_type* d_pos, p_type* d_vel, p_type* d_acc, p_type* d_mass, int numParticles)
 {
-	float dt = .01;
-	beginFrame << <numBlocks, TPB >> >(d_pos, d_vel, d_acc, d_mass, numParticles, numBlocks, dt);
-	cudaError_t err;
+	float dt = .1;
 
+	dim3 block(TPB2d, TPB2d);
+	dim3 grid;
+	grid.x = (numParticles + TPB2d - 1) / TPB2d;
+	grid.y = (numParticles + TPB2d - 1) / TPB2d;
+
+	//beginFrame << <numBlocks, TPB >> >(d_pos, d_vel, d_acc, d_mass, numParticles, numBlocks, dt);
+	cudaError_t err = cudaSuccess;
+	doParticles<<< grid, block >>>(d_pos, d_vel, d_acc, d_mass, numParticles, dt);
+	
+	err = cudaGetLastError();
+
+	if (err != cudaSuccess)
+	{
+		fprintf(stderr, "Failed to launch vectorAdd kernel (error code %s)!\n", cudaGetErrorString(err));
+		exit(EXIT_FAILURE);
+	}
+		cudaDeviceSynchronize();
+
+	int numBlocks2 = (numParticles * 3 + TPB - 1) / TPB;
 	ARR_ADD << <numBlocks2, TPB >> >(d_vel, d_acc, numParticles * 3);
 
 	//p_type* test;
@@ -134,6 +204,14 @@ __host__ void doFrame(p_type* d_pos, p_type* d_vel, p_type* d_acc, p_type* d_mas
 	//cudaMemcpy(test, d_pos, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 	//cudaMemcpy(test, d_vel, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 	//cudaMemcpy(test, d_acc, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
+
+	err = cudaGetLastError();
+
+	if (err != cudaSuccess)
+	{
+		fprintf(stderr, "Failed to launch vectorAdd kernel (error code %s)!\n", cudaGetErrorString(err));
+		exit(EXIT_FAILURE);
+	}
 
 	cudaDeviceSynchronize();
 	ARR_SET << <numBlocks2, TPB >> >(d_acc, 0.0f, numParticles * 3);

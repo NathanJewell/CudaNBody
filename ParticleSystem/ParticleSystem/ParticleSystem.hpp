@@ -38,5 +38,7 @@ private:
 	p_type* d_acc;
 	p_type* d_mass;
 
+
+
 	bool allocated;
 };

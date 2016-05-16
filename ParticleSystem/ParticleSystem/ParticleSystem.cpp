@@ -44,6 +44,7 @@ void ParticleSystem::allocate(const unsigned int& newNumParticles)
 		err = cudaMalloc((void **)&d_acc, size);
 		err = cudaMalloc((void **)&d_mass, size/3);
 
+
 		//copy from cpu to GPU
 		
 		printf("ERROR!!!!???? %s", cudaGetErrorString(err));
@@ -68,12 +69,12 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	noiseMaker.SetFrequency(.001);
 	noiseMaker.SetPersistence(.5);
 
-
+	float noiseScale = 3;
 	utils::NoiseMap nm;
 
 	float xDim = 15000;
 	float yDim = 15000;
-	float zDim = 15000;
+	float zDim = 500;
 
 	float crt = cbrt(numParticles*30);
 	float dx = xDim/crt;
@@ -81,6 +82,29 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	float dz = zDim/crt;
 
 	int particlesGenerated = 0;
+	for (int i = 0; i < numParticles; i++)
+	{
+			int index = particlesGenerated * 3;
+
+			h_pos[index] = random(xDim, -xDim) + xDim/2;
+			h_pos[index + 1] =random(yDim, -yDim) + yDim/2;
+			h_pos[index + 2] = random(200);
+
+			h_vel[index] = random(100, -50);
+			h_vel[index + 1] = random(100, -50);
+			h_vel[index + 2] = random(25, -12.5);
+
+			h_acc[index] = 0;
+			h_acc[index + 1] = 0;
+			h_acc[index + 2] = 0;
+
+			h_mass[particlesGenerated] = EARTH_KG;
+
+			particlesGenerated++;
+
+	}
+
+	/*
 	for (float xIt = -xDim/2; xIt <= xDim/2; xIt += dx)
 	{
 		for (float yIt = -yDim/2; yIt <= yDim/2; yIt += dy)
@@ -89,7 +113,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 			{
 				if (particlesGenerated < numParticles)
 				{
-					double p = noiseMaker.GetValue(xIt/3, yIt/3, zIt/3);
+					double p = noiseMaker.GetValue(xIt/noiseScale, yIt/noiseScale, zIt/noiseScale);
 					if (p < 0)
 					{
 						p = 0;
@@ -101,7 +125,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 							
 						h_pos[index] = xIt + random(dx);
 						h_pos[index + 1] = yIt + random(dy);
-						h_pos[index + 2] = random(200);
+						h_pos[index + 2] = 0;// random(200);
 
 						h_vel[index] = 0;
 						h_vel[index + 1] = 0;
@@ -119,7 +143,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 			}
 		}
 	}
-
+	*/
 
 	size_t size = sizeof(p_type) * 3 * numParticles;
 	cudaError_t err = cudaSuccess;
@@ -193,12 +217,12 @@ void ParticleSystem::doFrameCPU()
 
 void ParticleSystem::doFrameGPU()
 {
-	int numBlocks = (numParticles + TPB - 1) / TPB;
-	int numBlocks2 = numBlocks = (numParticles * 3 + TPB - 1) / TPB;
-	doFrame(d_pos, d_vel, d_acc, d_mass, numParticles, numBlocks, numBlocks2);
+
+	doFrame(d_pos, d_vel, d_acc, d_mass, numParticles);
 
 	//copy vector back to cpu (until opengl-cuda gets implemented)
 	cudaMemcpy(h_pos, d_pos, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
+	//std::cout << h_pos[0] << std::endl;
 
 }
 

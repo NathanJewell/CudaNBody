@@ -2,8 +2,17 @@
 
 #include "Defines.hpp"
 #include <tuple>
+
+#include <sstream>
 typedef std::tuple<p_type, p_type, p_type> point;
 
+template <typename T>
+std::string toString(T Number)
+{
+	std::stringstream ss;
+	ss << Number;
+	return ss.str();
+}
 
 inline float fInvSqrt(const float& in)
 {

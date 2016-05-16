@@ -16,7 +16,6 @@
 
 int main(int argc, char** argv)
 {
-	
 	srand(time(NULL));
 
 	ParticleRenderer ren;
@@ -26,8 +25,6 @@ int main(int argc, char** argv)
 	ren.initGL();
 	ren.initSystem();
 	ren.begin();
-
-
 
 
 

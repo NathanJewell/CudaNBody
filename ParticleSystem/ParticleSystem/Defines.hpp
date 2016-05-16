@@ -2,25 +2,18 @@
 
 typedef double p_type;	//type to use for all particle stuff
 
-#define USE_CPU
+//#define SAVE_IMAGE
 
-#define BIG_G .00006674
+#define COORD_TO_PIXEL 1
 
-#define EARTH_KG 10000000
-
-#define MAX_FORCE BIG_G * EARTH_KG /5
-
-//#define SPIRAL_DIST
-
-#define DISK_DIST
-
-//#define GALAXY_DIST
+#define EARTH_KG 10000
 
 #define PI 3.141592
 
 #define E_MATH 2.71828
 
 #define TPB 1024	//threads to use per block on gpu
+#define TPB2d 16
 
 //1million km per pixel
 //billion dist units per pixel
