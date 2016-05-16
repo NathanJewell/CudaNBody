@@ -460,14 +460,14 @@ C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdint.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\thr/xtimec.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\thr/xthrcommon.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ParticleRenderer.hpp
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\ParticleRenderer.hpp
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
-C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\glew.h
+C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\glew.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL/glu.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\winapifamily.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL/gl.h
-C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\freeglut.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_std.h
+C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\GL\freeglut.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_std.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\windows.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\sdkddkver.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\excpt.h
@@ -671,79 +671,79 @@ C:\Program Files (x86)\Windows Kits\8.1\Include\um\ime_cmodes.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\shared\windowsx.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\mmsystem.h
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL/gl.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_ext.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ParticleSystem.hpp
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\gl\freeglut_ext.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\ParticleSystem.hpp
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\Defines.hpp
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\device_launch_parameters.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\math.cuh
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\math.cuh
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\cuda_runtime.h
 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include\device_launch_parameters.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\tuple
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\MathUtil.hpp
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\MathUtil.hpp
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\sstream
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\iterator
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\noiseutils.h
-C:\Users\Nathan\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\noise/noise.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module/module.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\add.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\modulebase.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\noiseutils.h
+C:\Users\njewell5880\Desktop\CudaNBody\ParticleSystem\ParticleSystem\inc\noise/noise.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module/module.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\add.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\modulebase.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\../basictypes.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\../exception.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\../noisegen.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\../basictypes.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\../exception.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\../noisegen.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\abs.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\billow.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\blend.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\cache.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\checkerboard.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\clamp.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\const.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\curve.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\cylinders.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\displace.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\exponent.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\invert.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\max.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\min.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\multiply.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\perlin.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\power.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\ridgedmulti.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\rotatepoint.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\scalebias.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\scalepoint.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\select.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\spheres.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\terrace.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\translatepoint.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\turbulence.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\voronoi.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model/model.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\cylinder.h
-C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
-C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
-C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\line.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\abs.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\billow.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\blend.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\cache.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\checkerboard.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\clamp.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\const.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\curve.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\cylinders.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\displace.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\exponent.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\invert.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\max.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\min.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\multiply.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\perlin.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\power.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\ridgedmulti.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\rotatepoint.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\scalebias.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\scalepoint.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\select.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\spheres.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\terrace.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\translatepoint.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\turbulence.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\module\voronoi.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model/model.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\cylinder.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\plane.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\line.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\sphere.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\plane.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc\noise\misc.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\inc/FreeImage.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\ShaderLoader.hpp
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\model\sphere.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\assert.h
+C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\crtdefs.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc\noise\misc.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\inc/FreeImage.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\ShaderLoader.hpp
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\fstream
 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector
 C:\Program Files (x86)\Windows Kits\8.1\Include\um\GL\GL.h
-c:\users\nathan\desktop\cudanbody\particlesystem\particlesystem\noise\noise.h
+c:\users\njewell5880\desktop\cudanbody\particlesystem\particlesystem\noise\noise.h

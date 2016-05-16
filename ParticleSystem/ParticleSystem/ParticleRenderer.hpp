@@ -25,11 +25,12 @@ public:
 	void initSystem();	//allocate memory and initialize particle positionss
 	void begin();
 	static void drawFrame();
+	static void keyboardFunc(unsigned char Key, int x, int y);
 
 	void setParticleVector(p_type* positions);
 
 private:
-	static GLuint vbo;		//buffer
+	static GLuint vbo, cbo;		//buffers
 
 	static GLsizei numParticles;
 
@@ -45,4 +46,6 @@ private:
 	static int frameCounter;
 
 	static GLuint vertexShader, fragmentShader, program;
+
+	static float* rotation;
 };

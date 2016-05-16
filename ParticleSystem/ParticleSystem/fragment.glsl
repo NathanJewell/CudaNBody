@@ -1,6 +1,4 @@
-#version 450 core
-
-layout(location = 0) out vec4 out_color;
+#version 330 core
 
 in vec4 color;
 
@@ -11,5 +9,5 @@ void main(void)
 	
 	vec3 product = (light * cos(color.a*3.141592)) + (dense * sin(color.a*3.141592));
 	vec4 newColor = vec4(1.0,0.0,0.0, 1.0);
-	out_color = vec4(1.0, 0.0, 0.0, 1.0);
+	gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
 }

@@ -72,9 +72,9 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	float noiseScale = 3;
 	utils::NoiseMap nm;
 
-	float xDim = 15000;
-	float yDim = 15000;
-	float zDim = 500;
+	float xDim = 150000;
+	float yDim = 150000;
+	float zDim = 150000;
 
 	float crt = cbrt(numParticles*30);
 	float dx = xDim/crt;
@@ -82,17 +82,19 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	float dz = zDim/crt;
 
 	int particlesGenerated = 0;
+
+	/*
 	for (int i = 0; i < numParticles; i++)
 	{
 			int index = particlesGenerated * 3;
 
 			h_pos[index] = random(xDim, -xDim) + xDim/2;
 			h_pos[index + 1] =random(yDim, -yDim) + yDim/2;
-			h_pos[index + 2] = random(200);
+			h_pos[index + 2] = random(zDim, -zDim) + zDim/2;
 
-			h_vel[index] = random(100, -50);
-			h_vel[index + 1] = random(100, -50);
-			h_vel[index + 2] = random(25, -12.5);
+			h_vel[index] = random(50, -25);
+			h_vel[index + 1] = random(50, -25);
+			h_vel[index + 2] = random(12.5, -6);
 
 			h_acc[index] = 0;
 			h_acc[index + 1] = 0;
@@ -103,8 +105,8 @@ void ParticleSystem::initialize(/*distribution type?*/)
 			particlesGenerated++;
 
 	}
-
-	/*
+	*/
+	
 	for (float xIt = -xDim/2; xIt <= xDim/2; xIt += dx)
 	{
 		for (float yIt = -yDim/2; yIt <= yDim/2; yIt += dy)
@@ -125,7 +127,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 							
 						h_pos[index] = xIt + random(dx);
 						h_pos[index + 1] = yIt + random(dy);
-						h_pos[index + 2] = 0;// random(200);
+						h_pos[index + 2] = zIt + random(dz);// random(200);
 
 						h_vel[index] = 0;
 						h_vel[index + 1] = 0;
@@ -143,7 +145,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 			}
 		}
 	}
-	*/
+	
 
 	size_t size = sizeof(p_type) * 3 * numParticles;
 	cudaError_t err = cudaSuccess;
@@ -154,6 +156,8 @@ void ParticleSystem::initialize(/*distribution type?*/)
 
 
 }
+
+
 
 void ParticleSystem::doFrameCPU()
 {
