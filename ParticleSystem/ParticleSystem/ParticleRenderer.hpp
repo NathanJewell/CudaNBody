@@ -31,6 +31,7 @@ public:
 
 private:
 	static GLuint vbo, cbo;		//buffers
+	static GLuint vao;			//vertex array
 
 	static GLsizei numParticles;
 
