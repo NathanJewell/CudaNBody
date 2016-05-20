@@ -91,6 +91,7 @@ void ParticleRenderer::drawFrame()
 
 	//parameters
 	glPointSize(2);
+	glColor4f(1.0, 0.0, 0.0, 1.0);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -99,12 +100,11 @@ void ParticleRenderer::drawFrame()
 	//drawing vertex array
 	glEnableClientState(GL_VERTEX_ARRAY);
 
+	//glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	//glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, particles, GL_STATIC_DRAW);
+	//glVertexPointer(3, GL_FLOAT, sizeof(p_type) * 3, 0);
 
 
-	for (int i = 0; i < numParticles * 3; i++)	//normalize coordinates for display
-	{
-		screenParticles[i] = particles[i]/ COORD_TO_PIXEL;
-	}
 
 
 	//glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, sizeof(p_type)*3, screenParticles);
@@ -114,19 +114,20 @@ void ParticleRenderer::drawFrame()
 	//glGetUniformLocation(program, "in_position");
 
 
-	glUseProgram(program);
+	//glUseProgram(program);
 	//glColorPointer(sizeof(float) * 4 * numParticles, GL_FLOAT, sizeof(float) * 4, &colors[0]);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
 	//glBindVertexArray(vao);
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, 0, &screenParticles[0]);
+	//glEnableVertexAttribArray(0);
+	//glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	//glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, 0, screenParticles);
 
-	glBindBuffer(GL_ARRAY_BUFFER, cbo);
-	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(float), &colors[0]);
+
+	//glEnableVertexAttribArray(1);
+	//glBindBuffer(GL_ARRAY_BUFFER, cbo);
+	//glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0, colors);
 
 	glPushMatrix();
 	glRotatef(rotation[0], rotation[1], rotation[2], rotation[3]);
@@ -134,7 +135,7 @@ void ParticleRenderer::drawFrame()
 	glPopMatrix();
 
 
-	glUseProgram(0);
+	//glUseProgram(0);
 	//glBindBuffer(GL_ARRAY_BUFFER_ARB, 0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glDisableClientState(GL_VERTEX_ARRAY);
@@ -142,8 +143,8 @@ void ParticleRenderer::drawFrame()
 
 	glDisable(GL_BLEND);
 	glDisable(GL_POINT_SMOOTH);
-	glDisableVertexAttribArray(0);
-	glDisableVertexAttribArray(1);
+	//glDisableVertexAttribArray(0);
+	//glDisableVertexAttribArray(1);
 
 
 
@@ -227,20 +228,21 @@ void ParticleRenderer::initSystem()
 	glGenBuffers(1, &vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, screenParticles, GL_STATIC_DRAW);
-	glVertexPointer(3, GL_DOUBLE, sizeof(p_type), &screenParticles[0]);
+	glVertexPointer(3, GL_DOUBLE, 0, &screenParticles[0]);
+
 
 	glEnableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	//glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, 0, (void*)0);
 
 	//color buffer
-	glGenBuffers(1, &cbo);
-	glBindBuffer(GL_ARRAY_BUFFER, cbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 4 * numParticles, colors, GL_STATIC_DRAW);
+	//glGenBuffers(1, &cbo);
+	//glBindBuffer(GL_ARRAY_BUFFER, cbo);
+	//glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 4 * numParticles, colors, GL_STATIC_DRAW);
 
 
-	glEnableVertexAttribArray(1);
-	glBindBuffer(GL_ARRAY_BUFFER, cbo);
+	//glEnableVertexAttribArray(1);
+	//glBindBuffer(GL_ARRAY_BUFFER, cbo);
 	//glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 0, (void*)0);
 
 	//cleanup
@@ -256,8 +258,8 @@ void ParticleRenderer::initSystem()
 	glAttachShader(program, vertexShader);
 	glAttachShader(program, fragmentShader);
 
-	glBindAttribLocation(program, 0, "in_position");
-	glBindAttribLocation(program, 1, "in_color");
+	//glBindAttribLocation(program, 0, "in_position");
+	//glBindAttribLocation(program, 1, "in_color");
 
 	glLinkProgram(program);
 
