@@ -72,41 +72,79 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	float noiseScale = 3;
 	utils::NoiseMap nm;
 
-	float xDim = 150000;
-	float yDim = 150000;
-	float zDim = 150000;
+	float xDim = 300000;
+	float yDim = 300000;
+	float zDim = 300000;
+	float radius = 300000 / 2;
 
 	float crt = cbrt(numParticles*30);
 	float dx = xDim/crt;
 	float dy = yDim/crt;
 	float dz = zDim/crt;
-
+	float px, py, pz, vx, vy, vz, calcR2, r2;
 	int particlesGenerated = 0;
+	r2 = radius*radius;
+	
+	int numSpheres = 5;
+	int pInSphere = numParticles/numSpheres;
+	int sSize = 100000;
+	int sVariance = 100000;
 
-	/*
-	for (int i = 0; i < numParticles; i++)
+	int rSize = 100000;
+	int rVariance = 75000;
+	for (int sIt = 0; sIt < numSpheres; sIt++)
 	{
+		double ty, tx, tz;	//translation factors
+		
+		tx = random(sSize, -sSize/2);
+		ty = random(sSize, -sSize/2);
+		tz = random(sSize, -sSize/2);
+
+		radius = random(rVariance * 2, rSize - rVariance);
+		r2 = radius*radius;
+		
+		pInSphere = random(numParticles / numSpheres, numParticles / (2*numSpheres));
+
+		for (int i = 0; i < pInSphere && particlesGenerated < numParticles; i++)
+		{
+			if (sIt == numSpheres - 1)
+			{
+				pInSphere = numParticles;
+			}
 			int index = particlesGenerated * 3;
 
-			h_pos[index] = random(xDim, -xDim) + xDim/2;
-			h_pos[index + 1] =random(yDim, -yDim) + yDim/2;
-			h_pos[index + 2] = random(zDim, -zDim) + zDim/2;
+		here:
+			px = h_pos[index] = random(radius * 2, -radius);
+			py = h_pos[index + 1] = random(radius * 2, -radius);
+			pz = h_pos[index + 2] = random(radius * 2, -radius);
 
-			h_vel[index] = random(50, -25);
-			h_vel[index + 1] = random(50, -25);
-			h_vel[index + 2] = random(12.5, -6);
+			//px -= tx; py -= ty; pz -= tz;
+			calcR2 = px*px + py*py + pz*pz;
+			if (calcR2 > r2)
+			{
+				goto here;
+			}
 
+			h_pos[index] += tx;
+			h_pos[index + 1] += ty;
+			h_pos[index + 2] += tz;
+
+			vx = h_vel[index] = random(50, -25);
+			vy = h_vel[index + 1] = random(50, -25);
+			vz = h_vel[index + 2] = random(12.5, -6);
 			h_acc[index] = 0;
 			h_acc[index + 1] = 0;
 			h_acc[index + 2] = 0;
 
-			h_mass[particlesGenerated] = EARTH_KG;
+			h_mass[particlesGenerated] = EARTH_KG + random(EARTH_KG * 100);
 
 			particlesGenerated++;
 
+		}
 	}
-	*/
+
 	
+	/*
 	for (float xIt = -xDim/2; xIt <= xDim/2; xIt += dx)
 	{
 		for (float yIt = -yDim/2; yIt <= yDim/2; yIt += dy)
@@ -145,7 +183,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 			}
 		}
 	}
-	
+	*/
 
 	size_t size = sizeof(p_type) * 3 * numParticles;
 	cudaError_t err = cudaSuccess;

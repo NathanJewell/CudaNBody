@@ -1,5 +1,11 @@
 #include "ParticleRenderer.hpp"
 
+int saveCounter = 0;
+double* camera;
+bool calculate = true;
+bool spin = true;
+bool save = true;
+
 ParticleRenderer::ParticleRenderer(){}
 ParticleRenderer::~ParticleRenderer()
 {
@@ -36,21 +42,23 @@ void ParticleRenderer::initGL()
 
 
 
-
 	//cudaGLRegisterBufferObject(vbo);
 
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 
 	/* initialize viewing values */
-	glViewport(512, 0, 128, 128);
+	glViewport(0, 0, 1024, 1024);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glOrtho(-width/2, width/2, -height/2, height/2, -1000000000, 1000000000);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
+	//gluPerspective(360.f, 1.f, 1.f, 100000.f);
+
+
 	glutPostRedisplay();
 	//glMatrixMode(GL_PROJECTION);
 
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
 	//glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
 
 	glLoadIdentity();
@@ -69,7 +77,11 @@ void ParticleRenderer::drawFrame()
 	/* clear all pixels */
 	auto t1 = Clock::now();
 
-	sys.doFrameGPU();
+	if (calculate)
+	{
+		sys.doFrameGPU();
+	}
+
 	//std::cout << "frame" << std::endl;
 	//sys.doFrameCPU();
 	if (COORD_TO_PIXEL != 1)
@@ -89,7 +101,7 @@ void ParticleRenderer::drawFrame()
 
 
 	//parameters
-	glColor4f(1.0f, 0.0f, 0.0f, .4f);
+	glColor4f(0.0f, 0.0f, 1.0f, .4f);
 	glPointSize(2);
 	glEnable(GL_POINT_SMOOTH);
 	glEnable(GL_BLEND);
@@ -99,32 +111,18 @@ void ParticleRenderer::drawFrame()
 	//drawing vertex array
 	glEnableClientState(GL_VERTEX_ARRAY);
 
-
-
-	for (int i = 0; i < numParticles * 3; i++)	//normalize coordinates for display
-	{
-		screenParticles[i] = particles[i]/ COORD_TO_PIXEL;
-	}
-
-
-	//glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, sizeof(p_type)*3, screenParticles);
-	//glEnableVertexAttribArray(0);
-
-	//glGetUniformLocation(program, "in_color");
-	//glGetUniformLocation(program, "in_position");
-
-
-	//glUseProgram(program);
-
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
+	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, screenParticles, GL_STATIC_DRAW);
+	glVertexPointer(3, GL_DOUBLE, sizeof(double) * 3, 0);
 
 
-
-	glPushMatrix();
-	glRotatef(rotation[0], rotation[1], rotation[2], rotation[3]);
+	//glPushMatrix();
+	//glRotatef(rotation[0], rotation[1], rotation[2], rotation[3]);
+	gluLookAt(camera[0], camera[1], camera[2], 0, 0, 0, 0, 1, 0);
 	glDrawArrays(GL_POINTS, 0, numParticles);
-	glPopMatrix();
+	//glPopMatrix();
 
 
 	//glUseProgram(0);
@@ -143,22 +141,37 @@ void ParticleRenderer::drawFrame()
 
 	// Make the BYTE array, factor of 3 because it's RBG.
 #ifdef SAVE_IMAGES
-	int renderWidth = 1024;
-	int renderHeight = 1024;
-	GLubyte* pixels = new GLubyte[3 * renderWidth * renderHeight];
+	if (frameCounter%1 == 0 && save)
+	{
+		saveCounter++;
+		int renderWidth = 1024;
+		int renderHeight = 1024;
+		GLubyte* pixels = new GLubyte[3 * renderWidth * renderHeight];
 
-	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-	glReadPixels(0, 0, renderWidth, renderHeight, GL_RGB, GL_UNSIGNED_BYTE, pixels);
+		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+		glReadPixels(0, 0, renderWidth, renderHeight, GL_RGB, GL_UNSIGNED_BYTE, pixels);
 
-	std::string filePath = "C:/CudaOutput/" + toString<int>(frameCounter) +".bmp";
+		std::string filePath = "E:/CudaOutput/7/" + toString<int>(saveCounter) +".bmp";
+	
+		// Convert to FreeImage format & save to file
+		FIBITMAP* image = FreeImage_ConvertFromRawBits(pixels, renderWidth, renderHeight, renderWidth * 3, 24, 0x00FF00, 0x0000FF, 0xFF0000, false);
+
+		FreeImage_Save(FIF_BMP, image, filePath.c_str(), 0);
+
+		// Free resources
+		FreeImage_Unload(image);
+		delete[] pixels;
+		if (spin)
+		{
+			rotation[0] += .0005;
+			camera[0] = sin(rotation[1]) * cos(rotation[0])*rotation[2];
+			camera[1] = cos(rotation[1]) * rotation[2];
+			camera[2] = sin(rotation[1]) * sin(rotation[0])*rotation[2];
+		}
+
+	}
 	frameCounter++;
-	// Convert to FreeImage format & save to file
-	FIBITMAP* image = FreeImage_ConvertFromRawBits(pixels, renderWidth, renderHeight, renderWidth*3, 24, 0x0000FF, 0xFF0000, 0x00FF00, false);
-	FreeImage_Save(FIF_BMP, image, filePath.c_str(), 0);
 
-	// Free resources
-	FreeImage_Unload(image);
-	delete[] pixels;
 #endif
 
 	glutPostRedisplay();
@@ -167,6 +180,7 @@ void ParticleRenderer::drawFrame()
 
 void ParticleRenderer::keyboardFunc(unsigned char Key, int x, int y)
 {
+	/*
 	rotation[0] += 1;
 	switch (Key)
 	{
@@ -177,11 +191,62 @@ void ParticleRenderer::keyboardFunc(unsigned char Key, int x, int y)
 	case 'z': rotation[3] += 1.0f;
 	case 'x': rotation[3] += -1.0f;
 	}
+	*/
+	if (Key == 'w')
+	{
+		rotation[1] += -.03;
+	}
+	else if (Key == 's')
+	{
+		rotation[1] += .03;
+	}
+	if (Key == 'a')
+	{
+		rotation[0] += -.03;
+	}
+	else if (Key == 'd')
+	{
+		rotation[0] += .03;
+	}
+	if (Key == 'r')
+	{
+		rotation[2] += 100;
+	}
+	else if (Key == 'f')
+	{
+		rotation[2] += -100;
+	}
+	if (Key == 'p')
+	{
+		spin = !spin;
+	}
+	if (Key == 'c')
+	{
+		calculate = !calculate;
+	}
+	if (Key == 'i')
+	{
+		save = !save;
+	}
+	camera[0] = sin(rotation[1]) * cos(rotation[0])*rotation[2];
+	camera[1] = cos(rotation[1]) * rotation[2];
+	camera[2] = sin(rotation[1]) * sin(rotation[0])*rotation[2];
 };
 
 void ParticleRenderer::initSystem()
 {
-	sys.allocate(5000);
+	camera = (double*)malloc(sizeof(double) * 3);
+	
+	rotation[0] = 0;
+	rotation[1] = 0;
+	rotation[2] = 1000000;
+	rotation[3] = 0;
+
+	camera[0] = 2000;
+	camera[1] = 0;
+	camera[2] = 2000;
+
+	sys.allocate(4000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 
@@ -190,7 +255,7 @@ void ParticleRenderer::initSystem()
 	screenParticles = (p_type*)malloc(sizeof(p_type) * 3 * numParticles);
 	for (int i = 0; i < numParticles * 3; i++)	//normalize coordinates for display
 	{
-		screenParticles[i] = particles[i];// / COORD_TO_PIXEL;
+		screenParticles[i] = particles[i] / COORD_TO_PIXEL;
 	}
 
 	if (!vbo)
@@ -201,47 +266,8 @@ void ParticleRenderer::initSystem()
 
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(p_type) * 3 * numParticles, screenParticles, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_DOUBLE, GL_FALSE, sizeof(double) * 3, &screenParticles[0]);
-	glEnableVertexAttribArray(0);
+	glVertexPointer(3, GL_DOUBLE, sizeof(double) * 3, 0);
 
-
-	glGenBuffers(1, &cbo);
-	glBindBuffer(GL_ARRAY_BUFFER, cbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float)*4*numParticles, &colors[0], GL_STATIC_DRAW);
-
-	glEnableVertexAttribArray(1);
-	glBindBuffer(GL_ARRAY_BUFFER, colorBuffer);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-
-
-	vertexShader = createShader(GL_VERTEX_SHADER, loadShaderFile("vertex.glsl"), "vertex");
-	fragmentShader = createShader(GL_FRAGMENT_SHADER, loadShaderFile("fragment.glsl"), "fragment");
-
-
-
-	program = glCreateProgram();
-	glAttachShader(program, vertexShader);
-	glAttachShader(program, fragmentShader);
-
-	glBindAttribLocation(program, 0, "in_position");
-
-	glLinkProgram(program);
-
-	int linkResult = 0;
-
-	glGetProgramiv(program, GL_LINK_STATUS, &linkResult);
-
-	//check for link errors
-	if (linkResult == GL_FALSE)
-	{
-		int infoLogLength = 0;
-		glGetProgramiv(program, GL_INFO_LOG_LENGTH, &infoLogLength);
-		std::vector<char> programLog(infoLogLength);
-		glGetProgramInfoLog(program, infoLogLength, NULL, &programLog[0]);
-		std::cout << "Shader Loader: LINK ERROR\n" << &programLog[0] << "\n";
-	}
 }
 
 void ParticleRenderer::begin()

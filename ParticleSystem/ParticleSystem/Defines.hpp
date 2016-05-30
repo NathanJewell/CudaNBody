@@ -6,7 +6,7 @@ typedef double p_type;	//type to use for all particle stuff
 
 #define COORD_TO_PIXEL 100
 
-#define EARTH_KG 1000000
+#define EARTH_KG 800000
 
 #define PI 3.141592
 
