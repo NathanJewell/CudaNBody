@@ -85,7 +85,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	int particlesGenerated = 0;
 	r2 = radius*radius;
 	
-	int numSpheres = 5;
+	int numSpheres = 20;
 	int pInSphere = numParticles/numSpheres;
 	int sSize = 100000;
 	int sVariance = 100000;
@@ -271,6 +271,61 @@ void ParticleSystem::doFrameGPU()
 int ParticleSystem::getNumParticles()
 {
 	return numParticles;
+}
+
+void ParticleSystem::writeData(const int& frameCounter)
+{
+	std::ofstream data("data/" + toString<int>(frameCounter) +".txt");
+
+	cudaMemcpy(h_vel, d_vel, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
+	cudaMemcpy(h_acc, d_acc, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
+
+	data << std::fixed << std::showpoint;
+	data << std::setprecision(20);
+
+	double totalMass = 0;
+	double xM = 0;
+	double yM = 0;
+	double zM = 0;
+	for (int i = 0; i < numParticles; i++)
+	{
+		int index = i * 3;
+
+		//data << h_pos[index] << " " << h_pos[index + 1] << " " << h_pos[index + 2] << " ";
+		//data << h_vel[index] << " " << h_vel[index + 1] << " " << h_vel[index + 2] << " ";
+		//data << h_acc[index] << " " << h_acc[index + 1] << " " << h_acc[index + 2] << " ";
+		//data << h_mass[i] << " ";
+
+		totalMass += h_mass[i];
+		xM += h_pos[index] * h_mass[i];
+		yM += h_pos[index + 1] * h_mass[i];
+		zM += h_pos[index + 2] * h_mass[i];
+
+		//data << "\n";
+	}
+
+	int *center = (int*)malloc(sizeof(int) * 3);
+	center[0] = xM / totalMass;
+	center[1] = yM / totalMass;
+	center[2] = zM / totalMass;
+
+	data << "---------------------------------------------------------\n";
+	data << "CENTER OF MASS " << center[0] << " " << center[1] << " " << center[2] << "\n";
+	data << "---------------------------------------------------------\n";
+
+	//double *distances = (double*)malloc(sizeof(double) * numParticles);
+	//double *sVelocity = (double*)malloc(sizeof(double) * numParticles);
+	for (int i = 0; i < numParticles; i++)
+	{
+		int index = i * 3;
+		double distance = getMagTwo(h_pos, i * 3, center);
+		double sVelocity = sqrt(pow(h_vel[index], 2) + pow(h_vel[index + 1], 2) + pow(h_vel[index + 2], 2));
+		data << i << " " << distance << " " << sVelocity << "\n";
+	}
+
+	
+
+	data.close();
 }
 //PRIVATE FUNCTIONS
 

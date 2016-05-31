@@ -8,6 +8,7 @@
 #include <chrono>
 #include "inc/FreeImage.h"
 #include "ShaderLoader.hpp"
+#include <fstream>
 
 
 typedef std::chrono::high_resolution_clock Clock;

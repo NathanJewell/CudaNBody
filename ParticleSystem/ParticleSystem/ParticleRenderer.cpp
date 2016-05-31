@@ -5,6 +5,7 @@ double* camera;
 bool calculate = true;
 bool spin = true;
 bool save = true;
+bool savedata = false;
 
 ParticleRenderer::ParticleRenderer(){}
 ParticleRenderer::~ParticleRenderer()
@@ -170,10 +171,16 @@ void ParticleRenderer::drawFrame()
 		}
 
 	}
-	frameCounter++;
+#endif
+#ifdef SAVE_DATA
+	if (savedata)
+	{
+		sys.writeData(frameCounter);
+		std::cout << "saved stuff" << std::endl;
+	}
 
 #endif
-
+	frameCounter++;
 	glutPostRedisplay();
 
 }
@@ -227,6 +234,10 @@ void ParticleRenderer::keyboardFunc(unsigned char Key, int x, int y)
 	if (Key == 'i')
 	{
 		save = !save;
+	}
+	if (Key == 'l')
+	{
+		savedata = !savedata;
 	}
 	camera[0] = sin(rotation[1]) * cos(rotation[0])*rotation[2];
 	camera[1] = cos(rotation[1]) * rotation[2];

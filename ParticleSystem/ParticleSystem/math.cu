@@ -176,7 +176,7 @@ __global__ void ARR_SET(p_type* getter, const p_type value, int N)
 
 __host__ void doFrame(p_type* d_pos, p_type* d_vel, p_type* d_acc, p_type* d_mass, int numParticles)
 {
-	float dt = .005;
+	float dt = .5;
 
 	dim3 block(TPB2d, TPB2d);
 	dim3 grid;

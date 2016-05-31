@@ -2,7 +2,8 @@
 
 typedef double p_type;	//type to use for all particle stuff
 
-#define SAVE_IMAGES
+//#define SAVE_IMAGES
+#define SAVE_DATA
 
 #define COORD_TO_PIXEL 100
 

@@ -7,7 +7,9 @@
 #include "device_launch_parameters.h"
 #include "math.cuh"
 #include "MathUtil.hpp"
-
+#include <fstream>
+#include <iostream>
+#include <iomanip>
 #include "noiseutils.h"
 
 class ParticleSystem
@@ -24,6 +26,7 @@ public:
 	//void copyPositionFromDevice();						//copies calculated vector from device to host
 	void doFrameCPU();						//calculates stuff (cpu based)
 	void doFrameGPU();					//calculates stuff (gpu based)
+	void writeData(const int& frameCounter);
 
 private:
 

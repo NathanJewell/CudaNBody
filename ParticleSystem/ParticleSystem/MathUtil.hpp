@@ -30,6 +30,14 @@ inline float fInvSqrt(const float& in)
 	return y;
 }
 
+inline double getMagTwo(const double* p1, const int& index, const int* center)
+{
+	p_type diffx = (p1[index] - center[0]);			//calculating difference between points
+	p_type diffy = (p1[index + 1] - center[1]);
+	p_type diffz = (p1[index + 2] - center[2]);
+	return  abs(diffx*diffx + diffy*diffy + diffz*diffz);
+}
+
 inline point getNormal(const p_type* pos, const int& p1, const int &p2)	//returns normalize vector toward point2
 {
 	p_type diffx = (pos[p2] - pos[p1]);			//calculating difference between points
