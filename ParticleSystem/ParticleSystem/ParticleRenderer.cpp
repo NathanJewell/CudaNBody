@@ -5,7 +5,7 @@ double* camera;
 bool calculate = true;
 bool spin = true;
 bool save = true;
-bool savedata = false;
+bool savedata = true;
 
 ParticleRenderer::ParticleRenderer(){}
 ParticleRenderer::~ParticleRenderer()
@@ -19,8 +19,8 @@ ParticleRenderer::~ParticleRenderer()
 void ParticleRenderer::initGL()
 {
 	/* select clearing (background) color */
-	width = 3000;
-	height =3000;
+	width = 10000;
+	height =10000;
 
 	frameCounter = 0;
 	rotation = (float*)malloc(sizeof(float) * 4);
@@ -142,7 +142,7 @@ void ParticleRenderer::drawFrame()
 
 	// Make the BYTE array, factor of 3 because it's RBG.
 #ifdef SAVE_IMAGES
-	if (frameCounter%1 == 0 && save)
+	if (frameCounter%3 == 0 && save)
 	{
 		saveCounter++;
 		int renderWidth = 1024;
@@ -152,7 +152,7 @@ void ParticleRenderer::drawFrame()
 		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 		glReadPixels(0, 0, renderWidth, renderHeight, GL_RGB, GL_UNSIGNED_BYTE, pixels);
 
-		std::string filePath = "E:/CudaOutput/7/" + toString<int>(saveCounter) +".bmp";
+		std::string filePath = "E:/CudaOutput/final2/frames/" + toString<int>(saveCounter) +".bmp";
 	
 		// Convert to FreeImage format & save to file
 		FIBITMAP* image = FreeImage_ConvertFromRawBits(pixels, renderWidth, renderHeight, renderWidth * 3, 24, 0x00FF00, 0x0000FF, 0xFF0000, false);
@@ -162,24 +162,25 @@ void ParticleRenderer::drawFrame()
 		// Free resources
 		FreeImage_Unload(image);
 		delete[] pixels;
-		if (spin)
-		{
-			rotation[0] += .0005;
-			camera[0] = sin(rotation[1]) * cos(rotation[0])*rotation[2];
-			camera[1] = cos(rotation[1]) * rotation[2];
-			camera[2] = sin(rotation[1]) * sin(rotation[0])*rotation[2];
-		}
+
 
 	}
 #endif
 #ifdef SAVE_DATA
-	if (savedata)
+	if (savedata && frameCounter % 100 == 0)
 	{
 		sys.writeData(frameCounter);
 		std::cout << "saved stuff" << std::endl;
 	}
 
 #endif
+	if (spin)
+	{
+		rotation[0] += .0002;
+		camera[0] = sin(rotation[1]) * cos(rotation[0])*rotation[2];
+		camera[1] = cos(rotation[1]) * rotation[2];
+		camera[2] = sin(rotation[1]) * sin(rotation[0])*rotation[2];
+	}
 	frameCounter++;
 	glutPostRedisplay();
 
@@ -247,7 +248,8 @@ void ParticleRenderer::keyboardFunc(unsigned char Key, int x, int y)
 void ParticleRenderer::initSystem()
 {
 	camera = (double*)malloc(sizeof(double) * 3);
-	
+	//frameCounter = 609600;
+	//saveCounter = 31090;
 	rotation[0] = 0;
 	rotation[1] = 0;
 	rotation[2] = 1000000;
@@ -257,7 +259,7 @@ void ParticleRenderer::initSystem()
 	camera[1] = 0;
 	camera[2] = 2000;
 
-	sys.allocate(4000);
+	sys.allocate(20000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 

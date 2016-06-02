@@ -11,6 +11,8 @@
 #include <iostream>
 #include <iomanip>
 #include "noiseutils.h"
+#include <vector>
+#include <string>
 
 class ParticleSystem
 {

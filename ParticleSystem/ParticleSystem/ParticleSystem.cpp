@@ -85,7 +85,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	int particlesGenerated = 0;
 	r2 = radius*radius;
 	
-	int numSpheres = 20;
+	int numSpheres = 70;
 	int pInSphere = numParticles/numSpheres;
 	int sSize = 100000;
 	int sVariance = 100000;
@@ -185,6 +185,53 @@ void ParticleSystem::initialize(/*distribution type?*/)
 	}
 	*/
 
+#ifdef LOAD_FILE
+	std::ifstream in;
+	in.open("E:/CudaOutput/final2/data/50600.txt");
+
+	std::vector<std::string> lines;
+	std::string line;
+	while (std::getline(in, line))
+	{
+		lines.push_back(line);
+	}
+
+	in.close();
+
+	for (int i = 0; i < numParticles; i++)
+	{
+		double nums[10];
+		std::string current = "";
+		int c = 0;
+		for (int sIt = 0; sIt < lines[i].size(); sIt++)
+		{
+			if (lines[i][sIt] == ' ')
+			{
+				nums[c] = std::stod(current);
+				current = "";
+				c++;
+			}
+			else
+			{
+				current += lines[i][sIt];
+			}
+		}
+		int index = i * 3;
+
+		h_pos[index] = nums[0];
+		h_pos[index + 1] = nums[1];
+		h_pos[index + 2] = nums[2];
+
+		h_vel[index] = nums[3];
+		h_vel[index + 1] = nums[4];
+		h_vel[index + 2] = nums[5];
+
+		h_acc[index] = 0;
+		h_acc[index + 1] = 0;
+		h_acc[index + 2] = 0;
+	}
+#endif
+
 	size_t size = sizeof(p_type) * 3 * numParticles;
 	cudaError_t err = cudaSuccess;
 	err = cudaMemcpy(d_pos, h_pos, size, cudaMemcpyHostToDevice);
@@ -275,7 +322,7 @@ int ParticleSystem::getNumParticles()
 
 void ParticleSystem::writeData(const int& frameCounter)
 {
-	std::ofstream data("data/" + toString<int>(frameCounter) +".txt");
+	std::ofstream data("E:/CudaOutput/final2/data/" + toString<int>(frameCounter) +".txt");
 
 	cudaMemcpy(h_vel, d_vel, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 	cudaMemcpy(h_acc, d_acc, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
@@ -291,17 +338,17 @@ void ParticleSystem::writeData(const int& frameCounter)
 	{
 		int index = i * 3;
 
-		//data << h_pos[index] << " " << h_pos[index + 1] << " " << h_pos[index + 2] << " ";
-		//data << h_vel[index] << " " << h_vel[index + 1] << " " << h_vel[index + 2] << " ";
-		//data << h_acc[index] << " " << h_acc[index + 1] << " " << h_acc[index + 2] << " ";
-		//data << h_mass[i] << " ";
+		data << h_pos[index] << " " << h_pos[index + 1] << " " << h_pos[index + 2] << " ";
+		data << h_vel[index] << " " << h_vel[index + 1] << " " << h_vel[index + 2] << " ";
+		data << h_acc[index] << " " << h_acc[index + 1] << " " << h_acc[index + 2] << " ";
+		data << h_mass[i] << " ";
 
 		totalMass += h_mass[i];
 		xM += h_pos[index] * h_mass[i];
 		yM += h_pos[index + 1] * h_mass[i];
 		zM += h_pos[index + 2] * h_mass[i];
 
-		//data << "\n";
+		data << "\n";
 	}
 
 	int *center = (int*)malloc(sizeof(int) * 3);
@@ -309,9 +356,15 @@ void ParticleSystem::writeData(const int& frameCounter)
 	center[1] = yM / totalMass;
 	center[2] = zM / totalMass;
 
-	data << "---------------------------------------------------------\n";
-	data << "CENTER OF MASS " << center[0] << " " << center[1] << " " << center[2] << "\n";
-	data << "---------------------------------------------------------\n";
+	data.close();
+
+	std::ofstream dv("E:/CudaOutput/final2/dv/" + toString<int>(frameCounter) +".txt");
+	dv << std::fixed << std::showpoint;
+	dv << std::setprecision(20);
+
+	dv << "---------------------------------------------------------\n";
+	dv << "CENTER OF MASS " << center[0] << " " << center[1] << " " << center[2] << "\n";
+	dv << "---------------------------------------------------------\n";
 
 	//double *distances = (double*)malloc(sizeof(double) * numParticles);
 	//double *sVelocity = (double*)malloc(sizeof(double) * numParticles);
@@ -320,12 +373,12 @@ void ParticleSystem::writeData(const int& frameCounter)
 		int index = i * 3;
 		double distance = getMagTwo(h_pos, i * 3, center);
 		double sVelocity = sqrt(pow(h_vel[index], 2) + pow(h_vel[index + 1], 2) + pow(h_vel[index + 2], 2));
-		data << i << " " << distance << " " << sVelocity << "\n";
+		dv << i << " " << distance << " " << sVelocity << "\n";
 	}
 
-	
+	dv.close();
 
-	data.close();
+
 }
 //PRIVATE FUNCTIONS
 

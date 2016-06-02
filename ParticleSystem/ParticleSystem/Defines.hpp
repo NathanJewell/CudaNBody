@@ -3,11 +3,12 @@
 typedef double p_type;	//type to use for all particle stuff
 
 //#define SAVE_IMAGES
-#define SAVE_DATA
+//#define SAVE_DATA
+#define LOAD_FILE
 
 #define COORD_TO_PIXEL 100
 
-#define EARTH_KG 800000
+#define EARTH_KG 4000000
 
 #define PI 3.141592
 

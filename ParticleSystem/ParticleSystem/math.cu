@@ -94,9 +94,6 @@ __global__ void doParticles(p_type* pos, p_type* vel, p_type* acc, p_type* mass,
 			distsqr = 500;
 		}
 
-		//else
-		//{
-
 		p_type attraction = (mass[X] * mass[Y]) / (distsqr);	//gravity equation
 
 
