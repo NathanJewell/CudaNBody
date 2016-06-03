@@ -152,7 +152,7 @@ void ParticleRenderer::drawFrame()
 		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 		glReadPixels(0, 0, renderWidth, renderHeight, GL_RGB, GL_UNSIGNED_BYTE, pixels);
 
-		std::string filePath = "E:/CudaOutput/final2/frames/" + toString<int>(saveCounter) +".bmp";
+		std::string filePath = "E:/CudaOutput/final/frames/" + toString<int>(saveCounter) +".bmp";
 	
 		// Convert to FreeImage format & save to file
 		FIBITMAP* image = FreeImage_ConvertFromRawBits(pixels, renderWidth, renderHeight, renderWidth * 3, 24, 0x00FF00, 0x0000FF, 0xFF0000, false);
@@ -248,8 +248,8 @@ void ParticleRenderer::keyboardFunc(unsigned char Key, int x, int y)
 void ParticleRenderer::initSystem()
 {
 	camera = (double*)malloc(sizeof(double) * 3);
-	//frameCounter = 609600;
-	//saveCounter = 31090;
+	frameCounter = 877700;
+	saveCounter = 32200;
 	rotation[0] = 0;
 	rotation[1] = 0;
 	rotation[2] = 1000000;
@@ -259,7 +259,7 @@ void ParticleRenderer::initSystem()
 	camera[1] = 0;
 	camera[2] = 2000;
 
-	sys.allocate(20000);
+	sys.allocate(10000);
 	sys.initialize();
 	numParticles = sys.getNumParticles();
 

@@ -187,7 +187,7 @@ void ParticleSystem::initialize(/*distribution type?*/)
 
 #ifdef LOAD_FILE
 	std::ifstream in;
-	in.open("E:/CudaOutput/final2/data/50600.txt");
+	in.open("E:/CudaOutput/final/data/613600.txt");
 
 	std::vector<std::string> lines;
 	std::string line;
@@ -322,7 +322,7 @@ int ParticleSystem::getNumParticles()
 
 void ParticleSystem::writeData(const int& frameCounter)
 {
-	std::ofstream data("E:/CudaOutput/final2/data/" + toString<int>(frameCounter) +".txt");
+	std::ofstream data("E:/CudaOutput/final/data/" + toString<int>(frameCounter) +".txt");
 
 	cudaMemcpy(h_vel, d_vel, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
 	cudaMemcpy(h_acc, d_acc, sizeof(p_type) * 3 * numParticles, cudaMemcpyDeviceToHost);
@@ -358,7 +358,7 @@ void ParticleSystem::writeData(const int& frameCounter)
 
 	data.close();
 
-	std::ofstream dv("E:/CudaOutput/final2/dv/" + toString<int>(frameCounter) +".txt");
+	std::ofstream dv("E:/CudaOutput/final/dv/" + toString<int>(frameCounter) +".txt");
 	dv << std::fixed << std::showpoint;
 	dv << std::setprecision(20);
 
@@ -371,9 +371,16 @@ void ParticleSystem::writeData(const int& frameCounter)
 	for (int i = 0; i < numParticles; i++)
 	{
 		int index = i * 3;
-		double distance = getMagTwo(h_pos, i * 3, center);
+		double distance = sqrt(getMagTwo(h_pos, i * 3, center));
 		double sVelocity = sqrt(pow(h_vel[index], 2) + pow(h_vel[index + 1], 2) + pow(h_vel[index + 2], 2));
-		dv << i << " " << distance << " " << sVelocity << "\n";
+		dv << distance << " " << "\n";
+	}
+	dv << "END DIST\n";
+	for (int i = 0; i < numParticles; i++)
+	{
+		int index = i * 3;
+		double sVelocity = sqrt(pow(h_vel[index], 2) + pow(h_vel[index + 1], 2) + pow(h_vel[index + 2], 2));
+		dv << sVelocity << "\n";
 	}
 
 	dv.close();
